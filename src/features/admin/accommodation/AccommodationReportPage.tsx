@@ -1,12 +1,17 @@
 import { ReportsLayout } from '../reports/ReportsLayout';
+import { PageHeader } from '../../../components/ui/PageHeader';
 
 export function AccommodationReportPage() {
     return (
-        <div className="space-y-6">
-            <div className="text-left">
-                <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tight">Occupancy Reports</h1>
-                <p className="text-[var(--text-muted)] text-sm uppercase tracking-widest font-bold">Detailed occupancy and assignment analytics</p>
-            </div>
+        <div className="space-y-8 animate-fade-in">
+            <PageHeader
+                title="Occupancy Reports"
+                subtitle="Detailed occupancy and assignment analytics"
+                breadcrumbs={[
+                    { label: 'Event', href: '/admin/dashboard' },
+                    { label: 'Occupancy' }
+                ]}
+            />
             <ReportsLayout />
         </div>
     );

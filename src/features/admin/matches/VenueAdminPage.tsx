@@ -24,8 +24,12 @@ export default function VenueAdminPage() {
     return (
         <div className="space-y-6">
             <PageHeader
-                title="Venue Administration"
-                subtitle="Manage tournament locations, schedules, and training availability"
+                title="Venues"
+                subtitle="Manage competition halls and daily schedule"
+                breadcrumbs={[
+                    { label: 'Admin', href: '/admin/dashboard' },
+                    { label: 'Venues' }
+                ]}
                 actions={
                     <IconButton
                         icon={Plus}

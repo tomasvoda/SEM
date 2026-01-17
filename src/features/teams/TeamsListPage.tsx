@@ -38,6 +38,10 @@ export function TeamsListPage() {
             <PageHeader
                 title="Teams"
                 subtitle="All IKF member countries and registration status"
+                breadcrumbs={[
+                    { label: 'Event', href: '/admin/dashboard' },
+                    { label: 'Teams' }
+                ]}
                 actions={
                     <div className="relative w-64">
                         <Search className="absolute left-3 top-2.5 w-4 h-4 text-white/40" />

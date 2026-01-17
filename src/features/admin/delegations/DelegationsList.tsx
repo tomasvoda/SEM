@@ -3,40 +3,31 @@ import { GlassCard } from '../../../components/ui/GlassCard';
 import { Users, Plus } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 import { Link } from 'react-router-dom';
-import { Breadcrumbs } from '../components/Breadcrumbs';
 import { DelegationListCard } from '../components/DelegationListCard';
+import { PageHeader } from '../../../components/ui/PageHeader';
 
 export function DelegationsList() {
     const { delegations } = useAdminStore();
 
-    // Remove any delete logic unless we have a deleteDelegation function in store -> we don't seem to have one exposed in types/admin? 
-    // Usually delegations are not deleted lightly. 
-    // I will skip Delete button for now to be safe, or just list them.
-
     return (
         <div className="space-y-6">
-            <div className="flex flex-col gap-2">
-                <Breadcrumbs
-                    items={[
-                        { label: 'Admin', path: '/admin/dashboard' },
-                        { label: 'Delegations' }
-                    ]}
-                />
-
-                <div className="flex justify-between items-end">
-                    <div className="text-left">
-                        <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tight">Delegations</h1>
-                        <p className="text-[var(--text-muted)] text-sm uppercase tracking-widest font-bold">Manage participating teams</p>
-                    </div>
+            <PageHeader
+                title="Delegations"
+                subtitle="Manage participating teams"
+                breadcrumbs={[
+                    { label: 'Event', href: '/admin/dashboard' },
+                    { label: 'Delegations' }
+                ]}
+                actions={
                     <Link
                         to="/admin/delegations/new"
-                        className="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-xs font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-brand-500/20"
+                        className="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-lg text-[10px] font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-brand-500/20"
                     >
                         <Plus className="w-4 h-4" />
                         Add Delegation
                     </Link>
-                </div>
-            </div>
+                }
+            />
 
             {delegations.length === 0 ? (
                 <GlassCard className="p-20 text-center border-dashed border-2">

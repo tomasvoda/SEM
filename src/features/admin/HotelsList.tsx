@@ -1,5 +1,6 @@
 import { Plus, Edit2, Eye, Hotel as HotelIcon, Search, Trash2 } from 'lucide-react';
 import { GlassCard } from '../../components/ui/GlassCard';
+import { PageHeader } from '../../components/ui/PageHeader';
 import { useAdminStore } from '../../store/adminStore';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -27,57 +28,39 @@ export function HotelsList() {
         setIsModalOpen(true);
     };
 
-    const handleDelete = (id: string) => {
+    const handleDelete = async (id: string) => {
         const hotel = hotels.find(h => h.id === id);
         if (!hotel) return;
 
         if (window.confirm(`Are you sure you want to delete ${hotel.name}? This action is irreversible.`)) {
-            const result = deleteHotel(id);
-            if (!result.success) {
-                alert(result.error);
+            const result = await deleteHotel(id);
+            if (result.success) {
+                // Successfully deleted
+            } else {
+                alert(result.error || 'Failed to delete hotel');
             }
         }
     };
 
     return (
         <div className="space-y-6">
-            {/* Diagnostic Banner - Temporary for Debugging */}
-            <GlassCard className="p-4 border-l-4 border-l-brand-500 bg-brand-500/5">
-                <div className="flex items-center justify-between">
-                    <div className="space-y-1">
-                        <h3 className="text-sm font-bold text-brand-500">Database Diagnostic</h3>
-                        <div className="flex gap-4 text-xs font-mono text-[var(--text-muted)]">
-                            <span>Hotels Loaded: <strong className="text-[var(--text-primary)]">{hotels.length}</strong></span>
-                            <span>Offers Loaded: <strong className="text-[var(--text-primary)]">{offers.length}</strong></span>
-                            <span>Delegations Loaded: <strong className="text-[var(--text-primary)]">{useAdminStore.getState().delegations.length}</strong></span>
-                        </div>
-                    </div>
+            <PageHeader
+                title="Hotels"
+                subtitle="Manage accommodation options and room availability"
+                breadcrumbs={[
+                    { label: 'Admin', href: '/admin/dashboard' },
+                    { label: 'Hotels' }
+                ]}
+                actions={
                     <button
-                        onClick={() => {
-                            const store = useAdminStore.getState();
-                            alert(`Loading: ${store.isLoading}\nError: ${store.error}\nHotels: ${store.hotels.length}`);
-                            store.loadInitialData();
-                        }}
-                        className="px-3 py-1.5 bg-brand-500 text-white rounded-lg text-xs font-bold hover:bg-brand-600 transition-all"
+                        onClick={handleAdd}
+                        className="bg-brand-500 hover:bg-brand-600 text-white px-6 py-2.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-brand-500/20 text-sm"
                     >
-                        Force Reload
+                        <Plus className="w-4 h-4" />
+                        Add New Hotel
                     </button>
-                </div>
-            </GlassCard>
-
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tight">Hotels</h1>
-                    <p className="text-[var(--text-muted)] text-sm uppercase tracking-widest font-bold">Admin / Hotel Management</p>
-                </div>
-                <button
-                    onClick={handleAdd}
-                    className="bg-brand-500 hover:bg-brand-600 text-white px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-lg shadow-brand-500/20"
-                >
-                    <Plus className="w-5 h-5" />
-                    Add New Hotel
-                </button>
-            </div>
+                }
+            />
 
             <GlassCard className="p-0 overflow-hidden">
                 <div className="p-4 border-b border-[var(--glass-border)] bg-[var(--glass-surface)]/50">
@@ -107,7 +90,7 @@ export function HotelsList() {
                         <tbody className="divide-y divide-[var(--glass-border)]">
                             {filteredHotels.length === 0 ? (
                                 <tr>
-                                    <td colSpan={4} className="px-6 py-12 text-center text-[var(--text-muted)] italic">
+                                    <td colSpan={5} className="px-6 py-12 text-center text-[var(--text-muted)] italic">
                                         No hotels found matching your search.
                                     </td>
                                 </tr>

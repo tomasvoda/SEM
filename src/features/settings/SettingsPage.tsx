@@ -11,7 +11,11 @@ export function SettingsPage() {
         <div className="space-y-6">
             <PageHeader
                 title="Settings"
-                subtitle="Manage your application preferences and appearance."
+                subtitle="Configure tournament parameters and system options"
+                breadcrumbs={[
+                    { label: 'Admin', href: '/admin/dashboard' },
+                    { label: 'Settings' }
+                ]}
             />
 
             <div className="grid gap-6 max-w-2xl text-[var(--text-primary)]">

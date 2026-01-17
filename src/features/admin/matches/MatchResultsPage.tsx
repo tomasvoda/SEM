@@ -76,8 +76,12 @@ export default function MatchResultsPage() {
     return (
         <div className="space-y-6">
             <PageHeader
-                title="Match Results & Scoring"
-                subtitle="Manage tournament scores and goal scorers"
+                title="Match Results"
+                subtitle="Enter scores and validate official match reports"
+                breadcrumbs={[
+                    { label: 'Admin', href: '/admin/dashboard' },
+                    { label: 'Results' }
+                ]}
             />
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

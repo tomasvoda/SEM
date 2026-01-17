@@ -1,16 +1,17 @@
 import { GlassCard } from '../../components/ui/GlassCard';
 import { PageHeader } from '../../components/ui/PageHeader';
 import { IconButton } from '../../components/ui/IconButton';
-import { RefreshCw, Download, Trophy, Clock, MapPin } from 'lucide-react';
+import { RefreshCw, Download, Trophy, Clock, MapPin, AlertCircle } from 'lucide-react';
 import { useAdminStore } from '../../store/adminStore';
 import { useMatchStore } from '../../store/matchStore';
-import { useMemo } from 'react';
-import { format, isToday, parseISO, isAfter } from 'date-fns';
+import { useTaskStore } from '../../store/taskStore';
+import { isToday, parseISO, isAfter, format } from 'date-fns';
 import { getFlagUrl } from '../../lib/countryUtils';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
+import { cn } from '../../lib/utils';
 
 export function DashboardPage() {
-    const { delegations, getHotelOccupancyReports } = useAdminStore();
+    const { delegations } = useAdminStore();
     const { schedule, getResolvedTeamCode } = useMatchStore();
 
     const stats = useMemo(() => {
@@ -43,32 +44,6 @@ export function DashboardPage() {
         };
     }, [delegations]);
 
-    // Simple occupancy summary for the chart placeholder - showing nearest 3 days with data
-    const occupancySummary = useMemo(() => {
-        const today = new Date().toISOString().split('T')[0];
-        const nextMonth = new Date();
-        nextMonth.setDate(nextMonth.getDate() + 30);
-        const nextMonthStr = nextMonth.toISOString().split('T')[0];
-
-        const reports = getHotelOccupancyReports({
-            dateFrom: today,
-            dateTo: nextMonthStr
-        });
-
-        // Group by date
-        const byDate: Record<string, { total: number; reserved: number }> = {};
-        reports.forEach(r => {
-            if (!byDate[r.date]) byDate[r.date] = { total: 0, reserved: 0 };
-            byDate[r.date].total += r.total_rooms;
-            byDate[r.date].reserved += r.reserved_rooms;
-        });
-
-        // Get first 3 dates that have any reserved rooms
-        return Object.entries(byDate)
-            .filter(([_, data]) => data.reserved > 0)
-            .sort((a, b) => a[0].localeCompare(b[0]))
-            .slice(0, 3);
-    }, [getHotelOccupancyReports]);
 
     // Find the nearest match day with matches
     const nextMatchDay = useMemo(() => {
@@ -85,11 +60,24 @@ export function DashboardPage() {
         return nextMatchDay.matches.filter(m => m.venue === 'Otrokovice' && m.type === 'match');
     }, [nextMatchDay]);
 
+    const { tasks } = useTaskStore();
+
+    const upcomingTasks = useMemo(() => {
+        return tasks
+            .filter(t => t.status !== 'completed')
+            .sort((a, b) => a.deadline.localeCompare(b.deadline))
+            .slice(0, 5);
+    }, [tasks]);
+
     return (
         <div className="space-y-6">
             <PageHeader
-                title="Dashboard"
-                subtitle="Overview of event statistics and recent activity"
+                title="Admin Dashboard"
+                subtitle="Tournament overview and quick actions"
+                breadcrumbs={[
+                    { label: 'Event', href: '/admin/dashboard' },
+                    { label: 'Dashboard' }
+                ]}
                 actions={
                     <>
                         <IconButton icon={RefreshCw} variant="glass" label="Refresh" />
@@ -124,52 +112,6 @@ export function DashboardPage() {
                 </GlassCard>
             </div>
 
-            <GlassCard className="p-6">
-                <div className="flex items-center justify-between mb-6">
-                    <div>
-                        <h3 className="text-sm font-black text-[var(--text-primary)] uppercase tracking-tight">Hotel Occupancy</h3>
-                        <p className="text-xs text-[var(--text-muted)] font-medium">Nearest 3 occupied days</p>
-                    </div>
-                    <div className="flex gap-4">
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-sm bg-brand-500/20 border border-brand-500/30" />
-                            <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase">Available</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-sm bg-brand-500" />
-                            <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase">Occupied</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="h-48 flex items-end gap-2 px-2">
-                    {occupancySummary.map(([date, data]) => {
-                        const occupancy = data.total > 0 ? (data.reserved / data.total) * 100 : 0;
-                        return (
-                            <div key={date} className="flex-1 flex flex-col items-center gap-2 group relative">
-                                <div className="w-full bg-brand-500/10 rounded-t-lg relative overflow-hidden" style={{ height: '100%' }}>
-                                    <div
-                                        className="absolute bottom-0 left-0 right-0 bg-brand-500 transition-all duration-1000"
-                                        style={{ height: `${occupancy}%` }}
-                                    />
-                                    {/* Tooltip */}
-                                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black/90 text-[10px] text-white rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-50 whitespace-nowrap font-bold">
-                                        {format(parseISO(date), 'MMM dd')}: {occupancy.toFixed(1)}% ({data.reserved}/{data.total} rooms)
-                                    </div>
-                                </div>
-                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter">
-                                    {format(parseISO(date), 'EEE')}
-                                </span>
-                            </div>
-                        );
-                    })}
-                    {occupancySummary.length === 0 && (
-                        <div className="w-full h-full flex items-center justify-center border-2 border-dashed border-white/5 rounded-xl">
-                            <p className="text-slate-500 font-mono text-xs uppercase tracking-widest">No occupancy data for next 30 days</p>
-                        </div>
-                    )}
-                </div>
-            </GlassCard>
 
             {/* Next Matches Day Schedule */}
             {nextMatchDay && (
@@ -189,6 +131,69 @@ export function DashboardPage() {
                     />
                 </div>
             )}
+
+            {/* Upcoming Tasks Widget */}
+            <GlassCard className="p-6">
+                <div className="flex items-center justify-between mb-6 border-b border-white/5 pb-4">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center">
+                            <Clock className="w-5 h-5 text-brand-500" />
+                        </div>
+                        <div>
+                            <h3 className="text-sm font-black text-[var(--text-primary)] uppercase tracking-tight">Upcoming Deadlines</h3>
+                            <p className="text-[10px] text-[var(--text-muted)] font-black uppercase tracking-widest">Next 5 deliverables</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="space-y-3">
+                    {upcomingTasks.map((task) => {
+                        const isOverdue = isAfter(new Date(), parseISO(task.deadline));
+                        return (
+                            <div key={task.id} className="group flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-all">
+                                <div className="flex items-center gap-4 flex-1 min-w-0">
+                                    <div className="flex flex-col items-center w-20 border-r border-white/10 pr-4 flex-shrink-0">
+                                        <span className={cn(
+                                            "text-[10px] font-black tracking-tighter",
+                                            isOverdue ? "text-red-400" : "text-[var(--text-primary)]"
+                                        )}>
+                                            {format(parseISO(task.deadline), 'dd MMM')}
+                                        </span>
+                                        <span className="text-[8px] font-bold text-[var(--text-muted)] uppercase tracking-widest">
+                                            {format(parseISO(task.deadline), 'yyyy')}
+                                        </span>
+                                    </div>
+                                    <div className="min-w-0">
+                                        <p className="text-xs font-black text-[var(--text-primary)] truncate group-hover:text-brand-300 transition-colors">
+                                            {task.title}
+                                        </p>
+                                        <p className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-widest">
+                                            Resp: {task.responsibility}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col items-end flex-shrink-0">
+                                    <div className={cn(
+                                        "flex items-center gap-1.5 px-2 py-1 rounded-md border text-[8px] font-black uppercase tracking-widest",
+                                        task.status === 'pending' ? "text-amber-400 border-amber-400/20 bg-amber-400/5" :
+                                            task.status === 'overdue' || isOverdue ? "text-red-400 border-red-400/20 bg-red-400/5" :
+                                                "text-blue-400 border-blue-400/20 bg-blue-400/5"
+                                    )}>
+                                        {task.status === 'pending' ? <Clock className="w-2.5 h-2.5" /> : <AlertCircle className="w-2.5 h-2.5" />}
+                                        {task.status === 'pending' ? 'In Progress' : isOverdue ? 'Overdue' : 'Planned'}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+
+                    {upcomingTasks.length === 0 && (
+                        <div className="py-8 text-center border-2 border-dashed border-white/5 rounded-xl">
+                            <p className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest">No upcoming tasks</p>
+                        </div>
+                    )}
+                </div>
+            </GlassCard>
         </div>
     );
 }

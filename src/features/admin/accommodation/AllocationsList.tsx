@@ -1,14 +1,13 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useAdminStore } from '../../../store/adminStore';
 import { GlassCard } from '../../../components/ui/GlassCard';
 import { cn } from '../../../lib/utils';
 import { Plus, Calendar, Users, Trash2, AlertCircle, Hotel, Info, CheckCircle2, XCircle } from 'lucide-react';
 import { format, parseISO, isValid as isValidDate } from 'date-fns';
 import { Link } from 'react-router-dom';
-import { Breadcrumbs } from '../components/Breadcrumbs';
 import { getFlagUrl } from '../../../lib/countryUtils';
-import { useMemo } from 'react';
 import { AllocationFormModal } from './components/AllocationFormModal';
+import { PageHeader } from '../../../components/ui/PageHeader';
 
 export function AllocationsList() {
     const { allocations, hotels, delegations, allocationRooms, deleteAllocation } = useAdminStore();
@@ -30,21 +29,18 @@ export function AllocationsList() {
         }
     };
 
-    // Calculate Missing Coverage (Nights & Persons)
     const missingCoverage = useMemo(() => {
         const activeDelegations = delegations.filter(d => (d.status as any) === 'submitted' || (d.status as any) === 'approved');
 
         return activeDelegations.map(d => {
             const teamAllocations = allocations.filter(a => a.delegation_id === d.id && a.status === 'confirmed');
 
-            // 1. Person-based missing coverage (across ANY allocation)
             const allocatedBeds = teamAllocations.reduce((sum, alloc) => {
                 const rooms = allocationRooms.filter(r => r.allocation_id === alloc.id);
                 return sum + rooms.reduce((rSum, room) => rSum + (room.rooms_count * room.room_capacity), 0);
             }, 0);
             const missingPax = Math.max(0, (d.required_persons || 0) - allocatedBeds);
 
-            // 2. Night-based missing coverage
             const start = parseISO(d.arrival_date);
             const end = parseISO(d.departure_date);
 
@@ -78,7 +74,24 @@ export function AllocationsList() {
     }, [delegations, allocations, allocationRooms]);
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-6 animate-fade-in">
+            <PageHeader
+                title="Allocations"
+                subtitle="Manage hotel capacity for delegations"
+                breadcrumbs={[
+                    { label: 'Event', href: '/admin/dashboard' },
+                    { label: 'Allocations' }
+                ]}
+                actions={
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-brand-500/20"
+                    >
+                        <Plus className="w-5 h-5" />
+                        Create Allocation
+                    </button>
+                }
+            />
 
             {/* Missing Allocation Section */}
             {missingCoverage.length > 0 && (
@@ -128,29 +141,6 @@ export function AllocationsList() {
                 </div>
             )}
 
-            <div className="flex flex-col gap-2">
-                <Breadcrumbs
-                    items={[
-                        { label: 'Accommodation', path: '/admin/accommodation/allocations' },
-                        { label: 'Allocations' }
-                    ]}
-                />
-
-                <div className="flex justify-between items-end">
-                    <div className="text-left">
-                        <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tight">Accommodation Allocations</h1>
-                        <p className="text-[var(--text-muted)] text-sm uppercase tracking-widest font-bold">Manage hotel capacity for delegations</p>
-                    </div>
-                    <button
-                        onClick={() => setIsModalOpen(true)}
-                        className="px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white rounded-xl text-xs font-black uppercase tracking-widest flex items-center gap-2 transition-all shadow-lg shadow-brand-500/20"
-                    >
-                        <Plus className="w-5 h-5" />
-                        Create Allocation
-                    </button>
-                </div>
-            </div>
-
             {allocations.length === 0 ? (
                 <GlassCard className="p-20 text-center border-dashed border-2">
                     <Hotel className="w-20 h-20 text-[var(--text-muted)] mx-auto mb-6 opacity-10" />
@@ -179,12 +169,8 @@ export function AllocationsList() {
                                 to={`/admin/accommodation/allocations/${allocation.id}`}
                                 className="block group relative"
                             >
-                                {/* Compact Card Design */}
                                 <GlassCard className="p-4 hover:border-brand-500/50 transition-all flex items-center gap-6 text-left relative overflow-hidden">
-                                    {/* Main Content Area - Clickable via Link */}
                                     <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-center">
-
-                                        {/* Delegation Info */}
                                         <div className="space-y-0.5">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-brand-500/80">Delegation</p>
                                             <div className="flex items-center gap-2">
@@ -192,8 +178,6 @@ export function AllocationsList() {
                                                 <span className="font-bold text-[var(--text-primary)] text-sm">{delegation?.team_name || 'N/A'}</span>
                                             </div>
                                         </div>
-
-                                        {/* Hotel Info */}
                                         <div className="space-y-0.5">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-brand-500/80">Hotel</p>
                                             <div className="flex items-center gap-2">
@@ -201,8 +185,6 @@ export function AllocationsList() {
                                                 <span className="font-bold text-[var(--text-primary)] text-sm">{hotel?.name || 'N/A'}</span>
                                             </div>
                                         </div>
-
-                                        {/* Period & Status Info */}
                                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                             <div className="space-y-0.5">
                                                 <p className="text-[9px] font-black uppercase tracking-widest text-brand-500/80">Period</p>
@@ -216,8 +198,6 @@ export function AllocationsList() {
                                                     </span>
                                                 </div>
                                             </div>
-
-                                            {/* Status Badge */}
                                             <div className={cn(
                                                 "px-2.5 py-1 rounded-lg text-[9px] font-black uppercase tracking-widest border flex items-center gap-1.5 w-fit",
                                                 getStatusStyle(allocation.status)
@@ -227,8 +207,6 @@ export function AllocationsList() {
                                             </div>
                                         </div>
                                     </div>
-
-                                    {/* Delete Action - Absolute Positioned */}
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pl-4 border-l border-[var(--glass-border)]/50 h-8 flex items-center">
                                         <button
                                             onClick={(e) => {

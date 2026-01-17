@@ -62,7 +62,11 @@ export default function TeamRostersPage() {
         <div className="space-y-6">
             <PageHeader
                 title="Team Rosters"
-                subtitle="Manage participants, coaches, and staff for each team"
+                subtitle="Review and validate participating player lists"
+                breadcrumbs={[
+                    { label: 'Admin', href: '/admin/dashboard' },
+                    { label: 'Rosters' }
+                ]}
             />
 
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">

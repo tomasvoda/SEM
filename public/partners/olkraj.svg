@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Váš Hosting - Chyba 404</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://ci.vas-hosting.cz/2024/css/reboot.css">
+	<link rel="stylesheet" href="https://ci.vas-hosting.cz/2024/css/layout.css">
+</head>
+<body>
+	<div>
+		<header>
+			<div class="container">
+				<a href="https://www.vas-hosting.cz/?utm_source=perror&amp;utm_medium=e404" class="c_logo">Váš-hosting.cz</a>
+			</div>
+		</header>
+		<section class="s_content">
+			<div class="container">
+				<div class="s_content__cover">
+					<div class="s_content__img">
+						<img src="https://ci.vas-hosting.cz/2024/images/img-404.svg" width="505" height="313" alt="404">
+					</div>
+					<div class="s_content__content">
+						<h1>To,co hledáte,<br>tady není...</h1>
+						<p>Pravděpodobně máte špatnou URL nebo to někdo smazal.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="s_footer">
+		<div class="container">
+			<div class="s_footer__cover">
+				<div class="s_footer__help">
+					<div class="c_contact-box s_hp-recommend__main-review">
+						<div class="c_contact-box__buble">
+							<p>Potřebujete pomoc?</p>
+							<p>Koukněte na naši <a href="https://www.vas-hosting.cz/napoveda?utm_source=perror&amp;utm_medium=e404">nápovědu</a>.</p>
+						</div>
+					</div>
+					<div class="s_footer__help-robot">
+						<img src="https://ci.vas-hosting.cz/2024/images/img-robot.svg" width="277" height="275" alt="Robot">
+						<img src="https://ci.vas-hosting.cz/2024/images/img-robot-shadow.svg" width="65" height="11" alt="Robot">
+						<img src="https://ci.vas-hosting.cz/2024/images/img-robot-shadow-2.svg" alt="Robot">
+					</div>
+				</div>
+				<div class="s_footer__columns">
+					<div class="s_footer__column">
+						<div class="s_footer__column-img">
+							<img src="https://ci.vas-hosting.cz/2024/images/domains.svg" width="105" height="84" alt="Nabízíme domény s PHP & FTP zdarma">
+						</div>
+						<p><strong>Nabízíme domény s&nbsp;PHP&nbsp;&&nbsp;FTP zdarma</strong></p>
+						<a href="https://www.vas-hosting.cz/domeny?utm_source=perror&amp;utm_medium=e404" class="btn">Chci doménu</a>
+					</div>
+					<div class="s_footer__column">
+						<div class="s_footer__column-img">
+							<img src="https://ci.vas-hosting.cz/2024/images/servers.svg" width="91" height="84" alt="Poskytujeme servery s unikátní administrací">
+						</div>
+						<p><strong>Poskytujeme servery s&nbsp;unikátní administrací</strong></p>
+						<p><a href="https://www.vas-hosting.cz/servery?utm_source=perror&amp;utm_medium=e404" class="btn">Chci server</a></p>
+						<a href="https://www.vas-hosting.cz/?utm_source=perror&amp;utm_medium=e404"><img src="https://ci.vas-hosting.cz/2024/images/logo-grayscale.svg" width="136" height="30" alt="Váš-hosting.cz"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

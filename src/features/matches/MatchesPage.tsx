@@ -7,6 +7,7 @@ import { getFlagUrl } from '../../lib/countryUtils';
 import { useMatchStore } from '../../store/matchStore';
 import type { Match } from '../../store/matchStore';
 import { parseISO, isAfter } from 'date-fns';
+import { calculateStandings } from '../../lib/matchUtils';
 
 export function MatchesPage() {
     // Destructure teamAssignments to trigger re-renders when assignments updated in Admin
@@ -63,8 +64,12 @@ export function MatchesPage() {
         <div className="space-y-8 pb-12">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <PageHeader
-                    title="Tournament Schedule"
-                    subtitle="Official 2026 European Championship Match Schedule"
+                    title="Matches"
+                    subtitle="Tournament schedule and match management"
+                    breadcrumbs={[
+                        { label: 'Event', href: '/admin/dashboard' },
+                        { label: 'Matches' }
+                    ]}
                     className="mb-0"
                 />
 
@@ -362,40 +367,50 @@ export function MatchesPage() {
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-white/5">
-                                        {[1, 2, 3, 4].map((pos) => {
-                                            const groupKey = selectedGroup.split(' ')[1];
-                                            const teamLabel = `${groupKey}${pos}`; // Corrected: A1 instead of 1A
-                                            const teamName = getResolvedTeamName(teamLabel);
-                                            const teamCode = getResolvedTeamCode(teamLabel);
-                                            return (
-                                                <tr key={pos} className="group/row hover:bg-white/5 transition-colors">
-                                                    <td className="py-4 px-3 font-black text-brand-500 text-sm">#{pos}</td>
-                                                    <td className="py-4 px-3">
-                                                        <div className="flex items-center gap-3">
-                                                            <div className="w-8 h-5 rounded overflow-hidden border border-white/10 flex-shrink-0 shadow-sm flex items-center justify-center bg-white/5">
-                                                                {teamCode !== teamLabel ? (
-                                                                    <img src={getFlagUrl(teamCode)} alt="" className="w-full h-full object-cover" />
-                                                                ) : (
-                                                                    <Trophy className="w-4 h-4 text-brand-500/40" />
-                                                                )}
-                                                            </div>
-                                                            <div className="flex items-center gap-2">
-                                                                <span className="font-black text-[var(--text-primary)] text-sm uppercase tracking-tight">{teamCode}</span>
-                                                                {teamCode !== teamName && (
-                                                                    <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest truncate max-w-[120px]">{teamName}</span>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">0</td>
-                                                    <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">0</td>
-                                                    <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">0</td>
-                                                    <td className="py-4 px-3 text-right">
-                                                        <span className="inline-block px-3 py-1 bg-brand-500/10 text-brand-500 rounded-lg font-black text-sm">0</span>
-                                                    </td>
-                                                </tr>
+                                        {(() => {
+                                            const group = groups.find(g => g.name === selectedGroup);
+                                            if (!group) return null;
+
+                                            // Get all matches for this group
+                                            const groupMatches = schedule.flatMap(day =>
+                                                day.matches.filter(m => m.group === group.name.split(' ')[1])
                                             );
-                                        })}
+
+                                            const standings = calculateStandings(groupMatches, group.teams);
+
+                                            return standings.map((item, idx) => {
+                                                const teamName = getResolvedTeamName(item.teamLabel);
+                                                const teamCode = getResolvedTeamCode(item.teamLabel);
+                                                return (
+                                                    <tr key={item.teamLabel} className="group/row hover:bg-white/5 transition-colors">
+                                                        <td className="py-4 px-3 font-black text-brand-500 text-sm">#{idx + 1}</td>
+                                                        <td className="py-4 px-3">
+                                                            <div className="flex items-center gap-3">
+                                                                <div className="w-8 h-5 rounded overflow-hidden border border-white/10 flex-shrink-0 shadow-sm flex items-center justify-center bg-white/5">
+                                                                    {teamCode !== item.teamLabel ? (
+                                                                        <img src={getFlagUrl(teamCode)} alt="" className="w-full h-full object-cover" />
+                                                                    ) : (
+                                                                        <Trophy className="w-4 h-4 text-brand-500/40" />
+                                                                    )}
+                                                                </div>
+                                                                <div className="flex items-center gap-2">
+                                                                    <span className="font-black text-[var(--text-primary)] text-sm uppercase tracking-tight">{teamCode}</span>
+                                                                    {teamCode !== teamName && (
+                                                                        <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest truncate max-w-[120px]">{teamName}</span>
+                                                                    )}
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">{item.played}</td>
+                                                        <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">{item.goalsFor}</td>
+                                                        <td className="py-4 px-3 text-center font-bold text-[var(--text-primary)] text-sm">{item.goalsAgainst}</td>
+                                                        <td className="py-4 px-3 text-right">
+                                                            <span className="inline-block px-3 py-1 bg-brand-500/10 text-brand-500 rounded-lg font-black text-sm">{item.points}</span>
+                                                        </td>
+                                                    </tr>
+                                                );
+                                            });
+                                        })()}
                                     </tbody>
                                 </table>
                             </div>

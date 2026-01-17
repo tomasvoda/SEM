@@ -1,5 +1,6 @@
-import { LayoutDashboard, Users, Shield, Trophy, Users2, Coins, Bell, Car, Hotel, MapPin, ClipboardCheck, Handshake, ChevronLeft, ChevronRight, Menu } from 'lucide-react';
+import { LayoutDashboard, Users, Shield, Trophy, Users2, Coins, Bell, Car, Hotel, MapPin, ClipboardCheck, Handshake, ChevronLeft, ChevronRight, ListTodo, ClipboardList } from 'lucide-react';
 import { NavigationItem } from './NavigationItem';
+import { CollapsibleNavigationItem } from './CollapsibleNavigationItem';
 import { cn } from '../../lib/utils';
 
 interface SidebarProps {
@@ -9,10 +10,12 @@ interface SidebarProps {
 
 const navigation = [
     { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
-    { name: 'Delegations', href: '/admin/delegations', icon: Users },
     { name: 'Teams', href: '/teams', icon: Users2 },
     { name: 'Matches', href: '/matches', icon: Trophy },
+    { name: 'Delegations', href: '/admin/delegations', icon: Users },
     { name: 'Partners', href: '/partners', icon: Handshake },
+    { name: 'Tasks', href: '/admin/tasks', icon: ListTodo },
+    { name: 'Volunteers', href: '/admin/volunteers', icon: ClipboardList },
     { name: 'Logistics', href: '/logistics', icon: Car },
 ];
 
@@ -86,14 +89,19 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
                         <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
                     ))}
 
-                    {!isCollapsed && <p className="px-2 text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mt-6 mb-2 animate-in fade-in">Accommodation</p>}
-                    {isCollapsed && <div className="my-2 border-t border-white/5 mx-2" />}
+                    <CollapsibleNavigationItem
+                        name="Accommodation"
+                        icon={Hotel}
+                        isCollapsed={isCollapsed}
+                        items={accommodationNavigation}
+                    >
+                        {accommodationNavigation.map((item) => (
+                            <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
+                        ))}
+                    </CollapsibleNavigationItem>
 
-                    {accommodationNavigation.map((item) => (
-                        <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
-                    ))}
 
-                    {!isCollapsed && <p className="px-2 text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider mt-6 mb-2 animate-in fade-in">Admin</p>}
+                    {!isCollapsed && <p className="px-2 text-xs font-semibold text-[var(--color-text-muted)] capitalize tracking-wider mt-6 mb-2 animate-in fade-in">Admin</p>}
                     {isCollapsed && <div className="my-2 border-t border-white/5 mx-2" />}
 
                     {adminLogisticsNav.map((item) => (

@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--[if IE 7]> <html lang="en" class="ie7"> <![endif]--><!--[if IE 8]> <html lang="en" class="ie8"> <![endif]--><!--[if IE 9]> <html lang="en" class="ie9"> <![endif]--><!--[if !IE]><!--><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]--><head><title>
+Český korfbalový svaz
+</title><!-- Meta --><meta content="Apache Tapestry Framework (version 5.3.8)" name="generator"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Český korfbalový svaz" property="og:title"/><meta content="Jeho cílem je zejména vytvářet podmínky pro rozvoj korfbalu na území České republiky, a to na úrovni rekreační, výkonnostní i vrcholové, a reprezentovat český korfbal v zahraničí." name="description"/><meta content="Jeho cílem je zejména vytvářet podmínky pro rozvoj korfbalu na území České republiky, a to na úrovni rekreační, výkonnostní i vrcholové, a reprezentovat český korfbal v zahraničí." property="og:description"/><meta content="https://www.korfbal.cz/assets/1.28.1/ctx/assets/img/cks/logo.jpg" property="og:image"/><meta content="1131" property="og:image:width"/><meta content="1000" property="og:image:height"/><meta content="https://www.korfbal.cz/error404" property="og:url"/><meta content="article" property="og:type"/><meta content="cs_CZ" property="og:locale"/><meta content="Český korfbalový svaz" property="og:site_name"/><meta content="Český korfbalový svaz" property="og:image:alt"/><meta content="summary_large_image" name="twitter:card"/><meta content="Český korfbalový svaz" name="twitter:image:alt"/><meta content="@cesky_korfbal" name="twitter:site"/><meta content="124456590564" property="fb:pages"/><meta content="132281564269" property="fb:app_id"/><!-- CSS Global Compulsory --><link href="/assets/1.28.1/ctx/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/assets/css/style.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/assets/css/headers/header1.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/assets/css/style_responsive.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/favicon.ico" rel="shortcut icon"/><!-- CSS Implementing Plugins --><link href="/assets/1.28.1/ctx/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet"/><link media="screen" type="text/css" href="/assets/1.28.1/ctx/assets/plugins/flexslider/flexslider.css" rel="stylesheet"/><link type="text/css" href="/assets/1.28.1/ctx/assets/plugins/parallax-slider/css/parallax-slider.css" rel="stylesheet"/><link href="/assets/1.28.1/ctx/assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet"/><!-- CSS Theme --><link id="style_color" href="/assets/1.28.1/ctx/assets/css/themes/cks.css" rel="stylesheet"/><link id="style_color-header-1" href="/assets/1.28.1/ctx/assets/css/themes/headers/header1-cks.css" rel="stylesheet"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/core/default.css"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/ctx/jquery-ui/bootstrap-theme/jquery-ui-1.9.2.custom.css"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/core/tapestry-console.css"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/core/t5-alerts.css"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/core/tree.css"/><link type="text/css" rel="stylesheet" href="/assets/1.28.1/tb/t5-bootstrap-alerts.css"/><script src="/assets/1.28.1/stack/cs_CZ/core.js" type="text/javascript"></script><script src="/assets/1.28.1/jquery/ui_1.12.1/minified/unique-id.js" type="text/javascript"></script><script src="/assets/1.28.1/app/components/FloatingCart.js" type="text/javascript"></script><script src="/assets/1.28.1/tb/t5-bootstrap-alerts.js" type="text/javascript"></script></head><body><!--=== Top === --><div class="top"><div class="container"><ul class="loginbar pull-right"><a id="tynamoLoginLink" class="btn btn-success" href="/error404.layout.profilemenu.loginlink_0.tynamologinlink">Přihlásit
+</a></ul></div></div><!--/top --><!--=== End Top === --><!--=== Header === --><div class="header"><div class="container"><!-- Logo --><div class="logo"><a title="Český korfbalový svaz" href="/"><img alt="Logo" src="/assets/1.28.1/ctx/assets/img/logo1-cks.png" id="logo-header"/></a></div><!-- /logo --><!-- Menu --><div class="navbar"><div class="navbar-inner"><a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><!-- /nav-collapse --><div class="nav-collapse collapse"><ul class="nav top-2"><li class="active"><a href="/"><i class="icon-home icon-large"></i></a></li><li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+O korfbalu
+<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/article/o-korfbalu-historie">Historie</a></li><li><a href="/article/novy-klub-vybaveni">Korfbalové vybavení</a></li><li><a href="/article/o-korfbalu-pravidla">Pravidla</a></li><li><a href="http://www.ceskatelevize.cz/ivysilani/10520031365-zijme-sportem/213471290330017/">ČT: Žijme sportem! Korfbal</a></li><li><a href="/article/novy-klub-zalozeni">Jak začít s korfbalem?</a></li></ul></li><li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+Soutěže
+<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/competitions/extraliga">Extraliga</a></li><li><a href="/competitions/1-liga">1. liga</a></li><li><a href="/competitions/dorost">Dorost</a></li><li><a href="/competitions/ozp-1-liga-starsi-zaci">OZP Starší žáci</a></li><li><a href="/competitions/mladsi-zaci">Mladší žáci</a></li><li><a href="/competitions/minizaci">Minižáci</a></li><li><a href="/competitions/pripravka">Přípravka</a></li><li><a href="/competitions/ikf-europa-cup">IKF Europa Cup</a></li><li><a href="/competitions/ikf-europa-shield">IKF Europa Shield</a></li><li><a href="/article/vysledkove-listiny">Výsledkové listiny</a></li></ul></li><li><a href="https://repre.korfbal.cz">Reprezentace</a></li><li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+Svaz
+<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/article/svaz-cinnost">Činnost</a></li><li><a href="/article/svaz-struktura">Organizační struktura</a></li><li><a href="/article/svaz-zpravy">Zprávy z jednání</a></li><li><a href="/article/svaz-komise">Komise ČKS</a></li><li><a href="https://www.korfbal.cz/zpravodaj/7298-c10-2021">Korfbalový zpravodaj - archiv</a></li><li><a href="/article/30-let-s-korfbalem">30 let s korfbalem</a></li><li><a href="/article/aplikace">Aplikace</a></li><li><a href="/article/2020-09-30-partneri">Partneři</a></li></ul></li><li><a href="/article/dokumenty">Dokumenty</a></li><li><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+Adresář
+<b class="caret"></b></a><ul class="dropdown-menu"><li><a href="/article/adresar-svaz">Svazové orgány</a></li><li><a href="/referees">Rozhodčí</a></li><li><a href="/clubs">Kluby</a></li></ul></li></ul></div><!-- /nav-collapse --></div><!-- /navbar-inner --></div><!-- /navbar --></div><!-- /container --></div><!--/header --><!--=== End Header === --><div class="app-alerts"><div class="container"><div class="row"><div class="span4 offset4"><div id="alerts"></div></div></div></div></div><div class="container"><div class="headline missing"></div></div><!-- Content Part --><div class="container" id="body-content"><div class="row"><div class="span12"><div class="text-center"><h1>Stránka nenalezena!</h1><img height="240" width="320" src="/assets/1.28.1/ctx/assets/img/cks/korfbal_block.gif"/></div></div></div></div><!--/container --><!-- End Content Part --><div id="body-footer"><!--=== Footer === --><div class="footer"><div class="container"><div class="row-fluid"><div class="span4"><div class="headline"><h3>O Českém korfbalovém svazu</h3></div><div class="block-text"><p>Jeho cílem je zejména vytvářet podmínky pro rozvoj korfbalu na území České republiky, a to na úrovni rekreační, výkonnostní i vrcholové, a reprezentovat český korfbal v zahraničí.</p>
+</div><!-- Stay Connected --><div class="headline"><h3>Zůstaň ve spojení</h3></div><ul class="social-icons"><li><a class="social_facebook" data-original-title="Facebook" target="_blank" href="https://www.facebook.com/cesky.korfbal"></a></li><li><a class="social_youtube" data-original-title="YouTube" href="https://www.youtube.com/channel/UCmhAGQJmmLFA4mv2PDklexA"></a></li><li><a class="social_instagram" data-original-title="Instagram" target="_blank" href="https://www.instagram.com/czechkorfbal/"></a></li><li><a class="social_rss" data-original-title="Feed" href="https://www.korfbal.cz/articles?feed=1"></a></li></ul></div><!--/span4 --><div class="span4"><div class="headline"><h3>Partneři</h3></div><div class="block-text"><!--raw--><p style="text-align:center"><a href="https://agenturasport.cz/" target="_blank"><img alt="" src="/attachment/8500" style="width:55%" /></a><a href="http://www.cukis.cz/" target="_blank"><img alt="" src="/attachment/5411" style="width:40%" /></a></p>
+<p style="text-align:center"><a href="http://www.cuscz.cz/" target="_blank">&nbsp<img alt=" " src="/attachment/5415" style="width:25%" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.ozp.cz/" target="_blank" title="Oborová zdravotní pojišťovna"><img alt="" src="/attachment/11902" style="width:60%" /></a></p>
+
+<p style="text-align:center"><a href="http://www.mikasa.cz/" target="_blank">&nbsp<img alt=" " src="/attachment/4767" style="width:45%" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.koutny.cz/" target="_blank" title="Koutný Prostějov"><img alt="" src="/attachment/10992" style="width:45%" /></a></p>
+
+<p style="text-align:center; margin-top: 2rem"><a href="https://stredoceskykraj.cz/" target="_blank">&nbsp<img alt=" " src="/attachment/12221" style="width:45%" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.kutnahora.cz/" target="_blank"><img alt="" src="/attachment/12223" style="width:45%" /></a></p>
+
+<!--<p style="text-align:center"><a href="http://visegradfund.org/" target="_blank"><img alt="" src="/attachment/4769" style="width:60%" /></a></p>--></div></div><!--/span4 --><div class="span4"><address><div class="headline"><h3>Kontakt</h3></div><div class="block-text"><address>
+<p>Český korfbalový svaz z.s.<br />
+Zátopkova 100/2, 160 17&nbsp;Praha 6</p>
+
+<p>emai<span style="color:#D3D3D3">l:&nbsp;</span><a href="/cdn-cgi/l/email-protection#076e696168476c68756165666b29647d"><span style="color:#D3D3D3"><span class="__cf_email__" data-cfemail="5c35323a331c37332e3a3e3d30723f26">[email&#160;protected]</span></span></a><br />
+Tel: +420 702 202 389</p>
+
+<p>identifikátor datové schránky:&nbsp;ffpc6nn</p>
+
+<p>zapsán ve spolkovém rejstříku vedeném Městským soudem v Praze, oddíl L, vložka 2244</p>
+</address>
+</div></address></div><!--/span4 --></div><!--/row-fluid --></div><!--/container --></div><!--/footer --><!--=== End Footer === --><!--=== Copyright === --><div class="copyright"><div class="container"><div class="row-fluid"><div class="span8"><p>
+©
+2013-2026
+Český korfbalový svaz.
+Realizace
+Jan Mynařík
+(verze
+1.28.1).
+Všechna práva vyhrazena.
+</p></div><div class="span4"><a href="/"><img alt="" class="pull-right" src="/assets/1.28.1/ctx/assets/img/cks/logo_bile.png" id="logo-footer"/></a></div></div><!--/row-fluid --></div><!--/container --></div><!--/copyright --><!--=== End Copyright === --></div><!-- JS Global Compulsory --><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/assets/1.28.1/ctx/assets/js/modernizr.custom.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script><!-- JS Implementing Plugins --><script src="/assets/1.28.1/ctx/assets/plugins/flexslider/jquery.flexslider-min.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/plugins/parallax-slider/js/modernizr.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/plugins/parallax-slider/js/jquery.cslider.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/plugins/bxslider/jquery.bxslider.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/plugins/back-to-top.js" type="text/javascript"></script><!-- JS Page Level --><script src="/assets/1.28.1/ctx/assets/js/app.js" type="text/javascript"></script><script src="/assets/1.28.1/ctx/assets/js/pages/index.js" type="text/javascript"></script><script type="text/javascript">
+jQuery(document).ready(function() {
+App.init();
+App.initSliders();
+App.initBxSlider1();
+Index.initParallaxSlider();
+});
+</script><!--[if lt IE 9]><!--><script src="/assets/1.28.1/ctx/assets/js/respond.js"></script><!--<![endif]--><script type="text/javascript">
+var disqus_shortname = 'korfbalcz'; // required: replace example with your forum shortname
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script><script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-2697940-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script><script type="text/javascript">var $ = jQuery; Tapestry.JQUERY=true;
+Tapestry.onDOMLoaded(function() {
+Tapestry.init({"bootstrapAlerts":[[]],"alertManager":[{"dismissURL":"/error404.layout.alerts:dismiss","id":"alerts","dismissText":"Dismiss all"}]});
+window.updateCartZone = function() { $('#null').tapestryZone('update', { url: 'https://www.korfbal.cz/error404.layout.floatingcart:cartupdate'} );$('#null').tapestryZone('update', { url: 'https://www.korfbal.cz/error404.layout.floatingcart:cartbadgeupdate'} ); };
+window.updateCart(false);
+});
+</script></body></html>

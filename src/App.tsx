@@ -38,9 +38,12 @@ import { AdminDelegationWizard } from './features/admin/delegations/AdminDelegat
 import { DelegationGallery } from './features/admin/DelegationGallery';
 import { TeamsListPage } from './features/teams/TeamsListPage';
 import { MatchesPage } from './features/matches/MatchesPage';
+import { PartnersPage } from './features/public/PartnersPage';
 import VenueAdminPage from './features/admin/matches/VenueAdminPage';
 import MatchResultsPage from './features/admin/matches/MatchResultsPage';
 import TeamRostersPage from './features/admin/matches/TeamRostersPage';
+import { TasksPage } from './features/admin/TasksPage';
+import { VolunteersPage } from './features/admin/VolunteersPage';
 
 function App() {
   const { theme } = useThemeStore();
@@ -129,6 +132,9 @@ function App() {
               {/* Legacy redirects */}
               <Route path="reports/accommodation" element={<Navigate to="/admin/accommodation/report" replace />} />
               <Route path="accommodation/reports" element={<Navigate to="/admin/accommodation/report" replace />} />
+
+              <Route path="tasks" element={<TasksPage />} />
+              <Route path="volunteers" element={<VolunteersPage />} />
             </Route>
           </Route>
 
@@ -148,7 +154,7 @@ function App() {
           <Route path="/teams" element={<TeamsListPage />} />
           <Route path="/matches" element={<MatchesPage />} />
           <Route path="/logistics" element={<UnderConstructionPage />} />
-          <Route path="/partners" element={<UnderConstructionPage />} />
+          <Route path="/partners" element={<PartnersPage />} />
           <Route path="/transport" element={<PlaceholderPage title="Transport" subtitle="Shuttle schedules and visuals" />} />
           <Route path="/meals" element={<PlaceholderPage title="Meals" subtitle="Catering and dining schedules" />} />
 

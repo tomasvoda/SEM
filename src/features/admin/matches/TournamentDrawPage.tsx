@@ -56,7 +56,11 @@ export default function TournamentDrawPage() {
             <div className="flex justify-between items-end">
                 <PageHeader
                     title="Tournament Draw"
-                    subtitle="Assign registered teams to group labels (A1, A2, etc.)"
+                    subtitle="Organize teams into groups and match brackets"
+                    breadcrumbs={[
+                        { label: 'Admin', href: '/admin/dashboard' },
+                        { label: 'Draw' }
+                    ]}
                 />
 
                 {saveSuccess && (

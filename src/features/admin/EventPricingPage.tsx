@@ -10,20 +10,17 @@ export function EventPricingPage() {
     return (
         <div className="space-y-6">
             <div className="flex flex-col gap-2">
-                <Breadcrumbs
-                    items={[
-                        { label: 'Admin', path: '/admin/dashboard' },
-                        { label: 'Hotels', path: '/admin/hotels' },
-                        { label: 'Event Packages' }
-                    ]}
-                />
                 <PageHeader
-                    title="Event Packages"
-                    subtitle="Configure global rates for accommodation, catering, transport, and accreditation."
+                    title="Pricing & Packages"
+                    subtitle="Manage event pricing, hotel rates, and meal packages"
+                    breadcrumbs={[
+                        { label: 'Admin', href: '/admin/dashboard' },
+                        { label: 'Pricing' }
+                    ]}
                 />
             </div>
 
-            <div className="max-w-4xl">
+            <div className="w-full">
                 <PricingSettings />
             </div>
         </div>
