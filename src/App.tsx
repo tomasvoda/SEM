@@ -44,6 +44,7 @@ import MatchResultsPage from './features/admin/matches/MatchResultsPage';
 import TeamRostersPage from './features/admin/matches/TeamRostersPage';
 import { TasksPage } from './features/admin/TasksPage';
 import { VolunteersPage } from './features/admin/VolunteersPage';
+import { VolunteerRegistrationPage } from './features/public/VolunteerRegistrationPage';
 
 function App() {
   const { theme } = useThemeStore();
@@ -155,6 +156,7 @@ function App() {
           <Route path="/matches" element={<MatchesPage />} />
           <Route path="/logistics" element={<UnderConstructionPage />} />
           <Route path="/partners" element={<PartnersPage />} />
+          <Route path="/volunteers/register" element={<VolunteerRegistrationPage />} />
           <Route path="/transport" element={<PlaceholderPage title="Transport" subtitle="Shuttle schedules and visuals" />} />
           <Route path="/meals" element={<PlaceholderPage title="Meals" subtitle="Catering and dining schedules" />} />
 
