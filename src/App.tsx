@@ -135,7 +135,10 @@ function App() {
               <Route path="accommodation/reports" element={<Navigate to="/admin/accommodation/report" replace />} />
 
               <Route path="tasks" element={<TasksPage />} />
-              <Route path="volunteers" element={<VolunteersPage />} />
+              <Route path="volunteers">
+                <Route index element={<VolunteersPage />} />
+                <Route path="register" element={<VolunteerRegistrationPage />} />
+              </Route>
             </Route>
           </Route>
 

@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { GlassCard } from '../../components/ui/GlassCard';
 import { PageHeader } from '../../components/ui/PageHeader';
 import {
@@ -294,10 +295,47 @@ function TaskEditModal({ task, onClose, onSave, nextNr }: {
 function StatusDropdown({ status, onChange }: { status: TaskStatus, onChange: (s: TaskStatus) => void }) {
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
+    const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
+
+    useEffect(() => {
+        const updatePosition = () => {
+            if (isOpen && containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                const dropdownHeight = 200;
+                const spaceBelow = window.innerHeight - rect.bottom;
+                const openUp = spaceBelow < dropdownHeight && rect.top > dropdownHeight;
+
+                setDropdownStyles({
+                    position: 'fixed',
+                    top: openUp ? 'auto' : `${rect.bottom + 8}px`,
+                    bottom: openUp ? `${window.innerHeight - rect.top + 8}px` : 'auto',
+                    left: `${rect.left}px`,
+                    width: '192px', // 48 * 4 (w-48)
+                    zIndex: 9999,
+                });
+            }
+        };
+
+        if (isOpen) {
+            updatePosition();
+            window.addEventListener('scroll', updatePosition, true);
+            window.addEventListener('resize', updatePosition);
+        }
+
+        return () => {
+            window.removeEventListener('scroll', updatePosition, true);
+            window.removeEventListener('resize', updatePosition);
+        };
+    }, [isOpen]);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+            const target = event.target as HTMLElement;
+            if (
+                containerRef.current &&
+                !containerRef.current.contains(target) &&
+                !target.closest('.status-dropdown-portal')
+            ) {
                 setIsOpen(false);
             }
         };
@@ -321,30 +359,33 @@ function StatusDropdown({ status, onChange }: { status: TaskStatus, onChange: (s
                 <StatusBadge status={status} />
             </button>
 
-            {isOpen && (
-                <GlassCard className="absolute top-full left-0 mt-2 z-50 w-48 p-2 border-white/10 shadow-2xl animate-in fade-in zoom-in-95 duration-100">
-                    <div className="flex flex-col gap-1">
-                        {statuses.map((s) => (
-                            <button
-                                key={s.value}
-                                onClick={() => {
-                                    onChange(s.value);
-                                    setIsOpen(false);
-                                }}
-                                className={cn(
-                                    "flex items-center justify-between px-3 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-colors",
-                                    status === s.value ? "bg-white/10 text-white" : "text-white/40 hover:bg-white/5 hover:text-white"
-                                )}
-                            >
-                                <div className="flex items-center gap-2">
-                                    <s.icon className={cn("w-3 h-3", s.color)} />
-                                    {s.label}
-                                </div>
-                                {status === s.value && <Check className="w-3 h-3 text-brand-500" />}
-                            </button>
-                        ))}
-                    </div>
-                </GlassCard>
+            {isOpen && createPortal(
+                <div style={dropdownStyles} className="status-dropdown-portal">
+                    <GlassCard className="w-48 p-2 border-white/10 shadow-2xl animate-in fade-in zoom-in-95 duration-100">
+                        <div className="flex flex-col gap-1">
+                            {statuses.map((s) => (
+                                <button
+                                    key={s.value}
+                                    onClick={() => {
+                                        onChange(s.value);
+                                        setIsOpen(false);
+                                    }}
+                                    className={cn(
+                                        "flex items-center justify-between px-3 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-colors",
+                                        status === s.value ? "bg-white/10 text-white" : "text-white/40 hover:bg-white/5 hover:text-white"
+                                    )}
+                                >
+                                    <div className="flex items-center gap-2">
+                                        <s.icon className={cn("w-3 h-3", s.color)} />
+                                        {s.label}
+                                    </div>
+                                    {status === s.value && <Check className="w-3 h-3 text-brand-500" />}
+                                </button>
+                            ))}
+                        </div>
+                    </GlassCard>
+                </div>,
+                document.body
             )}
         </div>
     );

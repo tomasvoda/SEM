@@ -14,8 +14,6 @@ const navigation = [
     { name: 'Matches', href: '/matches', icon: Trophy },
     { name: 'Delegations', href: '/admin/delegations', icon: Users },
     { name: 'Partners', href: '/partners', icon: Handshake },
-    { name: 'Tasks', href: '/admin/tasks', icon: ListTodo },
-    { name: 'Volunteers', href: '/admin/volunteers', icon: ClipboardList },
     { name: 'Logistics', href: '/logistics', icon: Car },
 ];
 
@@ -35,6 +33,10 @@ const adminCompetitionNav = [
     { name: 'Draw', href: '/admin/matches/draw', icon: Trophy },
     { name: 'Rosters', href: '/admin/rosters', icon: Users },
     { name: 'Results', href: '/admin/results', icon: ClipboardCheck },
+];
+const adminStaffNav = [
+    { name: 'Tasks', href: '/admin/tasks', icon: ListTodo },
+    { name: 'Volunteers', href: '/admin/volunteers', icon: ClipboardList },
 ];
 
 export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
@@ -108,10 +110,11 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
                         <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
                     ))}
 
-                    {/* Separator */}
-                    <div className="my-2 border-t border-[var(--glass-border)] mx-2 opacity-50" />
-
                     {adminCompetitionNav.map((item) => (
+                        <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
+                    ))}
+
+                    {adminStaffNav.map((item) => (
                         <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
                     ))}
 

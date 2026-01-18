@@ -4,14 +4,25 @@ import {
     User, Mail, Phone, Calendar,
     MapPin, Check,
     ChevronRight, ChevronLeft, Heart,
-    Send
+    Send, Building, Briefcase
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useVolunteerStore, EVENT_DATES } from '../../store/volunteerStore';
-import type { AvailabilityStatus } from '../../store/volunteerStore';
+import type { AvailabilityStatus, VolunteerRole } from '../../store/volunteerStore';
 import { format, parseISO } from 'date-fns';
 
 type FormStep = 'personal' | 'availability' | 'confirmation';
+
+const ROLES: { value: VolunteerRole; label: string }[] = [
+    { value: 'driver', label: 'Řidič' },
+    { value: 'results', label: 'Výsledkový servis' },
+    { value: 'court', label: 'Obsluha hřiště' },
+    { value: 'hospitality', label: 'Hospitality & VIP' },
+    { value: 'media', label: 'Média' },
+    { value: 'general', label: 'Všeobecná výpomoc' },
+];
+
+const TOURNAMENT_LOCATIONS = ['Prostějov', 'Otrokovice', 'Zlín'];
 
 export function VolunteerRegistrationPage() {
     const { addVolunteer } = useVolunteerStore();
@@ -24,14 +35,18 @@ export function VolunteerRegistrationPage() {
         email: '',
         phone: '',
         birthDate: '',
-        city: '',
-        languages: [] as string[],
+        homeClub: '',
+        languages: ['CZ'] as string[],
+        preferredRoles: [] as VolunteerRole[],
         preferredLocations: [] as string[],
-        availabilityByDay: {} as Record<string, AvailabilityStatus>,
+        availabilityByDay: EVENT_DATES.reduce((acc, date) => {
+            if (date === '2026-10-14') acc[date] = 'afternoon';
+            else if (date === '2026-10-25') acc[date] = 'morning';
+            else acc[date] = 'full';
+            return acc;
+        }, {} as Record<string, AvailabilityStatus>),
         gdpr: false
     });
-
-    const locations = ['Prague', 'Zlín', 'Brno', 'Otrokovice', 'Prostějov'];
 
     const toggleLocation = (loc: string) => {
         setFormData(prev => ({
@@ -42,12 +57,12 @@ export function VolunteerRegistrationPage() {
         }));
     };
 
-    const toggleLanguage = (lang: string) => {
+    const toggleRole = (role: VolunteerRole) => {
         setFormData(prev => ({
             ...prev,
-            languages: prev.languages.includes(lang)
-                ? prev.languages.filter(l => l !== lang)
-                : [...prev.languages, lang]
+            preferredRoles: prev.preferredRoles.includes(role)
+                ? prev.preferredRoles.filter(r => r !== role)
+                : [...prev.preferredRoles, role]
         }));
     };
 
@@ -61,13 +76,27 @@ export function VolunteerRegistrationPage() {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        addVolunteer({
-            ...formData,
-            source: 'public'
-        });
-        setIsSubmitted(true);
+        try {
+            await addVolunteer({
+                first_name: formData.firstName,
+                last_name: formData.lastName,
+                email: formData.email,
+                phone: formData.phone,
+                birth_date: formData.birthDate,
+                home_club: formData.homeClub,
+                languages: formData.languages,
+                preferred_roles: formData.preferredRoles,
+                preferred_locations: formData.preferredLocations,
+                availability_by_day: formData.availabilityByDay,
+                source: 'public'
+            });
+            setIsSubmitted(true);
+        } catch (error) {
+            console.error('Registration failed:', error);
+            alert('Registrace se nezdařila. Zkuste to prosím znovu.');
+        }
     };
 
     if (isSubmitted) {
@@ -77,16 +106,16 @@ export function VolunteerRegistrationPage() {
                     <div className="w-20 h-20 rounded-3xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-8">
                         <Check className="w-10 h-10 text-emerald-500" />
                     </div>
-                    <h2 className="text-2xl font-black text-white uppercase tracking-tight">Registration Sent!</h2>
+                    <h2 className="text-2xl font-black text-white uppercase tracking-tight">Registrace odeslána!</h2>
                     <p className="text-sm text-[var(--text-muted)] leading-relaxed">
-                        Thank you for your interest in volunteering for EURO 2026. We've received your application and sent a confirmation email to <span className="text-white font-bold">{formData.email}</span>.
+                        Děkujeme za váš zájem o dobrovolnictví na EURO 2026. Vaši přihlášku jsme přijali a odeslali jsme potvrzovací e-mail na adresu <span className="text-white font-bold">{formData.email}</span>.
                     </p>
                     <div className="pt-4">
                         <button
                             onClick={() => window.location.href = '/'}
                             className="w-full py-4 bg-brand-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-brand-500/20 hover:scale-[1.02] transition-all"
                         >
-                            Back to Home
+                            Zpět na úvod
                         </button>
                     </div>
                 </GlassCard>
@@ -100,10 +129,10 @@ export function VolunteerRegistrationPage() {
                 {/* Header */}
                 <div className="text-center space-y-2">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-[10px] font-black text-brand-400 uppercase tracking-[0.2em] mb-4">
-                        <Heart className="w-3 h-3" /> Join the team
+                        <Heart className="w-3 h-3" /> Přidej se k týmu
                     </div>
-                    <h1 className="text-4xl font-black text-white uppercase tracking-tighter">Volunteer Registration</h1>
-                    <p className="text-[var(--text-muted)] text-sm max-w-xl mx-auto">Be part of the European Korfball Championship 2026. Join our team and help us create an unforgettable event.</p>
+                    <h1 className="text-4xl font-black text-white uppercase tracking-tighter">Registrace dobrovolníka</h1>
+                    <p className="text-[var(--text-muted)] text-sm max-w-xl mx-auto">Staňte se součástí Mistrovství Evropy v korfbalu 2026. Přidejte se k našemu týmu a pomozte nám vytvořit nezapomenutelnou akci.</p>
                 </div>
 
                 {/* Progress */}
@@ -116,25 +145,48 @@ export function VolunteerRegistrationPage() {
                 <form onSubmit={handleSubmit}>
                     {step === 'personal' && (
                         <GlassCard className="p-8 md:p-12 border-white/10 shadow-2xl animate-in fade-in slide-in-from-bottom-4 duration-500">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                                 <div className="space-y-6">
-                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-8">Personal Details</h3>
-                                    <InputItem icon={User} label="First Name" type="text" value={formData.firstName} onChange={(v: string) => setFormData(p => ({ ...p, firstName: v }))} required />
-                                    <InputItem icon={User} label="Last Name" type="text" value={formData.lastName} onChange={(v: string) => setFormData(p => ({ ...p, lastName: v }))} required />
-                                    <InputItem icon={Mail} label="Email Address" type="email" value={formData.email} onChange={(v: string) => setFormData(p => ({ ...p, email: v }))} required />
-                                    <InputItem icon={Phone} label="Phone Number" type="tel" value={formData.phone} onChange={(v: string) => setFormData(p => ({ ...p, phone: v }))} required />
+                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-8">Osobní údaje</h3>
+                                    <InputItem icon={User} label="Jméno" type="text" value={formData.firstName} onChange={(v: string) => setFormData(p => ({ ...p, firstName: v }))} required />
+                                    <InputItem icon={User} label="Příjmení" type="text" value={formData.lastName} onChange={(v: string) => setFormData(p => ({ ...p, lastName: v }))} required />
+                                    <InputItem icon={Mail} label="E-mailová adresa" type="email" value={formData.email} onChange={(v: string) => setFormData(p => ({ ...p, email: v }))} required />
+                                    <InputItem icon={Phone} label="Telefonní číslo" type="tel" value={formData.phone} onChange={(v: string) => setFormData(p => ({ ...p, phone: v }))} required />
                                 </div>
-                                <div className="space-y-6">
-                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-8">Location & Extras</h3>
-                                    <InputItem icon={Calendar} label="Date of Birth" type="date" value={formData.birthDate} onChange={(v: string) => setFormData(p => ({ ...p, birthDate: v }))} required />
-                                    <InputItem icon={MapPin} label="Your City" type="text" value={formData.city} onChange={(v: string) => setFormData(p => ({ ...p, city: v }))} required />
+                                <div className="space-y-8">
+                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-8">Klub a preference</h3>
+                                    <InputItem icon={Building} label="Domovský klub" type="text" placeholder="např. Korfbal Club Brno" value={formData.homeClub} onChange={(v: string) => setFormData(p => ({ ...p, homeClub: v }))} required />
+                                    <InputItem icon={Calendar} label="Datum narození" type="date" value={formData.birthDate} onChange={(v: string) => setFormData(p => ({ ...p, birthDate: v }))} required />
 
                                     <div className="space-y-3">
                                         <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
-                                            <MapPin className="w-3 h-3" /> Preferred Locations
+                                            <Briefcase className="w-3 h-3" /> Preferované role
                                         </label>
                                         <div className="flex flex-wrap gap-2">
-                                            {locations.map(loc => (
+                                            {ROLES.map(role => (
+                                                <button
+                                                    key={role.value}
+                                                    type="button"
+                                                    onClick={() => toggleRole(role.value)}
+                                                    className={cn(
+                                                        "px-3 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all",
+                                                        formData.preferredRoles.includes(role.value)
+                                                            ? "bg-brand-500 text-white shadow-lg shadow-brand-500/20"
+                                                            : "bg-white/5 text-white/40 border border-white/10 hover:border-white/20"
+                                                    )}
+                                                >
+                                                    {role.label}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3">
+                                        <label className="text-[9px] font-black text-slate-500 uppercase tracking-widest flex items-center gap-2">
+                                            <MapPin className="w-3 h-3" /> Preferované lokality
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {TOURNAMENT_LOCATIONS.map(loc => (
                                                 <button
                                                     key={loc}
                                                     type="button"
@@ -160,7 +212,7 @@ export function VolunteerRegistrationPage() {
                                     onClick={() => setStep('availability')}
                                     className="flex items-center gap-2 px-8 py-4 bg-brand-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-brand-500/20 hover:scale-[1.02] transition-all"
                                 >
-                                    Availability <ChevronRight className="w-4 h-4" />
+                                    Dále: Dostupnost <ChevronRight className="w-4 h-4" />
                                 </button>
                             </div>
                         </GlassCard>
@@ -170,8 +222,8 @@ export function VolunteerRegistrationPage() {
                         <GlassCard className="p-8 md:p-12 border-white/10 shadow-2xl animate-in fade-in slide-in-from-right-4 duration-500">
                             <div className="space-y-8">
                                 <div className="text-center md:text-left">
-                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-2">When are you available?</h3>
-                                    <p className="text-xs text-[var(--text-muted)]">Select your availability for each tournament day. This helps us plan shifts.</p>
+                                    <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-[0.3em] mb-2">Jaká je vaše dostupnost?</h3>
+                                    <p className="text-xs text-[var(--text-muted)]">Vyberte svou dostupnost pro jednotlivé dny turnaje. Pomůže nám to s plánováním směn.</p>
                                 </div>
 
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
@@ -179,10 +231,10 @@ export function VolunteerRegistrationPage() {
                                         <div key={date} className="space-y-2">
                                             <p className="text-[10px] font-black text-white/40 uppercase tracking-widest text-center">{format(parseISO(date), 'EEE, dd.MM')}</p>
                                             <div className="flex flex-col gap-1">
-                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'full'} onClick={() => setDayAvailability(date, 'full')} label="Full" />
-                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'morning'} onClick={() => setDayAvailability(date, 'morning')} label="AM" />
-                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'afternoon'} onClick={() => setDayAvailability(date, 'afternoon')} label="PM" />
-                                                <AvailabilityBtn active={!formData.availabilityByDay[date] || formData.availabilityByDay[date] === 'none'} onClick={() => setDayAvailability(date, 'none')} label="None" />
+                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'full'} onClick={() => setDayAvailability(date, 'full')} label="Celý den" />
+                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'morning'} onClick={() => setDayAvailability(date, 'morning')} label="Dopoledne" />
+                                                <AvailabilityBtn active={formData.availabilityByDay[date] === 'afternoon'} onClick={() => setDayAvailability(date, 'afternoon')} label="Odpoledne" />
+                                                <AvailabilityBtn active={!formData.availabilityByDay[date] || formData.availabilityByDay[date] === 'none'} onClick={() => setDayAvailability(date, 'none')} label="Nemůžu" />
                                             </div>
                                         </div>
                                     ))}
@@ -197,7 +249,7 @@ export function VolunteerRegistrationPage() {
                                             {formData.gdpr && <Check className="w-3.5 h-3.5 text-white" />}
                                         </div>
                                         <span className="text-xs text-[var(--text-muted)] leading-relaxed">
-                                            I agree to the <span className="text-white underline">processing of personal data</span> for the purpose of volunteer selection and coordination for EURO 2026.
+                                            Souhlasím se <span className="text-white underline">zpracováním osobních údajů</span> pro účely výběru a koordinace dobrovolníků pro EURO 2026.
                                         </span>
                                     </label>
 
@@ -207,7 +259,7 @@ export function VolunteerRegistrationPage() {
                                             onClick={() => setStep('personal')}
                                             className="flex items-center gap-2 px-6 py-4 bg-white/5 text-white/60 rounded-2xl text-xs font-black uppercase tracking-widest hover:bg-white/10 transition-colors"
                                         >
-                                            <ChevronLeft className="w-4 h-4" /> Back
+                                            <ChevronLeft className="w-4 h-4" /> Zpět
                                         </button>
                                         <button
                                             type="submit"
@@ -217,7 +269,7 @@ export function VolunteerRegistrationPage() {
                                                 !formData.gdpr ? "opacity-50 cursor-not-allowed" : "hover:scale-[1.05] active:scale-95"
                                             )}
                                         >
-                                            Submit Registration <Send className="w-4 h-4 ml-2" />
+                                            Odeslat registraci <Send className="w-4 h-4 ml-2" />
                                         </button>
                                     </div>
                                 </div>
