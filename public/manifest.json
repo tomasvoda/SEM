@@ -8,8 +8,8 @@
     "orientation": "portrait",
     "icons": [
         {
-            "src": "/favicon.svg",
-            "type": "image/svg+xml",
+            "src": "/korfby.jpg",
+            "type": "image/jpeg",
             "sizes": "any"
         }
     ]

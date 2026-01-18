@@ -49,12 +49,11 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
                 {/* Logo Area */}
                 <div className={cn("flex items-center h-14 flex-shrink-0 border-b border-white/[0.02]", isCollapsed ? "justify-center" : "px-6")}>
                     <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 overflow-hidden">
-                        <svg className="w-7 h-7 text-brand-500/80 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square" strokeLinejoin="miter">
-                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" className="fill-brand-500/10" />
-                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" className="fill-brand-500/10" />
-                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" strokeOpacity="0.4" strokeDasharray="2 2" />
-                            <path d="M7 10v7h7" stroke="currentColor" strokeWidth="2" />
-                        </svg>
+                        <img
+                            src="/korfby.jpg"
+                            alt="Korfby Mascot"
+                            className="w-8 h-8 rounded-lg object-cover shadow-sm bg-white/10 rotate-3 border border-white/10"
+                        />
 
                         {!isCollapsed && (
                             <div className="flex flex-col min-w-0 animate-in fade-in duration-300">
