@@ -198,6 +198,17 @@ export const useAdminStore = create<AdminState>()(
                 }
             },
 
+            updateDelegation: async (id, data) => {
+                try {
+                    const updated = await delegationService.updateDelegation(id, data);
+                    set((state) => ({
+                        delegations: state.delegations.map((d) => d.id === id ? updated : d)
+                    }));
+                } catch (err: any) {
+                    set({ error: err.message });
+                }
+            },
+
             addHotel: async (hotel) => {
                 try {
                     const newHotel = await hotelService.createHotel(hotel);

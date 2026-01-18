@@ -1,7 +1,6 @@
 import { PageHeader } from '../../components/ui/PageHeader';
 import { GlassCard } from '../../components/ui/GlassCard';
 import { useDelegationStore } from '../../store/delegationStore';
-import { Breadcrumbs } from './components/Breadcrumbs';
 import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { CheckCircle2, Save } from 'lucide-react';

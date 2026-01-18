@@ -10,7 +10,6 @@ import {
     Info, Users, DollarSign,
     CheckCircle2, AlertCircle
 } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
 import {
     type OfferStatus,
     type ServiceType,
@@ -84,9 +83,9 @@ export function OfferDetail() {
         }, 500);
     };
 
-    const handleDelete = () => {
+    const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete this offer?')) {
-            const success = deleteOffer(offer.id);
+            const success = await deleteOffer(offer.id);
             if (success) {
                 navigate(`/admin/hotels/${hotel.id}#offers`); // Back to hotel context
             } else {
@@ -95,7 +94,6 @@ export function OfferDetail() {
         }
     };
 
-    const roomTypeOptions = []; // Legacy
     const statusOptions = [
         { value: 'draft', label: 'Draft' },
         { value: 'confirmed', label: 'Confirmed' },

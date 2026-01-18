@@ -41,8 +41,7 @@ export function DelegationListCard({
     doubles,
     cateringType,
     trainingCount,
-    status,
-    onViewDetails
+    status
 }: DelegationListCardProps) {
 
     const statusConfig = {

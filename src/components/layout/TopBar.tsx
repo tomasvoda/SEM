@@ -1,4 +1,4 @@
-import { Bell, Search, Settings, LogOut, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { Bell, Settings, LogOut, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { IconButton } from '../ui/IconButton';
 import { useAuthStore } from '../../store/authStore';
 import { Link } from 'react-router-dom';

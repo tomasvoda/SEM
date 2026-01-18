@@ -1,4 +1,4 @@
-import { Plus, Search, FileText, Calendar, Building2, ChevronRight } from 'lucide-react';
+import { Search, FileText, Calendar, Building2, ChevronRight } from 'lucide-react';
 import { GlassCard } from '../../components/ui/GlassCard';
 import { useAdminStore } from '../../store/adminStore';
 import { Link } from 'react-router-dom';

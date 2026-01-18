@@ -7,7 +7,6 @@ import { DelegationView } from './views/DelegationView';
 import { DailyGridView } from './views/DailyGridView';
 import { DailyDetailView } from './views/DailyDetailView';
 import { cn } from '../../../lib/utils';
-import { format, startOfMonth, endOfMonth } from 'date-fns';
 import { EVENT_START_DATE, EVENT_END_DATE } from '../../../types/admin';
 
 type TabType = 'overview' | 'hotels' | 'delegations' | 'heatmap' | 'daily';

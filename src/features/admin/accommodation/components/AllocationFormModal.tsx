@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useAdminStore } from '../../../../store/adminStore';
 import { GlassCard } from '../../../../components/ui/GlassCard';
 import { Select } from '../../../../components/ui/Select';
-import { X, Calendar, User, Users, Bed, Check, ChevronsRight, AlertCircle, RefreshCw, Hotel, Info } from 'lucide-react';
+import { X, Calendar, Users, Hotel, Info } from 'lucide-react';
 import { EVENT_START_DATE, EVENT_END_DATE } from '../../../../types/admin';
 
 interface AllocationFormModalProps {
