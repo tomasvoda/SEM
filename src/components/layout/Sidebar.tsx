@@ -48,12 +48,27 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
 
                 {/* Logo Area */}
                 <div className={cn("flex items-center h-14 flex-shrink-0 border-b border-white/[0.02]", isCollapsed ? "justify-center" : "px-6")}>
-                    <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 overflow-hidden">
-                        <img
-                            src="/korfby.jpg"
-                            alt="Korfby Mascot"
-                            className="w-8 h-8 rounded-lg object-cover shadow-sm bg-white/10 rotate-3 border border-white/10"
-                        />
+                    <div className="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                        <div className="relative w-8 h-8 flex items-center justify-center">
+                            {/* Animated Node Network Icon */}
+                            <svg className="w-full h-full text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                {/* Central Hub */}
+                                <circle cx="12" cy="12" r="3" className="fill-brand-500/20 stroke-brand-500" />
+
+                                {/* Orbiting Nodes Group - Animates Rotation */}
+                                <g className="origin-center animate-[spin_10s_linear_infinite]">
+                                    {/* Connection Lines */}
+                                    <line x1="12" y1="12" x2="12" y2="4" className="stroke-brand-500/40" />
+                                    <line x1="12" y1="12" x2="19" y2="16" className="stroke-brand-500/40" />
+                                    <line x1="12" y1="12" x2="5" y2="16" className="stroke-brand-500/40" />
+
+                                    {/* Satellite Nodes */}
+                                    <circle cx="12" cy="4" r="1.5" className="fill-brand-500 stroke-brand-500" />
+                                    <circle cx="19" cy="16" r="1.5" className="fill-purple-500 stroke-purple-500" />
+                                    <circle cx="5" cy="16" r="1.5" className="fill-emerald-500 stroke-emerald-500" />
+                                </g>
+                            </svg>
+                        </div>
 
                         {!isCollapsed && (
                             <div className="flex flex-col min-w-0 animate-in fade-in duration-300">
