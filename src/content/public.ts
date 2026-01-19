@@ -29,17 +29,17 @@ export const publicContent = {
     ],
     contact: {
         general: {
-            email: "info@ekc2026.cz",
-            phone: "+420 123 456 789"
+            email: "info@korfbal.cz",
+            phone: "+420 702 202 389"
         },
         volunteers: {
-            email: "volunteers@ekc2026.cz"
+            email: "dobrovolnici@korfbal.cz"
         },
         media: {
             email: "press@ekc2026.cz"
         },
         teams: {
-            email: "teams@ekc2026.cz"
+            email: "office@korfbal.cz"
         }
     },
     routes: {

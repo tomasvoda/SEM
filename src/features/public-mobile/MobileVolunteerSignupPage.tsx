@@ -32,7 +32,7 @@ export function MobileVolunteerSignupPage() {
     const { addVolunteer } = useVolunteerStore();
     const [step, setStep] = useState<FormStep>('personal');
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [showInfo, setShowInfo] = useState(true);
+    const [showInfo, setShowInfo] = useState(false);
 
     const [formData, setFormData] = useState({
         firstName: '',

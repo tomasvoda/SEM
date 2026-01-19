@@ -17,10 +17,10 @@ export function MobileTeamsPage() {
     );
 
     const allTeams = Object.values(IKF_MEMBERS).sort((a, b) => {
-        const aReg = registeredCodes.has(a.code);
-        const bReg = registeredCodes.has(b.code);
-        if (aReg && !bReg) return -1;
-        if (!aReg && bReg) return 1;
+        // Strict rank-based sorting
+        if (a.rank && b.rank) return (a.rank as number) - (b.rank as number);
+        if (a.rank) return -1;
+        if (b.rank) return 1;
         return a.countryName.localeCompare(b.countryName);
     });
 
@@ -38,15 +38,17 @@ export function MobileTeamsPage() {
                 {t('navigation.teams.subtitle')}
             </p>
 
-            <div className="relative mb-6">
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-[var(--text-muted)]" />
-                <input
-                    type="text"
-                    placeholder={t('navigation.teams.search')}
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-sm text-[var(--text-primary)] focus:border-brand-500/50 outline-none transition-all"
-                />
+            <div className="sticky top-0 z-30 pt-4 pb-4 -mx-4 px-4 bg-[var(--app-bg)]/80 backdrop-blur-md">
+                <div className="relative">
+                    <Search className="absolute left-3 top-2.5 w-4 h-4 text-[var(--text-muted)]" />
+                    <input
+                        type="text"
+                        placeholder={t('navigation.teams.search')}
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-sm text-[var(--text-primary)] focus:border-brand-500/50 outline-none transition-all"
+                    />
+                </div>
             </div>
 
             <div className="grid grid-cols-1 gap-3">
@@ -58,7 +60,7 @@ export function MobileTeamsPage() {
                             className="glass-panel rounded-2xl p-4 active:scale-[0.98] transition-all relative overflow-hidden group"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+                                <div className="w-[53px] h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
                                     <img
                                         src={getFlagUrl(team.code)}
                                         alt=""
@@ -66,12 +68,12 @@ export function MobileTeamsPage() {
                                     />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <div className="flex items-center gap-2 mb-1">
+                                    <div className="flex items-center justify-between mb-1">
                                         <h3 className="text-sm font-black text-[var(--text-primary)] uppercase truncate">
                                             {team.countryName}
                                         </h3>
                                         {isRegistered && (
-                                            <div className="bg-emerald-500/20 text-emerald-400 p-0.5 rounded-full">
+                                            <div className="bg-emerald-500/20 text-emerald-400 p-0.5 rounded-full flex-shrink-0">
                                                 <Check className="w-3 h-3" />
                                             </div>
                                         )}
@@ -89,13 +91,6 @@ export function MobileTeamsPage() {
                                 </div>
                             </div>
 
-                            {isRegistered && (
-                                <div className="mt-3 pt-3 border-t border-white/5 flex items-center justify-between">
-                                    <span className="text-[9px] font-black text-emerald-500 uppercase tracking-widest">
-                                        {t('navigation.teams.registered')}
-                                    </span>
-                                </div>
-                            )}
                         </div>
                     );
                 })}

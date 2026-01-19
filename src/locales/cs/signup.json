@@ -3,15 +3,16 @@
     "subtitle": "Přidej se k týmu EKC 2026",
     "intro": {
         "title": "Staň se srdcem šampionátu",
-        "description": "Hledáme nadšené lidi, kteří nám pomohou uspořádat největší korfbalovou akci v Evropě. Jako dobrovolník získáte jedinečný pohled do zákulisí velkého sportovního eventu a stanete se součástí naší korfbalové rodiny."
+        "description": "Hledáme nadšence, kteří nám a Korfymu pomohou uspořádat největší korfbalou akci Evropy. Jako dobrovolník / dobrovolnice získáš jedinečný pohled do zákulisí velkého sportovního eventu a staneš se součástí naší korfbalové rodiny."
     },
     "benefits": {
         "title": "Co získáte jako dobrovolník?",
         "items": [
-            "Oficiální certifikát a balíček oblečení",
-            "Stravování zdarma během směn",
+            "Oficiální merch turnaje",
+            "Stravování a ubytování zdarma",
             "Vstup na všechny zápasy",
-            "Nové přátele a nezapomenutelné zážitky"
+            "Nové přátele z celé Evropy",
+            "Nezapomenutelné zážitky"
         ]
     },
     "steps": {
@@ -86,7 +87,7 @@
     },
     "actions": {
         "next": "Další: Dostupnost",
-        "continue_to_form": "Pokračovat k registraci",
+        "continue_to_form": "Registrovat se",
         "submit": "Odeslat přihlášku",
         "submitting": "Odesílám..."
     },

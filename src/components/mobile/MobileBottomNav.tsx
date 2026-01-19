@@ -17,15 +17,15 @@ export function MobileBottomNav() {
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
             {/* Glassmorphism bottom bar */}
-            <div className="glass border-t border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-1 py-2">
+            <div className="glass border-t border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-1 py-5">
                 <div className="flex items-center justify-between max-w-md mx-auto">
                     {navigationItems.map((item) => {
                         const Icon = item.icon;
                         return (
                             <NavLink
                                 key={item.id}
-                                border-t
                                 to={item.path}
+                                state={item.id === 'home' ? { triggerMascot: true } : undefined}
                                 className={({ isActive }) =>
                                     cn(
                                         "flex flex-col items-center justify-center flex-1 py-1 px-1 rounded-xl transition-all duration-200",

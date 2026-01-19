@@ -49,11 +49,13 @@
       --text-secondary: rgba(255, 255, 255, 0.75);
       --text-muted: rgba(255, 255, 255, 0.45);
 
-      /* Deep, central ambient light */
+      /* Liquid, dynamic ambient light */
       --bg-image:
-        radial-gradient(circle at 50% -20%, rgba(6, 182, 212, 0.15), transparent 50%),
-        radial-gradient(circle at 50% 120%, rgba(56, 189, 248, 0.05), transparent 50%),
-        linear-gradient(to bottom, #020617, #020617);
+        radial-gradient(circle at 20% 10%, rgba(6, 182, 212, 0.12), transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08), transparent 50%),
+        radial-gradient(circle at 50% 120%, rgba(6, 182, 212, 0.06), transparent 60%),
+        radial-gradient(circle at -10% 50%, rgba(6, 182, 212, 0.04), transparent 40%),
+        linear-gradient(to bottom, #020617, #0a0f1e);
     }
   }
 
@@ -64,10 +66,10 @@
       /* Clean Slate-50 */
 
       /* Neutral Vision Glass: Cool gray tint, low opacity */
-      --glass-surface: rgba(240, 245, 250, 0.5);
-      --glass-border: rgba(15, 23, 42, 0.05);
-      --glass-highlight: rgba(255, 255, 255, 0.6);
-      --glass-refraction: linear-gradient(120deg, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+      --glass-surface: rgba(255, 255, 255, 0.5);
+      --glass-border: rgba(6, 182, 212, 0.1);
+      --glass-highlight: rgba(255, 255, 255, 0.8);
+      --glass-refraction: linear-gradient(120deg, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
 
       --text-primary: #0f172a;
       /* Slate-900 */
@@ -76,9 +78,10 @@
       --text-muted: #94a3b8;
       /* Slate-400 */
 
-      /* Calm top-center light */
+      /* Calm liquid top light */
       --bg-image:
-        radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.05), transparent 60%),
+        radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.03), transparent 50%),
         linear-gradient(to bottom, #f8fafc, #f1f5f9);
     }
   }
@@ -96,25 +99,28 @@
     --text-muted: rgba(255, 255, 255, 0.45);
 
     --bg-image:
-      radial-gradient(circle at 50% -20%, rgba(6, 182, 212, 0.15), transparent 50%),
-      radial-gradient(circle at 50% 120%, rgba(56, 189, 248, 0.05), transparent 50%),
-      linear-gradient(to bottom, #020617, #020617);
+      radial-gradient(circle at 20% 10%, rgba(6, 182, 212, 0.12), transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08), transparent 50%),
+      radial-gradient(circle at 50% 120%, rgba(6, 182, 212, 0.06), transparent 60%),
+      radial-gradient(circle at -10% 50%, rgba(6, 182, 212, 0.04), transparent 40%),
+      linear-gradient(to bottom, #020617, #0a0f1e);
   }
 
   /* --- 5. MANUAL LIGHT OVERRIDE --- */
   [data-theme="light"] {
     --app-bg: #f8fafc;
-    --glass-surface: rgba(240, 245, 250, 0.5);
-    --glass-border: rgba(15, 23, 42, 0.05);
-    --glass-highlight: rgba(255, 255, 255, 0.6);
-    --glass-refraction: linear-gradient(120deg, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+    --glass-surface: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(6, 182, 212, 0.1);
+    --glass-highlight: rgba(255, 255, 255, 0.8);
+    --glass-refraction: linear-gradient(120deg, rgba(255, 255, 255, 0.5) 0%, transparent 60%);
 
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #94a3b8;
 
     --bg-image:
-      radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.05), transparent 60%),
+      radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.08), transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.03), transparent 50%),
       linear-gradient(to bottom, #f8fafc, #f1f5f9);
   }
 
@@ -128,13 +134,51 @@
   }
 }
 
+.page-transition {
+  animation: page-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heart-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.4));
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.animate-heart-pulse {
+  animation: heart-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* 
    OPTICAL GLASS 
 */
 @utility glass {
   background: var(--glass-surface);
-  backdrop-filter: blur(var(--backdrop-blur));
-  -webkit-backdrop-filter: blur(var(--backdrop-blur));
+  backdrop-filter: blur(var(--backdrop-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--backdrop-blur)) saturate(180%);
 
   border: 1px solid var(--glass-border);
   box-shadow:
@@ -146,7 +190,9 @@
   @apply glass;
   box-shadow:
     0 20px 40px -4px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px var(--glass-highlight);
+    inset 0 0 0 1px var(--glass-highlight),
+    0 0 20px 2px rgba(6, 182, 212, 0.05);
+  /* Soft glowing aura */
 }
 
 @utility glass-hover {
@@ -193,4 +239,20 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes korfy-slide-in {
+  from {
+    transform: translateX(150%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .animate-korfy-slide {
+    animation: korfy-slide-in 0.69s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
 }

@@ -10,7 +10,7 @@ export function MobileHeader() {
 
     return (
         <header className="sticky top-0 z-40 safe-area-top">
-            <div className="glass border-b border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-4 py-3">
+            <div className="glass border-b border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-4 py-1.5">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
@@ -19,11 +19,8 @@ export function MobileHeader() {
                         </div>
                         <div>
                             <h1 className="text-sm font-black text-[var(--text-primary)] uppercase tracking-tight leading-none">
-                                {t('appName')}
+                                EKC 2026 <span className="text-[var(--text-muted)] font-normal">| ČESKO</span>
                             </h1>
-                            <p className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
-                                Czechia 2026
-                            </p>
                         </div>
                     </div>
 

@@ -32,7 +32,7 @@ export function MobileVenuesPage() {
                 {VENUE_IDS.map((id) => (
                     <GlassCard key={id} className="overflow-hidden border-white/10">
                         {/* City Summary */}
-                        <div className="p-5 bg-brand-500/5">
+                        <div className="p-5 bg-gradient-to-b from-brand-500/[0.07] to-transparent">
                             <h2 className="text-xl font-black text-brand-500 uppercase tracking-tight mb-3">
                                 {t(`cities.${id}.name`)}
                             </h2>
@@ -50,7 +50,7 @@ export function MobileVenuesPage() {
                                 </div>
                                 <div className="flex-1">
                                     <p className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-0.5">{t('labels.hall')}</p>
-                                    <p className="text-sm font-black text-[var(--text-primary)] uppercase">{t(`cities.${id}.venue`)}</p>
+                                    <p className="text-base font-black text-[var(--text-primary)] uppercase leading-tight">{t(`cities.${id}.venue`)}</p>
                                 </div>
                             </div>
 
@@ -65,9 +65,9 @@ export function MobileVenuesPage() {
                             </div>
 
                             <div className="grid grid-cols-2 gap-4 pt-2">
-                                <div className="px-4 py-3 bg-white/5 rounded-xl border border-white/10">
-                                    <p className="text-[8px] font-black uppercase tracking-widest text-[var(--text-muted)]">{t('labels.capacity')}</p>
-                                    <p className="text-xs font-black text-brand-500">{t(`cities.${id}.capacity`)}</p>
+                                <div className="px-4 py-3 bg-white/5 rounded-xl border border-white/10 flex flex-col justify-center">
+                                    <p className="text-[8px] font-black uppercase tracking-widest text-[var(--text-muted)] leading-none mb-1">{t('labels.capacity')}</p>
+                                    <p className="text-xs font-black text-brand-500 leading-none">{t(`cities.${id}.capacity`)}</p>
                                 </div>
                                 <button
                                     onClick={() => handleNavigate(`${t(`cities.${id}.venue`)}, ${VENUE_ADDRESSES[id]}`)}
