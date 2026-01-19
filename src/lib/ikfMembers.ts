@@ -42,4 +42,8 @@ export const IKF_MEMBERS: Record<string, IKFMember> = {
     'WAL': { code: 'WAL', countryName: 'Wales', federationName: 'Welsh Korfball Association (WKA)', rank: 27 },
     // 16. France
     'FRA': { code: 'FRA', countryName: 'France', federationName: 'Fédération Korfbal France', rank: 29 },
+    // Historical / Additional
+    'RUS': { code: 'RUS', countryName: 'Russia', federationName: 'Russian Korfball Federation', rank: 99 },
+    'SCO': { code: 'SCO', countryName: 'Scotland', federationName: 'Scottish Korfball Association', rank: 99 },
+    'GBR': { code: 'GBR', countryName: 'Great Britain', federationName: 'British Korfball Association', rank: 99 },
 };

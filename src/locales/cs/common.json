@@ -7,7 +7,10 @@
             "subtitle": "Registrované země a žebříček",
             "search": "Hledat zemi...",
             "registered": "Potvrzeno",
-            "rank": "ŽEBŘÍČEK"
+            "rank": "ŽEBŘÍČEK",
+            "history_title": "Historie šampionátů",
+            "result": "Výsledek",
+            "no_history": "Historie není k dispozici"
         },
         "program": "Program",
         "venues": "Haly",

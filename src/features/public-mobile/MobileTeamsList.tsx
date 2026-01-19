@@ -1,23 +1,17 @@
 import { useState } from 'react';
-import { useAdminStore } from '../../store/adminStore';
 import { getFlagUrl } from '../../lib/countryUtils';
-import { Search, Check } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { IKF_MEMBERS } from '../../lib/ikfMembers';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
-export function MobileTeamsPage() {
+export function MobileTeamsList() {
     const { t } = useTranslation('common');
-    const { delegations } = useAdminStore();
+    const navigate = useNavigate();
     const [search, setSearch] = useState('');
 
-    const registeredCodes = new Set(
-        delegations
-            .filter(d => (d.status as any) === 'submitted' || (d.status as any) === 'approved')
-            .map(d => d.country_code)
-    );
-
     const allTeams = Object.values(IKF_MEMBERS).sort((a, b) => {
-        // Strict rank-based sorting
+        // Purely by rank (ascending)
         if (a.rank && b.rank) return (a.rank as number) - (b.rank as number);
         if (a.rank) return -1;
         if (b.rank) return 1;
@@ -38,7 +32,7 @@ export function MobileTeamsPage() {
                 {t('navigation.teams.subtitle')}
             </p>
 
-            <div className="sticky top-0 z-30 pt-4 pb-4 -mx-4 px-4 bg-[var(--app-bg)]/80 backdrop-blur-md">
+            <div className="sticky top-0 z-30 pt-4 pb-4 -mx-4 px-4 bg-[var(--app-bg)]/95 backdrop-blur-xl border-b border-white/5">
                 <div className="relative">
                     <Search className="absolute left-3 top-2.5 w-4 h-4 text-[var(--text-muted)]" />
                     <input
@@ -53,14 +47,14 @@ export function MobileTeamsPage() {
 
             <div className="grid grid-cols-1 gap-3">
                 {filteredTeams.map((team) => {
-                    const isRegistered = registeredCodes.has(team.code);
                     return (
                         <div
                             key={team.code}
-                            className="glass-panel rounded-2xl p-4 active:scale-[0.98] transition-all relative overflow-hidden group"
+                            onClick={() => navigate(`/mobile/teams/${team.code}/history`)}
+                            className="glass-panel rounded-2xl p-4 active:scale-[0.98] transition-all relative overflow-hidden group cursor-pointer border-white/5 bg-white/[0.04]"
                         >
                             <div className="flex items-center gap-4">
-                                <div className="w-[53px] h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden">
+                                <div className="w-[72px] h-[48px] rounded-lg border border-white/10 flex items-center justify-center overflow-hidden transition-all shadow-lg bg-white/5">
                                     <img
                                         src={getFlagUrl(team.code)}
                                         alt=""
@@ -68,29 +62,29 @@ export function MobileTeamsPage() {
                                     />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <div className="flex items-center justify-between mb-1">
-                                        <h3 className="text-sm font-black text-[var(--text-primary)] uppercase truncate">
+                                    <div className="mb-1">
+                                        <h3 className="text-sm font-black uppercase truncate text-white">
                                             {team.countryName}
                                         </h3>
-                                        {isRegistered && (
-                                            <div className="bg-emerald-500/20 text-emerald-400 p-0.5 rounded-full flex-shrink-0">
-                                                <Check className="w-3 h-3" />
-                                            </div>
-                                        )}
                                     </div>
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-[10px] font-bold text-brand-500 uppercase tracking-widest">
-                                            {team.code}
-                                        </span>
-                                        {team.rank && (
-                                            <span className="text-[10px] text-[var(--text-muted)] font-black">
-                                                {t('navigation.teams.rank')} #{team.rank}
+                                    <div className="flex items-center gap-1.5 mt-1">
+                                        <div className="px-1.5 py-0.5 rounded bg-brand-500/10 border border-brand-500/10">
+                                            <span className="text-[10px] font-black text-brand-500 uppercase tracking-widest leading-none">
+                                                {team.code}
                                             </span>
-                                        )}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
+                            {/* Ranking in bottom right */}
+                            {team.rank && (
+                                <div className="absolute bottom-4 right-4 flex items-center gap-1.5">
+                                    <span className="text-[10px] text-brand-500 font-black leading-none">
+                                        #{team.rank}
+                                    </span>
+                                </div>
+                            )}
                         </div>
                     );
                 })}

@@ -49,13 +49,14 @@ import { VolunteerRegistrationPage } from './features/public/VolunteerRegistrati
 // Mobile Public Pages
 import { MobileLayout } from './components/mobile/MobileLayout';
 import { MobileHomePage } from './features/public-mobile/MobileHomePage';
-import { MobileTeamsPage } from './features/public-mobile/MobileTeamsPage';
+import { MobileTeamsList } from './features/public-mobile/MobileTeamsList';
 import { MobileProgramPage } from './features/public-mobile/MobileProgramPage';
 import { MobileVenuesPage } from './features/public-mobile/MobileVenuesPage';
 import { MobileVolunteersPage, MobileContactPage } from './features/public-mobile/MobilePages';
 import { MobileSettingsPage } from './features/public-mobile/MobileSettingsPage';
 import { MobileVolunteerSignupPage } from './features/public-mobile/MobileVolunteerSignupPage';
 import { MobileThankYouPage } from './features/public-mobile/MobileThankYouPage';
+import { MobileTeamHistoryPage } from './features/public-mobile/MobileTeamHistoryPage';
 import { RootRedirect } from './components/RootRedirect';
 
 function App() {
@@ -90,7 +91,8 @@ function App() {
         <Route path="/mobile" element={<MobileLayout />}>
           <Route index element={<Navigate to="home" replace />} />
           <Route path="home" element={<MobileHomePage />} />
-          <Route path="teams" element={<MobileTeamsPage />} />
+          <Route path="teams" element={<MobileTeamsList />} />
+          <Route path="teams/:code/history" element={<MobileTeamHistoryPage />} />
           <Route path="program" element={<MobileProgramPage />} />
           <Route path="venues" element={<MobileVenuesPage />} />
           <Route path="volunteers" element={<MobileVolunteersPage />} />
