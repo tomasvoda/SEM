@@ -21,6 +21,12 @@
             "capacity": "3,000 spectators"
         }
     },
+    "labels": {
+        "hall": "Hall",
+        "address": "Address",
+        "capacity": "CAPACITY",
+        "navigate": "NAVIGATE"
+    },
     "transport": {
         "title": "Getting Around",
         "description": "Free shuttle service between venues during the tournament"

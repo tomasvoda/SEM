@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Trophy, Users, MapPin, Calendar, ArrowRight } from 'lucide-react';
+import { Trophy, Users, Calendar, ArrowRight } from 'lucide-react';
 import { publicContent } from '../../content/public';
 import { differenceInDays } from 'date-fns';
 import { useState } from 'react';
@@ -27,8 +27,9 @@ export function MobileHomePage() {
                 </div>
 
                 <div className="text-left relative z-10 max-w-[70%]">
-                    <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-none mb-2">
-                        {t('hero.title')}
+                    <h1 className="text-3xl font-black text-[var(--text-primary)] uppercase tracking-tighter leading-[0.9] mb-4">
+                        {t('hero.titleLine1')}<br />
+                        <span className="text-brand-500">{t('hero.titleLine2')}</span>
                     </h1>
                     <p className="text-lg font-bold text-brand-500 uppercase tracking-wide mb-4">
                         {t('hero.subtitle')}
@@ -90,18 +91,6 @@ export function MobileHomePage() {
                         <p className="text-2xl font-black text-brand-500">16</p>
                         <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-muted)] mt-1">
                             {t('highlights.teams')}
-                        </p>
-                    </Link>
-                    <Link to="/mobile/venues" className="glass-panel rounded-xl p-4 active:scale-95 transition-transform">
-                        <p className="text-2xl font-black text-brand-500">3</p>
-                        <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-muted)] mt-1">
-                            {t('highlights.cities')}
-                        </p>
-                    </Link>
-                    <Link to="/mobile/venues" className="glass-panel rounded-xl p-4 active:scale-95 transition-transform">
-                        <MapPin className="w-5 h-5 text-brand-500 mb-2" />
-                        <p className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-muted)] text-[var(--text-primary)]">
-                            {t('highlights.venues')}
                         </p>
                     </Link>
                     <Link to="/mobile/program" className="col-span-2 glass-panel rounded-xl p-5 active:scale-95 transition-transform text-left border-brand-500/20 bg-brand-500/5 flex items-center justify-between">

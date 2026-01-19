@@ -21,6 +21,12 @@
             "capacity": "3 000 diváků"
         }
     },
+    "labels": {
+        "hall": "Hala",
+        "address": "Adresa",
+        "capacity": "KAPACITA",
+        "navigate": "NAVIGOVAT"
+    },
     "transport": {
         "title": "Doprava",
         "description": "Během turnaje zajišťujeme bezplatnou shuttle dopravu mezi místy konání"

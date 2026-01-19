@@ -1,7 +1,8 @@
 {
     "hero": {
-        "title": "European Korfball Championship 2026",
-        "subtitle": "Czechia",
+        "titleLine1": "European Korfball",
+        "titleLine2": "Championship 2026",
+        "subtitle": "Czech Republic",
         "date": "October 16-24, 2026",
         "cities": "Prostějov · Otrokovice · Zlín"
     },
@@ -10,24 +11,24 @@
         "join": "Join our team"
     },
     "countdown": {
-        "title": "Championship Starts In",
+        "title": "Championship starts in",
         "days": "Days",
         "hours": "Hours",
         "minutes": "Minutes"
     },
     "highlights": {
         "title": "Highlights",
-        "teams": "Teams",
+        "teams": "teams",
         "cities": "Cities",
         "venues": "Venues",
-        "news": "Latest News",
+        "news": "News",
         "program": "Program"
     },
     "news": {
         "ikf_draw": {
-            "tag": "IKF Draw",
-            "title": "Team draw will take place by the end of February 2025",
-            "description": "The group stage draw will be managed by IKF. Organizers are currently waiting for more details."
+            "tag": "IKF Official",
+            "title": "Team draw to take place by end of February 2025",
+            "description": "Group draws will be managed by IKF. Organizers are currently awaiting further details."
         }
     }
 }
