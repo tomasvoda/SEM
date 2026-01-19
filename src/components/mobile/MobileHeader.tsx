@@ -10,7 +10,7 @@ export function MobileHeader() {
 
     return (
         <header className="sticky top-0 z-40 safe-area-top">
-            <div className="glass border-b border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-4 py-1.5">
+            <div className="mobile-header-bar px-4 py-1.5">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-3">

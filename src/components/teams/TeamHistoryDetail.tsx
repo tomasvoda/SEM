@@ -46,7 +46,7 @@ export function TeamHistoryDetail({ countryCode }: TeamHistoryDetailProps) {
             {history.map((entry, index) => (
                 <div
                     key={index}
-                    className="glass-panel p-4 rounded-2xl border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 group"
+                    className="glass p-4 transition-colors relative flex flex-col sm:flex-row sm:items-center justify-between gap-4 group"
                 >
                     <div className="flex items-center gap-4">
                         <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center flex-shrink-0">

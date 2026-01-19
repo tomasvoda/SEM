@@ -6,9 +6,9 @@ import { cn } from '../../lib/utils';
 const navigationItems = [
     { id: 'home', path: '/mobile/home', icon: Home, labelKey: 'navigation.home' },
     { id: 'teams', path: '/mobile/teams', icon: Users, labelKey: 'navigation.teams.title' },
+    { id: 'volunteers', path: '/mobile/volunteers', icon: Heart, labelKey: 'navigation.volunteers' },
     { id: 'program', path: '/mobile/program', icon: Calendar, labelKey: 'navigation.program' },
-    { id: 'venues', path: '/mobile/venues', icon: MapPin, labelKey: 'navigation.venues' },
-    { id: 'volunteers', path: '/mobile/volunteers', icon: Heart, labelKey: 'navigation.volunteers' }
+    { id: 'venues', path: '/mobile/venues', icon: MapPin, labelKey: 'navigation.venues' }
 ];
 
 export function MobileBottomNav() {
@@ -16,8 +16,8 @@ export function MobileBottomNav() {
 
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
-            {/* Glassmorphism bottom bar */}
-            <div className="glass border-t border-white/5 backdrop-blur-xl bg-[var(--glass-surface)] px-1 py-5">
+            {/* Glassmorphism bottom bar - Unified class */}
+            <div className="mobile-bottom-nav-bar px-1 py-5">
                 <div className="flex items-center justify-between max-w-md mx-auto">
                     {navigationItems.map((item) => {
                         const Icon = item.icon;
@@ -30,7 +30,7 @@ export function MobileBottomNav() {
                                     cn(
                                         "flex flex-col items-center justify-center flex-1 py-1 px-1 rounded-xl transition-all duration-200",
                                         isActive
-                                            ? "text-brand-500"
+                                            ? "nav-active-highlight"
                                             : "text-[var(--text-muted)]"
                                     )
                                 }
@@ -43,7 +43,7 @@ export function MobileBottomNav() {
                                                 isActive && "scale-110"
                                             )}
                                         />
-                                        <span className="text-[8px] font-black uppercase tracking-tight leading-none whitespace-nowrap overflow-hidden text-ellipsis w-full text-center">
+                                        <span className="mobile-nav-label whitespace-nowrap overflow-hidden text-ellipsis w-full text-center">
                                             {t(item.labelKey)}
                                         </span>
                                     </>

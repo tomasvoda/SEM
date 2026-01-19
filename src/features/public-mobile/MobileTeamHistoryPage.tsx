@@ -33,8 +33,8 @@ export function MobileTeamHistoryPage() {
     return (
         <div className="min-h-screen pb-24 page-transition">
             {/* Header / Navigation */}
-            <div className="sticky top-0 z-50 bg-[var(--app-bg)]/95 backdrop-blur-xl border-b border-white/5">
-                <div className="flex items-center gap-4 px-4 h-20">
+            <div className="sticky top-0 z-30 bg-[var(--app-bg)]/95 backdrop-blur-xl border-b border-white/10">
+                <div className="flex items-center gap-4 px-4 h-16">
                     <button
                         onClick={() => navigate('/mobile/teams')}
                         className="p-2 -ml-2 rounded-xl active:bg-white/5 transition-colors"
@@ -46,10 +46,10 @@ export function MobileTeamHistoryPage() {
                             <img src={getFlagUrl(team.code)} alt="" className="w-full h-full object-cover" />
                         </div>
                         <div className="min-w-0">
-                            <h1 className="text-lg font-black text-[var(--text-primary)] uppercase tracking-tight truncate leading-none mb-1">
+                            <h1 className="mobile-card-title text-[18px] leading-none mb-1">
                                 {team.countryName}
                             </h1>
-                            <p className="text-[10px] font-black text-brand-500 uppercase tracking-[0.2em] leading-none">
+                            <p className="mobile-metadata-label text-brand-500 leading-none">
                                 {t('navigation.teams.history_title')}
                             </p>
                         </div>
