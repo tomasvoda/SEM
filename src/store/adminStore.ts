@@ -72,7 +72,9 @@ const calculateNights = (from: string, to: string) => {
     const d2 = new Date(to);
     if (isNaN(d1.getTime()) || isNaN(d2.getTime())) return 0;
     const diff = d2.getTime() - d1.getTime();
-    return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+    const nights = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+    // Safety cap: Never generate more than 90 days in one go to prevent freezing
+    return Math.min(nights, 90);
 };
 
 export const useAdminStore = create<AdminState>()(
@@ -101,6 +103,14 @@ export const useAdminStore = create<AdminState>()(
                         allocationService.getAllocations(),
                         allocationService.getAllocationRooms()
                     ]);
+
+                    console.log('Admin Core Data Loaded:', {
+                        hotels: (hotels || []).length,
+                        delegations: (delegations || []).length,
+                        capacities: (capacities || []).length,
+                        allocations: (allocations || []).length,
+                        rooms: (rooms || []).length
+                    });
 
                     // 2. Try Fetch Offers ( Optional / May fail if table missing )
                     let offers: any[] = [];
@@ -148,25 +158,33 @@ export const useAdminStore = create<AdminState>()(
                     // Combine DB capacities with Offer capacities
                     const allCapacities = [...capacities, ...offerCapacities];
 
-                    // 4. Derive daily capacity allocations for reports
-                    const derivedDailyAllocations: HotelDailyCapacityAllocation[] = [];
-                    (allocations || []).filter((a: any) => a.status === 'confirmed').forEach((alloc: any) => {
-                        const allocRooms = (rooms || []).filter(r => r.allocation_id === alloc.id);
-                        const nights = calculateNights(alloc.date_from, alloc.date_to);
-                        const startDate = new Date(alloc.date_from);
+                    // 4. Pre-index capacities for O(1) lookup: Map<"hotelId_date_capacity", HotelDailyCapacity>
+                    const capacityLookup = new Map<string, HotelDailyCapacity>();
+                    allCapacities.forEach(cap => {
+                        const key = `${cap.hotel_id}_${cap.date}_${cap.room_capacity}`;
+                        capacityLookup.set(key, cap);
+                    });
 
-                        for (let n = 0; n < nights; n++) {
-                            const currentDate = new Date(startDate);
-                            currentDate.setDate(startDate.getDate() + n);
-                            const dateStr = currentDate.toISOString().split('T')[0];
+                    // 5. Derive daily capacity allocations for reports
+                    const derivedDailyAllocations: HotelDailyCapacityAllocation[] = [];
+                    const confirmedAllocations = (allocations || []).filter((a: any) => a.status === 'confirmed');
+
+                    confirmedAllocations.forEach((alloc: any) => {
+                        const allocRooms = (rooms || []).filter(r => r.allocation_id === alloc.id);
+                        if (allocRooms.length === 0) return;
+
+                        const nightsCount = calculateNights(alloc.date_from, alloc.date_to);
+                        const start = new Date(alloc.date_from);
+
+                        for (let n = 0; n < nightsCount; n++) {
+                            const current = new Date(start);
+                            current.setDate(start.getDate() + n);
+                            const dateStr = current.toISOString().split('T')[0];
 
                             allocRooms.forEach(room => {
-                                // Match against ALL capacities (DB + Offer) by capacity (beds)
-                                const cap = allCapacities.find(c =>
-                                    c.hotel_id === alloc.hotel_id &&
-                                    c.date === dateStr &&
-                                    c.room_capacity === room.room_capacity
-                                );
+                                const key = `${alloc.hotel_id}_${dateStr}_${room.room_capacity}`;
+                                const cap = capacityLookup.get(key);
+
                                 if (cap) {
                                     derivedDailyAllocations.push({
                                         id: `derived_${alloc.id}_${dateStr}_${room.room_capacity}_${room.id}`,
@@ -865,7 +883,18 @@ export const useAdminStore = create<AdminState>()(
             }
         }),
         {
-            name: 'sem-admin-storage-v2'
+            name: 'sem-admin-storage-v2',
+            partialize: (state) => ({
+                hotels: state.hotels,
+                offers: state.offers,
+                offerRooms: state.offerRooms,
+                offerServices: state.offerServices,
+                delegations: state.delegations,
+                allocations: state.allocations,
+                allocationRooms: state.allocationRooms,
+                // dailyCapacities and dailyCapacityAllocations are derived on load 
+                // and should not be persisted to avoid huge storage writes and freezes.
+            }),
         }
     )
 );

@@ -1,0 +1,105 @@
+{
+    "title": "Volunteer Registration",
+    "subtitle": "Join the EKC 2026 team",
+    "intro": {
+        "title": "Be the Heart of the Championship",
+        "description": "We are looking for enthusiastic people to help us organize the biggest korfball event in Europe. As a volunteer, you will gain a unique behind-the-scenes look at a major sporting event and become part of our korfball family."
+    },
+    "benefits": {
+        "title": "What do you get as a volunteer?",
+        "items": [
+            "Official certificate and volunteer kit",
+            "Free meals during shifts",
+            "Access to all matches",
+            "New friends and unforgettable experiences"
+        ]
+    },
+    "steps": {
+        "personal": "Personal Info",
+        "preferences": "Preferences",
+        "review": "Review"
+    },
+    "fields": {
+        "firstName": {
+            "label": "First Name",
+            "placeholder": "Enter your first name"
+        },
+        "lastName": {
+            "label": "Last Name",
+            "placeholder": "Enter your last name"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "your@email.com"
+        },
+        "phone": {
+            "label": "Phone Number",
+            "placeholder": "+420 123 456 789"
+        },
+        "homeClub": {
+            "label": "Home Club",
+            "placeholder": "e.g. KC Brno"
+        },
+        "birthDate": {
+            "label": "Birth Date"
+        },
+        "locations": {
+            "label": "Preferred Locations"
+        },
+        "languages": {
+            "label": "Languages You Speak",
+            "placeholder": "Select languages"
+        },
+        "roles": {
+            "label": "Preferred Volunteer Roles",
+            "placeholder": "Select roles",
+            "options": {
+                "registration": "Registration & Accreditation",
+                "hospitality": "Hospitality & Guest Services",
+                "transport": "Transportation & Logistics",
+                "medical": "Medical & First Aid",
+                "media": "Media & Communications",
+                "venue": "Venue Operations"
+            }
+        },
+        "availability": {
+            "label": "Your Availability",
+            "status": {
+                "full": "Full Day",
+                "morning": "Morning",
+                "afternoon": "Afternoon",
+                "none": "Not Available"
+            },
+            "placeholder": "Let us know when you are available"
+        },
+        "gdpr": {
+            "label": "I agree to the processing of personal data for the purpose of volunteer coordination for EURO 2026."
+        },
+        "notes": {
+            "label": "Additional Information",
+            "placeholder": "Any special skills, previous experience, or notes?"
+        }
+    },
+    "validation": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address"
+    },
+    "actions": {
+        "next": "Next: Availability",
+        "continue_to_form": "Continue to Registration",
+        "submit": "Submit Application",
+        "submitting": "Submitting..."
+    },
+    "thankYou": {
+        "title": "Thank You!",
+        "message": "Your volunteer application has been submitted successfully. We'll review your application and get back to you soon.",
+        "email": "You will receive a confirmation email shortly.",
+        "next": "What's next?",
+        "steps": [
+            "We'll review your application within 2-3 weeks",
+            "You'll receive an email with next steps",
+            "Selected volunteers will be invited to online orientation"
+        ],
+        "backHome": "Back to Home"
+    }
+}

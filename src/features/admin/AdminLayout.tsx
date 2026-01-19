@@ -4,7 +4,9 @@ import { useAdminStore } from '../../store/adminStore';
 import { Loader2 } from 'lucide-react';
 
 export function AdminLayout() {
-    const { loadInitialData, isLoading, error } = useAdminStore();
+    const loadInitialData = useAdminStore(state => state.loadInitialData);
+    const isLoading = useAdminStore(state => state.isLoading);
+    const error = useAdminStore(state => state.error);
 
     useEffect(() => {
         loadInitialData();

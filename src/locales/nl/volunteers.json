@@ -1,0 +1,31 @@
+{
+  "title": "Vrijwilliger worden",
+  "hero": {
+    "title": "Wees onderdeel van het kampioenschap",
+    "subtitle": "Sluit je aan bij ons team van toegewijde vrijwilligers"
+  },
+  "why": {
+    "title": "Waarom vrijwilliger worden?",
+    "reasons": [
+      "Wees onderdeel van een groot Europees sportevenement",
+      "Ontmoet mensen uit heel Europa",
+      "Krijg waardevolle ervaring in evenementenbeheer",
+      "Ontvang een officieel vrijwilligerscertificaat",
+      "Gratis maaltijden en vervoer tijdens het evenement"
+    ]
+  },
+  "roles": {
+    "title": "Vrijwilligersrollen",
+    "registration": "Registratie & Accreditatie",
+    "hospitality": "Gastvrijheid & VIP-service",
+    "transport": "Vervoer & Logistiek",
+    "medical": "Medisch & Eerste hulp",
+    "media": "Media & Communicatie",
+    "venue": "Locatiebeheer"
+  },
+  "cta": {
+    "title": "Klaar om mee te doen?",
+    "button": "Registreer als vrijwilliger",
+    "subtitle": "Aanmeldingen sluiten 31 juli 2026"
+  }
+}

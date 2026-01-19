@@ -1,0 +1,71 @@
+{
+  "title": "Vrijwilligersregistratie",
+  "subtitle": "Sluit je aan bij het EKC 2026 team",
+  "steps": {
+    "personal": "Persoonlijke gegevens",
+    "preferences": "Voorkeuren",
+    "review": "Controleren"
+  },
+  "fields": {
+    "firstName": {
+      "label": "Voornaam",
+      "placeholder": "Voer uw voornaam in"
+    },
+    "lastName": {
+      "label": "Achternaam",
+      "placeholder": "Voer uw achternaam in"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "uw@email.nl"
+    },
+    "phone": {
+      "label": "Telefoonnummer",
+      "placeholder": "+31 6 12345678"
+    },
+    "languages": {
+      "label": "Talen die u spreekt",
+      "placeholder": "Selecteer talen"
+    },
+    "roles": {
+      "label": "Voorkeur vrijwilligersrollen",
+      "placeholder": "Selecteer rollen",
+      "options": {
+        "registration": "Registratie & Accreditatie",
+        "hospitality": "Gastvrijheid & VIP-service",
+        "transport": "Vervoer & Logistiek",
+        "medical": "Medisch & Eerste hulp",
+        "media": "Media & Communicatie",
+        "venue": "Locatiebeheer"
+      }
+    },
+    "availability": {
+      "label": "Uw beschikbaarheid",
+      "placeholder": "Laat ons weten wanneer u beschikbaar bent (bijv. 16-20 okt, alleen weekenden, etc.)"
+    },
+    "notes": {
+      "label": "Aanvullende informatie",
+      "placeholder": "Speciale vaardigheden, eerdere ervaring of opmerkingen?"
+    }
+  },
+  "validation": {
+    "required": "Dit veld is verplicht",
+    "email": "Voer een geldig e-mailadres in"
+  },
+  "actions": {
+    "submit": "Aanmelding verzenden",
+    "submitting": "Verzenden..."
+  },
+  "thankYou": {
+    "title": "Bedankt!",
+    "message": "Uw vrijwilligersaanmelding is succesvol verzonden. We bekijken uw aanmelding en nemen binnenkort contact met u op.",
+    "email": "U ontvangt binnenkort een bevestigingsmail.",
+    "next": "Wat nu?",
+    "steps": [
+      "We bekijken uw aanmelding binnen 2-3 weken",
+      "U ontvangt een e-mail met de volgende stappen",
+      "Geselecteerde vrijwilligers worden uitgenodigd voor een online introductie"
+    ],
+    "backHome": "Terug naar home"
+  }
+}

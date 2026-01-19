@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Europameisterschaft im Korbball 2026",
+    "subtitle": "Tschechien",
+    "date": "16.-20. Oktober 2026",
+    "cities": "Prostějov · Otrokovice · Zlín"
+  },
+  "cta": {
+    "volunteer": "Als Freiwilliger registrieren",
+    "learnMore": "Mehr über die Meisterschaft"
+  },
+  "countdown": {
+    "title": "Meisterschaft beginnt in",
+    "days": "Tage",
+    "hours": "Stunden",
+    "minutes": "Minuten"
+  },
+  "highlights": {
+    "title": "Event-Highlights",
+    "teams": "Teams",
+    "cities": "Städte",
+    "venues": "Wettkampfstätten",
+    "volunteers": "Freiwillige gesucht"
+  }
+}

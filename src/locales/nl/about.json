@@ -1,0 +1,18 @@
+{
+  "title": "Over het kampioenschap",
+  "intro": "Het Europees Kampioenschap Korfbal 2026 brengt de beste teams uit heel Europa samen voor een spannende week van competitie in het hart van Tsjechië.",
+  "sections": {
+    "history": {
+      "title": "Toernooigeschiedenis",
+      "content": "Het Europees Kampioenschap Korfbal wordt sinds 1998 gehouden en toont het hoogste niveau van competitief korfbal in Europa."
+    },
+    "czechia": {
+      "title": "Waarom Tsjechië?",
+      "content": "Tsjechië heeft een rijke traditie in korfbal en biedt faciliteiten van wereldklasse in drie prachtige Moravische steden."
+    },
+    "format": {
+      "title": "Competitieformat",
+      "content": "16 nationale teams strijden in groepsfases gevolgd door knock-outronden, culminerend in de kampioensfinale."
+    }
+  }
+}

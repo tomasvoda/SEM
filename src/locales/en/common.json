@@ -1,0 +1,47 @@
+{
+    "appName": "EKC 2026",
+    "navigation": {
+        "home": "Home",
+        "teams": {
+            "title": "Teams",
+            "subtitle": "Registered Nations & Rankings",
+            "search": "Search country...",
+            "registered": "Registered",
+            "rank": "RANK"
+        },
+        "program": "Program",
+        "venues": "Venues",
+        "volunteers": "Volunteers",
+        "contact": "Contact",
+        "settings": "Settings"
+    },
+    "actions": {
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "close": "Close",
+        "learnMore": "Learn More",
+        "register": "Register"
+    },
+    "language": {
+        "system": "System Default",
+        "en": "English",
+        "cs": "Čeština",
+        "nl": "Nederlands",
+        "de": "Deutsch",
+        "fr": "Français"
+    },
+    "theme": {
+        "system": "System",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "form": {
+        "required": "Required",
+        "optional": "Optional",
+        "error": "Please check your input",
+        "success": "Success!"
+    }
+}

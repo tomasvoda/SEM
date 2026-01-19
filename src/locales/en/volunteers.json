@@ -1,0 +1,33 @@
+{
+    "title": "Volunteer with Us",
+    "hero": {
+        "title": "Be Part of the Largest Korfball Event in Europe",
+        "subtitle": "Join our team of dedicated volunteers for EURO 2026"
+    },
+    "why": {
+        "title": "Why Volunteer?",
+        "reasons": [
+            "Be in the heart of the biggest European championship",
+            "Join a great team and meet people from all over Europe",
+            "Gain unique experiences and valuable skills",
+            "Receive an official certificate for your CV",
+            "Get a volunteer kit and free meals",
+            "Free access to all championship matches",
+            "Team building activities and post-finale party"
+        ]
+    },
+    "roles": {
+        "title": "Volunteer Roles",
+        "registration": "Registration & Accreditation",
+        "hospitality": "Hospitality & Guest Services",
+        "transport": "Transportation & Logistics",
+        "medical": "Medical & First Aid",
+        "media": "Media & Communications",
+        "venue": "Venue Operations"
+    },
+    "cta": {
+        "title": "Ready to Join?",
+        "button": "Register as Volunteer",
+        "subtitle": "Applications close July 31, 2026"
+    }
+}

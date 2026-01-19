@@ -1,0 +1,41 @@
+{
+  "appName": "EKC 2026",
+  "navigation": {
+    "home": "Accueil",
+    "about": "À propos",
+    "program": "Programme",
+    "venues": "Lieux",
+    "volunteers": "Bénévoles",
+    "contact": "Contact",
+    "settings": "Paramètres"
+  },
+  "actions": {
+    "back": "Retour",
+    "next": "Suivant",
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "learnMore": "En savoir plus",
+    "register": "S'inscrire"
+  },
+  "language": {
+    "system": "Système par défaut",
+    "en": "English",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "fr": "Français"
+  },
+  "theme": {
+    "system": "Système",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "form": {
+    "required": "Obligatoire",
+    "optional": "Facultatif",
+    "error": "Veuillez vérifier votre saisie",
+    "success": "Succès!"
+  }
+}

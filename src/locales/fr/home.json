@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "title": "Championnat d'Europe de Korfbal 2026",
+    "subtitle": "République tchèque",
+    "date": "16-20 octobre 2026",
+    "cities": "Prostějov · Otrokovice · Zlín"
+  },
+  "cta": {
+    "volunteer": "S'inscrire comme bénévole",
+    "learnMore": "En savoir plus sur le championnat"
+  },
+  "countdown": {
+    "title": "Le championnat commence dans",
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes": "Minutes"
+  },
+  "highlights": {
+    "title": "Points forts de l'événement",
+    "teams": "Équipes",
+    "cities": "Villes",
+    "venues": "Lieux de compétition",
+    "volunteers": "Bénévoles recherchés"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Lieux de compétition",
+  "subtitle": "Trois magnifiques villes moraves",
+  "cities": {
+    "prostejov": {
+      "name": "Prostějov",
+      "description": "Lieu de compétition principal avec des installations sportives modernes",
+      "venue": "Sportcentrum DDM",
+      "capacity": "1 200 spectateurs"
+    },
+    "otrokovice": {
+      "name": "Otrokovice",
+      "description": "Deuxième lieu près de Zlín",
+      "venue": "Halle municipale des sports",
+      "capacity": "800 spectateurs"
+    },
+    "zlin": {
+      "name": "Zlín",
+      "description": "Ville historique avec une excellente infrastructure",
+      "venue": "Zimní Stadion Luďka Čajky",
+      "capacity": "1 000 spectateurs"
+    }
+  },
+  "transport": {
+    "title": "Transport",
+    "description": "Service de navette gratuit entre les lieux pendant le tournoi"
+  }
+}

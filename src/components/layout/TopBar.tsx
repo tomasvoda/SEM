@@ -40,16 +40,9 @@ export function TopBar() {
             {/* Glass strip background removed in favor of direct styling */}
 
             <div className="flex items-center gap-4">
-                <div className="flex items-center gap-3">
-                    <img
-                        src="/korfby.jpg"
-                        alt="Korfby"
-                        className="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm"
-                    />
-                    <h2 className="text-xs font-medium text-[var(--text-secondary)] tracking-widest uppercase opacity-80">
-                        European Korfball Championship 2026 <span className="mx-2 opacity-30">|</span> Czechia
-                    </h2>
-                </div>
+                <h2 className="text-xs font-medium text-[var(--text-secondary)] tracking-widest uppercase opacity-80">
+                    European Korfball Championship 2026 <span className="mx-2 opacity-30">|</span> Czechia
+                </h2>
             </div>
 
             <div className="flex items-center gap-2">

@@ -1,0 +1,31 @@
+{
+  "title": "Devenir bénévole",
+  "hero": {
+    "title": "Faites partie du championnat",
+    "subtitle": "Rejoignez notre équipe de bénévoles dévoués"
+  },
+  "why": {
+    "title": "Pourquoi devenir bénévole?",
+    "reasons": [
+      "Faites partie d'un grand événement sportif européen",
+      "Rencontrez des gens de toute l'Europe",
+      "Acquérez une expérience précieuse en gestion d'événements",
+      "Recevez un certificat officiel de bénévole",
+      "Repas et transport gratuits pendant l'événement"
+    ]
+  },
+  "roles": {
+    "title": "Rôles des bénévoles",
+    "registration": "Inscription et accréditation",
+    "hospitality": "Hospitalité et service aux invités",
+    "transport": "Transport et logistique",
+    "medical": "Médical et premiers secours",
+    "media": "Médias et communications",
+    "venue": "Opérations sur site"
+  },
+  "cta": {
+    "title": "Prêt à vous joindre?",
+    "button": "S'inscrire comme bénévole",
+    "subtitle": "Les candidatures se terminent le 31 juillet 2026"
+  }
+}

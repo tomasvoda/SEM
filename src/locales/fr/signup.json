@@ -1,0 +1,71 @@
+{
+  "title": "Inscription bénévole",
+  "subtitle": "Rejoignez l'équipe EKC 2026",
+  "steps": {
+    "personal": "Informations personnelles",
+    "preferences": "Préférences",
+    "review": "Vérification"
+  },
+  "fields": {
+    "firstName": {
+      "label": "Prénom",
+      "placeholder": "Entrez votre prénom"
+    },
+    "lastName": {
+      "label": "Nom de famille",
+      "placeholder": "Entrez votre nom de famille"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "votre@email.fr"
+    },
+    "phone": {
+      "label": "Numéro de téléphone",
+      "placeholder": "+33 1 23 45 67 89"
+    },
+    "languages": {
+      "label": "Langues que vous parlez",
+      "placeholder": "Sélectionner les langues"
+    },
+    "roles": {
+      "label": "Rôles de bénévole préférés",
+      "placeholder": "Sélectionner les rôles",
+      "options": {
+        "registration": "Inscription et accréditation",
+        "hospitality": "Hospitalité et service aux invités",
+        "transport": "Transport et logistique",
+        "medical": "Médical et premiers secours",
+        "media": "Médias et communications",
+        "venue": "Opérations sur site"
+      }
+    },
+    "availability": {
+      "label": "Votre disponibilité",
+      "placeholder": "Faites-nous savoir quand vous êtes disponible (par ex. 16-20 oct, weekends seulement, etc.)"
+    },
+    "notes": {
+      "label": "Informations supplémentaires",
+      "placeholder": "Compétences particulières, expérience antérieure ou remarques?"
+    }
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "email": "Veuillez entrer une adresse e-mail valide"
+  },
+  "actions": {
+    "submit": "Envoyer la candidature",
+    "submitting": "Envoi en cours..."
+  },
+  "thankYou": {
+    "title": "Merci!",
+    "message": "Votre candidature de bénévole a été soumise avec succès. Nous examinerons votre candidature et vous contacterons bientôt.",
+    "email": "Vous recevrez un e-mail de confirmation sous peu.",
+    "next": "Et maintenant?",
+    "steps": [
+      "Nous examinerons votre candidature dans les 2-3 semaines",
+      "Vous recevrez un e-mail avec les prochaines étapes",
+      "Les bénévoles sélectionnés seront invités à une orientation en ligne"
+    ],
+    "backHome": "Retour à l'accueil"
+  }
+}

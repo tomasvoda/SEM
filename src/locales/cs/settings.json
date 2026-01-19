@@ -1,0 +1,20 @@
+{
+    "title": "Nastavení",
+    "sections": {
+        "appearance": {
+            "title": "Vzhled",
+            "theme": "Téma",
+            "themeDescription": "Vyberte, jak má aplikace vypadat"
+        },
+        "language": {
+            "title": "Jazyk",
+            "select": "Jazyk aplikace",
+            "description": "Vyberte preferovaný jazyk"
+        },
+        "about": {
+            "title": "O aplikaci",
+            "version": "Verze",
+            "copyright": "© 2026 Mistrovství Evropy v korfbalu"
+        }
+    }
+}

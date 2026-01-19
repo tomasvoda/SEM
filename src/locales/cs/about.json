@@ -1,0 +1,18 @@
+{
+    "title": "O mistrovství",
+    "intro": "Mistrovství Evropy v korfbalu 2026 spojí nejlepší týmy z celé Evropy pro vzrušující týden soutěže v srdci České republiky.",
+    "sections": {
+        "history": {
+            "title": "Historie turnaje",
+            "content": "Mistrovství Evropy v korfbalu se koná od roku 1998 a představuje nejvyšší úroveň soutěžního korfbalu v Evropě."
+        },
+        "czechia": {
+            "title": "Proč Česká republika?",
+            "content": "Česká republika má bohatou tradici v korfbalu a nabízí špičková zařízení ve třech krásných moravských městech."
+        },
+        "format": {
+            "title": "Formát soutěže",
+            "content": "16 národních týmů bude soutěžit ve skupinové fázi následované vyřazovacími koly a vyvrcholí mistrovským finále."
+        }
+    }
+}

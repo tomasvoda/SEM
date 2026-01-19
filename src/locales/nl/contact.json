@@ -1,0 +1,35 @@
+{
+  "title": "Contact",
+  "info": {
+    "title": "Neem contact op",
+    "description": "Vragen? We helpen u graag!"
+  },
+  "organizer": {
+    "title": "Toernooi organisator",
+    "name": "Tsjechische Korfbalbond",
+    "email": "info@ekc2026.cz",
+    "phone": "+420 123 456 789"
+  },
+  "sections": {
+    "general": {
+      "title": "Algemene vragen",
+      "email": "info@ekc2026.cz"
+    },
+    "volunteers": {
+      "title": "Vrijwilligersprogramma",
+      "email": "volunteers@ekc2026.cz"
+    },
+    "media": {
+      "title": "Media & Pers",
+      "email": "press@ekc2026.cz"
+    },
+    "teams": {
+      "title": "Teamdelegaties",
+      "email": "teams@ekc2026.cz"
+    }
+  },
+  "social": {
+    "title": "Volg ons",
+    "description": "Blijf op de hoogte via social media"
+  }
+}

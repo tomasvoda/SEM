@@ -1,0 +1,49 @@
+{
+    "title": "Program",
+    "subtitle": "Rozpis zápasů a výsledky • 16.-24. října",
+    "days": {
+        "day1": {
+            "date": "Čtvrtek 16. října",
+            "title": "Zahájení a skupinová fáze",
+            "events": [
+                "10:00 - Slavnostní zahájení",
+                "12:00 - Začátek skupinových zápasů",
+                "18:00 - Uvítací recepce"
+            ]
+        },
+        "day2": {
+            "date": "Pátek 17. října",
+            "title": "Pokračování skupinové fáze",
+            "events": [
+                "09:00 - Dopolední zápasy",
+                "14:00 - Odpolední zápasy"
+            ]
+        },
+        "day3": {
+            "date": "Sobota 18. října",
+            "title": "Čtvrtfinále",
+            "events": [
+                "10:00 - Čtvrtfinále 1 a 2",
+                "15:00 - Čtvrtfinále 3 a 4"
+            ]
+        },
+        "day4": {
+            "date": "Neděle 19. října",
+            "title": "Semifinále",
+            "events": [
+                "11:00 - Semifinále 1",
+                "14:00 - Semifinále 2"
+            ]
+        },
+        "day5": {
+            "date": "Pondělí 20. října",
+            "title": "Finále a zakončení",
+            "events": [
+                "10:00 - Zápas o 3. místo",
+                "14:00 - Mistrovské finále",
+                "16:00 - Vyhlášení vítězů a zakončení"
+            ]
+        }
+    },
+    "note": "Podrobný rozpis zápasů bude zveřejněn blíže k události"
+}

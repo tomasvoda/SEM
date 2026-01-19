@@ -1,0 +1,18 @@
+{
+    "title": "About the Championship",
+    "intro": "The European Korfball Championship 2026 brings together the best teams from across Europe for an exciting week of competition in the heart of Czechia.",
+    "sections": {
+        "history": {
+            "title": "Tournament History",
+            "content": "The European Korfball Championship has been held since 1998 and showcases the highest level of competitive korfball in Europe."
+        },
+        "czechia": {
+            "title": "Why Czechia?",
+            "content": "Czechia has a rich tradition in korfball and offers world-class facilities across three beautiful Moravian cities."
+        },
+        "format": {
+            "title": "Competition Format",
+            "content": "16 national teams will compete in group stages followed by knockout rounds, culminating in the championship final."
+        }
+    }
+}

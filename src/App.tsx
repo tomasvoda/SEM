@@ -4,7 +4,7 @@ import { useThemeStore } from './store/themeStore';
 import { useEffect } from 'react';
 
 // Placeholders
-import { DashboardPage } from './features/placeholders/DashboardPage';
+import { AdminDashboard } from './features/admin/AdminDashboard';
 import { PlaceholderPage } from './features/placeholders/PlaceholderPage';
 import { UnderConstructionPage } from './features/placeholders/UnderConstructionPage';
 import { SettingsPage } from './features/settings/SettingsPage';
@@ -46,6 +46,18 @@ import { TasksPage } from './features/admin/TasksPage';
 import { VolunteersPage } from './features/admin/VolunteersPage';
 import { VolunteerRegistrationPage } from './features/public/VolunteerRegistrationPage';
 
+// Mobile Public Pages
+import { MobileLayout } from './components/mobile/MobileLayout';
+import { MobileHomePage } from './features/public-mobile/MobileHomePage';
+import { MobileTeamsPage } from './features/public-mobile/MobileTeamsPage';
+import { MobileProgramPage } from './features/public-mobile/MobileProgramPage';
+import { MobileVenuesPage } from './features/public-mobile/MobileVenuesPage';
+import { MobileVolunteersPage, MobileContactPage } from './features/public-mobile/MobilePages';
+import { MobileSettingsPage } from './features/public-mobile/MobileSettingsPage';
+import { MobileVolunteerSignupPage } from './features/public-mobile/MobileVolunteerSignupPage';
+import { MobileThankYouPage } from './features/public-mobile/MobileThankYouPage';
+import { RootRedirect } from './components/RootRedirect';
+
 function App() {
   const { theme } = useThemeStore();
 
@@ -74,14 +86,30 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Mobile Public Routes - Separate from desktop */}
+        <Route path="/mobile" element={<MobileLayout />}>
+          <Route index element={<Navigate to="home" replace />} />
+          <Route path="home" element={<MobileHomePage />} />
+          <Route path="teams" element={<MobileTeamsPage />} />
+          <Route path="program" element={<MobileProgramPage />} />
+          <Route path="venues" element={<MobileVenuesPage />} />
+          <Route path="volunteers" element={<MobileVolunteersPage />} />
+          <Route path="contact" element={<MobileContactPage />} />
+          <Route path="settings" element={<MobileSettingsPage />} />
+          <Route path="volunteer-signup" element={<MobileVolunteerSignupPage />} />
+          <Route path="thank-you" element={<MobileThankYouPage />} />
+        </Route>
+
+        {/* Desktop Routes - Unchanged */}
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Navigate to="/admin/dashboard" replace />} />
+          {/* Root route - auto-detect device and redirect */}
+          <Route path="/" element={<RootRedirect />} />
 
           {/* Admin Section - Root and Dashboard */}
           <Route path="/admin">
             <Route index element={<Navigate to="dashboard" replace />} />
             <Route element={<AdminLayout />}>
-              <Route path="dashboard" element={<DashboardPage />} />
+              <Route path="dashboard" element={<AdminDashboard />} />
 
               <Route path="hotels" element={<HotelsList />} />
               <Route path="hotels/:id" element={<HotelDetail />} />

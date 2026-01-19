@@ -1,0 +1,35 @@
+{
+  "title": "Kontakt",
+  "info": {
+    "title": "Kontaktieren Sie uns",
+    "description": "Haben Sie Fragen? Wir helfen Ihnen gerne!"
+  },
+  "organizer": {
+    "title": "Turnier-Organisator",
+    "name": "Tschechischer Korbballverband",
+    "email": "info@ekc2026.cz",
+    "phone": "+420 123 456 789"
+  },
+  "sections": {
+    "general": {
+      "title": "Allgemeine Anfragen",
+      "email": "info@ekc2026.cz"
+    },
+    "volunteers": {
+      "title": "Freiwilligen-Programm",
+      "email": "volunteers@ekc2026.cz"
+    },
+    "media": {
+      "title": "Medien & Presse",
+      "email": "press@ekc2026.cz"
+    },
+    "teams": {
+      "title": "Team-Delegationen",
+      "email": "teams@ekc2026.cz"
+    }
+  },
+  "social": {
+    "title": "Folgen Sie uns",
+    "description": "Bleiben Sie auf dem Laufenden über soziale Medien"
+  }
+}

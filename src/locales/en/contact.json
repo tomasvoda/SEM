@@ -1,0 +1,35 @@
+{
+    "title": "Contact Us",
+    "info": {
+        "title": "Get in Touch",
+        "description": "Have questions? We're here to help!"
+    },
+    "organizer": {
+        "title": "Tournament Organizer",
+        "name": "Czech Korfball Association",
+        "email": "info@ekc2026.cz",
+        "phone": "+420 123 456 789"
+    },
+    "sections": {
+        "general": {
+            "title": "General Inquiries",
+            "email": "info@ekc2026.cz"
+        },
+        "volunteers": {
+            "title": "Volunteer Program",
+            "email": "volunteers@ekc2026.cz"
+        },
+        "media": {
+            "title": "Media & Press",
+            "email": "press@ekc2026.cz"
+        },
+        "teams": {
+            "title": "Team Delegations",
+            "email": "teams@ekc2026.cz"
+        }
+    },
+    "social": {
+        "title": "Follow Us",
+        "description": "Stay updated on social media"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "title": "Herní místa",
+    "subtitle": "Tři krásná moravská města",
+    "cities": {
+        "prostejov": {
+            "name": "Prostějov",
+            "venue": "Sportcentrum DDM",
+            "summary": "Prostějov je známý jako město módy a domov krásné secesní radnice. Okolí nabízí malebnou Plumlovskou přehradu s unikátním zámkem.",
+            "capacity": "1 200 diváků"
+        },
+        "otrokovice": {
+            "name": "Otrokovice",
+            "venue": "Městská sportovní hala",
+            "summary": "Průmyslové srdce s unikátní baťovskou architekturou. Město na soutoku Moravy a Dřevnice je klíčovým bodem historického Baťova kanálu.",
+            "capacity": "800 diváků"
+        },
+        "zlin": {
+            "name": "Zlín",
+            "venue": "DATART aréna",
+            "summary": "Světoznámé město Tomáše Bati. Milovníci architektury ocení funkcionalistický mrakodrap „21“ i unikátní muzeum obuvi.",
+            "capacity": "3 000 diváků"
+        }
+    },
+    "transport": {
+        "title": "Doprava",
+        "description": "Během turnaje zajišťujeme bezplatnou shuttle dopravu mezi místy konání"
+    }
+}

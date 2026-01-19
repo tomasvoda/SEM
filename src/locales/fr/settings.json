@@ -1,0 +1,20 @@
+{
+  "title": "Paramètres",
+  "sections": {
+    "appearance": {
+      "title": "Apparence",
+      "theme": "Thème",
+      "themeDescription": "Choisissez l'apparence de l'application"
+    },
+    "language": {
+      "title": "Langue",
+      "select": "Langue de l'application",
+      "description": "Choisissez votre langue préférée"
+    },
+    "about": {
+      "title": "À propos",
+      "version": "Version",
+      "copyright": "© 2026 Championnat d'Europe de Korfbal"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Einstellungen",
+  "sections": {
+    "appearance": {
+      "title": "Erscheinungsbild",
+      "theme": "Design",
+      "themeDescription": "Wählen Sie, wie die App aussieht"
+    },
+    "language": {
+      "title": "Sprache",
+      "select": "App-Sprache",
+      "description": "Wählen Sie Ihre bevorzugte Sprache"
+    },
+    "about": {
+      "title": "Über",
+      "version": "Version",
+      "copyright": "© 2026 Europameisterschaft im Korbball"
+    }
+  }
+}

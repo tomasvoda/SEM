@@ -1,6 +1,7 @@
 import { LayoutDashboard, Users, Shield, Trophy, Users2, Coins, Bell, Car, Hotel, MapPin, ClipboardCheck, Handshake, ChevronLeft, ChevronRight, ListTodo, ClipboardList } from 'lucide-react';
 import { NavigationItem } from './NavigationItem';
 import { CollapsibleNavigationItem } from './CollapsibleNavigationItem';
+import { LogoEM } from '../ui/LogoEM';
 import { cn } from '../../lib/utils';
 
 interface SidebarProps {
@@ -14,7 +15,6 @@ const navigation = [
     { name: 'Matches', href: '/matches', icon: Trophy },
     { name: 'Delegations', href: '/admin/delegations', icon: Users },
     { name: 'Partners', href: '/partners', icon: Handshake },
-    { name: 'Logistics', href: '/logistics', icon: Car },
 ];
 
 const accommodationNavigation = [
@@ -46,41 +46,23 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
             {/* Ultra-Liquid Glass: No hard lines, deep diffuse shadow, high blur */}
             <div className="flex-1 flex flex-col min-h-0 backdrop-blur-2xl border-r border-white/[0.03] shadow-[30px_0_60px_-15px_rgba(0,0,0,0.3)] bg-gradient-to-r from-transparent via-white/[0.01] to-white/[0.03]">
 
-                {/* Logo Area */}
-                <div className={cn("flex items-center h-14 flex-shrink-0 border-b border-white/[0.02]", isCollapsed ? "justify-center" : "px-6")}>
-                    <div className="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
-                        <div className="relative w-8 h-8 flex items-center justify-center">
-                            {/* Animated Node Network Icon */}
-                            <svg className="w-full h-full text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                {/* Central Hub */}
-                                <circle cx="12" cy="12" r="3" className="fill-brand-500/20 stroke-brand-500" />
-
-                                {/* Orbiting Nodes Group - Animates Rotation */}
-                                <g className="origin-center animate-[spin_10s_linear_infinite]">
-                                    {/* Connection Lines */}
-                                    <line x1="12" y1="12" x2="12" y2="4" className="stroke-brand-500/40" />
-                                    <line x1="12" y1="12" x2="19" y2="16" className="stroke-brand-500/40" />
-                                    <line x1="12" y1="12" x2="5" y2="16" className="stroke-brand-500/40" />
-
-                                    {/* Satellite Nodes */}
-                                    <circle cx="12" cy="4" r="1.5" className="fill-brand-500 stroke-brand-500" />
-                                    <circle cx="19" cy="16" r="1.5" className="fill-purple-500 stroke-purple-500" />
-                                    <circle cx="5" cy="16" r="1.5" className="fill-emerald-500 stroke-emerald-500" />
-                                </g>
-                            </svg>
-                        </div>
-
-                        {!isCollapsed && (
-                            <div className="flex flex-col min-w-0 animate-in fade-in duration-300">
-                                <h1 className="text-[9px] font-bold uppercase tracking-[0.15em] text-[var(--text-muted)] leading-none whitespace-nowrap">
-                                    Sport Event
-                                </h1>
-                                <h1 className="text-[9px] font-bold uppercase tracking-[0.15em] text-[var(--text-muted)] leading-none mt-1 whitespace-nowrap">
-                                    Management
-                                </h1>
-                            </div>
-                        )}
+                {/* Logo Area - Premium Presentation */}
+                <div className={cn(
+                    "flex items-center h-16 flex-shrink-0 border-b border-white/[0.02] relative",
+                    isCollapsed ? "justify-center px-2" : "px-4"
+                )}>
+                    {/* Logo with dedicated zone */}
+                    <div className="flex items-center justify-center">
+                        <LogoEM />
                     </div>
+
+                    {/* Subtle vertical divider (enterprise style) - only when not collapsed */}
+                    {!isCollapsed && (
+                        <div
+                            className="absolute right-4 top-1/2 -translate-y-1/2 h-8 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent"
+                            aria-hidden="true"
+                        />
+                    )}
                 </div>
 
                 {/* Navigation */}
@@ -115,6 +97,8 @@ export function Sidebar({ isCollapsed = false, toggle }: SidebarProps) {
                             <NavigationItem key={item.name} {...item} isCollapsed={isCollapsed} />
                         ))}
                     </CollapsibleNavigationItem>
+
+                    <NavigationItem name="Logistics" href="/logistics" icon={Car} isCollapsed={isCollapsed} />
 
 
                     {!isCollapsed && <p className="px-2 text-xs font-semibold text-[var(--color-text-muted)] capitalize tracking-wider mt-6 mb-2 animate-in fade-in">Admin</p>}

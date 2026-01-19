@@ -1,0 +1,18 @@
+{
+  "title": "À propos du championnat",
+  "intro": "Le Championnat d'Europe de Korfbal 2026 réunit les meilleures équipes de toute l'Europe pour une semaine passionnante de compétition au cœur de la République tchèque.",
+  "sections": {
+    "history": {
+      "title": "Histoire du tournoi",
+      "content": "Le Championnat d'Europe de Korfbal existe depuis 1998 et présente le plus haut niveau de korfbal compétitif en Europe."
+    },
+    "czechia": {
+      "title": "Pourquoi la République tchèque?",
+      "content": "La République tchèque possède une riche tradition de korfbal et offre des installations de classe mondiale dans trois magnifiques villes moraves."
+    },
+    "format": {
+      "title": "Format de la compétition",
+      "content": "16 équipes nationales s'affrontent en phases de groupes suivies de tours à élimination directe, aboutissant à la finale du championnat."
+    }
+  }
+}

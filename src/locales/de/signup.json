@@ -1,0 +1,71 @@
+{
+  "title": "Freiwilligen-Registrierung",
+  "subtitle": "Werde Teil des EKC 2026 Teams",
+  "steps": {
+    "personal": "Persönliche Daten",
+    "preferences": "Präferenzen",
+    "review": "Überprüfung"
+  },
+  "fields": {
+    "firstName": {
+      "label": "Vorname",
+      "placeholder": "Geben Sie Ihren Vornamen ein"
+    },
+    "lastName": {
+      "label": "Nachname",
+      "placeholder": "Geben Sie Ihren Nachnamen ein"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "ihre@email.de"
+    },
+    "phone": {
+      "label": "Telefonnummer",
+      "placeholder": "+49 123 456789"
+    },
+    "languages": {
+      "label": "Sprachen, die Sie sprechen",
+      "placeholder": "Sprachen auswählen"
+    },
+    "roles": {
+      "label": "Bevorzugte Freiwilligen-Rollen",
+      "placeholder": "Rollen auswählen",
+      "options": {
+        "registration": "Registrierung & Akkreditierung",
+        "hospitality": "Gastfreundschaft & Gästeservice",
+        "transport": "Transport & Logistik",
+        "medical": "Medizinisch & Erste Hilfe",
+        "media": "Medien & Kommunikation",
+        "venue": "Hallenbetrieb"
+      }
+    },
+    "availability": {
+      "label": "Ihre Verfügbarkeit",
+      "placeholder": "Lassen Sie uns wissen, wann Sie verfügbar sind (z.B. 16.-20. Okt, nur Wochenenden, etc.)"
+    },
+    "notes": {
+      "label": "Zusätzliche Informationen",
+      "placeholder": "Besondere Fähigkeiten, Vorerfahrung oder Anmerkungen?"
+    }
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "actions": {
+    "submit": "Anmeldung absenden",
+    "submitting": "Wird gesendet..."
+  },
+  "thankYou": {
+    "title": "Vielen Dank!",
+    "message": "Ihre Freiwilligen-Anmeldung wurde erfolgreich übermittelt. Wir prüfen Ihre Anmeldung und melden uns in Kürze bei Ihnen.",
+    "email": "Sie erhalten in Kürze eine Bestätigungs-E-Mail.",
+    "next": "Wie geht es weiter?",
+    "steps": [
+      "Wir prüfen Ihre Anmeldung innerhalb von 2-3 Wochen",
+      "Sie erhalten eine E-Mail mit den nächsten Schritten",
+      "Ausgewählte Freiwillige werden zu einer Online-Einführung eingeladen"
+    ],
+    "backHome": "Zurück zur Startseite"
+  }
+}

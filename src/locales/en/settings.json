@@ -1,0 +1,20 @@
+{
+    "title": "Settings",
+    "sections": {
+        "appearance": {
+            "title": "Appearance",
+            "theme": "Theme",
+            "themeDescription": "Choose how the app looks"
+        },
+        "language": {
+            "title": "Language",
+            "select": "App Language",
+            "description": "Choose your preferred language"
+        },
+        "about": {
+            "title": "About",
+            "version": "Version",
+            "copyright": "© 2026 European Korfball Championship"
+        }
+    }
+}

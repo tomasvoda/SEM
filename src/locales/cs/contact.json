@@ -1,0 +1,35 @@
+{
+    "title": "Kontaktujte nás",
+    "info": {
+        "title": "Ozvěte se nám",
+        "description": "Máte dotazy? Rádi vám pomůžeme!"
+    },
+    "organizer": {
+        "title": "Pořadatel turnaje",
+        "name": "Český korfbalový svaz",
+        "email": "info@ekc2026.cz",
+        "phone": "+420 123 456 789"
+    },
+    "sections": {
+        "general": {
+            "title": "Obecné dotazy",
+            "email": "info@ekc2026.cz"
+        },
+        "volunteers": {
+            "title": "Program dobrovolníků",
+            "email": "volunteers@ekc2026.cz"
+        },
+        "media": {
+            "title": "Média a tisk",
+            "email": "press@ekc2026.cz"
+        },
+        "teams": {
+            "title": "Týmové delegace",
+            "email": "teams@ekc2026.cz"
+        }
+    },
+    "social": {
+        "title": "Sledujte nás",
+        "description": "Buďte v obraze na sociálních sítích"
+    }
+}

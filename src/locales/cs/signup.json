@@ -1,0 +1,105 @@
+{
+    "title": "Registrace dobrovolníka",
+    "subtitle": "Přidej se k týmu EKC 2026",
+    "intro": {
+        "title": "Staň se srdcem šampionátu",
+        "description": "Hledáme nadšené lidi, kteří nám pomohou uspořádat největší korfbalovou akci v Evropě. Jako dobrovolník získáte jedinečný pohled do zákulisí velkého sportovního eventu a stanete se součástí naší korfbalové rodiny."
+    },
+    "benefits": {
+        "title": "Co získáte jako dobrovolník?",
+        "items": [
+            "Oficiální certifikát a balíček oblečení",
+            "Stravování zdarma během směn",
+            "Vstup na všechny zápasy",
+            "Nové přátele a nezapomenutelné zážitky"
+        ]
+    },
+    "steps": {
+        "personal": "Osobní údaje",
+        "preferences": "Preference",
+        "review": "Kontrola"
+    },
+    "fields": {
+        "firstName": {
+            "label": "Jméno",
+            "placeholder": "Zadejte své jméno"
+        },
+        "lastName": {
+            "label": "Příjmení",
+            "placeholder": "Zadejte své příjmení"
+        },
+        "email": {
+            "label": "E-mail",
+            "placeholder": "vas@email.cz"
+        },
+        "phone": {
+            "label": "Telefonní číslo",
+            "placeholder": "+420 123 456 789"
+        },
+        "homeClub": {
+            "label": "Domovský klub",
+            "placeholder": "např. KC Brno"
+        },
+        "birthDate": {
+            "label": "Datum narození"
+        },
+        "locations": {
+            "label": "Preferované lokality"
+        },
+        "languages": {
+            "label": "Jazyky, kterými mluvíte",
+            "placeholder": "Vyberte jazyky"
+        },
+        "roles": {
+            "label": "Preferované role",
+            "placeholder": "Vyberte role",
+            "options": {
+                "registration": "Registrace a akreditace",
+                "hospitality": "Hospitality a služby hostům",
+                "transport": "Doprava a logistika",
+                "medical": "Zdravotní péče a první pomoc",
+                "media": "Média a komunikace",
+                "venue": "Provoz hal"
+            }
+        },
+        "availability": {
+            "label": "Vaše dostupnost",
+            "status": {
+                "full": "Celý den",
+                "morning": "Dopoledne",
+                "afternoon": "Odpoledne",
+                "none": "Není k dispozici"
+            },
+            "placeholder": "Dejte nám vědět, kdy jste k dispozici"
+        },
+        "gdpr": {
+            "label": "Souhlasím se zpracováním osobních údajů pro účely koordinace dobrovolníků na EURO 2026."
+        },
+        "notes": {
+            "label": "Další informace",
+            "placeholder": "Máte nějaké speciální dovednosti, předchozí zkušenosti nebo poznámky?"
+        }
+    },
+    "validation": {
+        "required": "Toto pole je povinné",
+        "email": "Zadejte prosím platnou e-mailovou adresu"
+    },
+    "actions": {
+        "next": "Další: Dostupnost",
+        "continue_to_form": "Pokračovat k registraci",
+        "submit": "Odeslat přihlášku",
+        "submitting": "Odesílám..."
+    },
+    "thankYou": {
+        "title": "Děkujeme!",
+        "message": "Vaše přihláška dobrovolníka byla úspěšně odeslána. Vaši přihlášku zkontrolujeme a brzy se vám ozveme.",
+        "email": "Potvrzení obdržíte e-mailem.",
+        "next": "Co bude dál?",
+        "steps": [
+            "Vaši přihlášku zkontrolujeme do 2-3 týdnů",
+            "E-mailem vám zašleme další kroky",
+            "Vybraní dobrovolníci budou pozváni na online orientaci"
+        ],
+        "backHome": "Zpět na domovskou stránku"
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Wedstrijdlocaties",
+  "subtitle": "Drie prachtige Moravische steden",
+  "cities": {
+    "prostejov": {
+      "name": "Prostějov",
+      "description": "Hoofdwedstrijdlocatie met moderne sportfaciliteiten",
+      "venue": "Sportcentrum DDM",
+      "capacity": "1.200 toeschouwers"
+    },
+    "otrokovice": {
+      "name": "Otrokovice",
+      "description": "Tweede locatie bij Zlín",
+      "venue": "Gemeentelijke sporthal",
+      "capacity": "800 toeschouwers"
+    },
+    "zlin": {
+      "name": "Zlín",
+      "description": "Historische stad met uitstekende infrastructuur",
+      "venue": "Zimní Stadion Luďka Čajky",
+      "capacity": "1.000 toeschouwers"
+    }
+  },
+  "transport": {
+    "title": "Vervoer",
+    "description": "Gratis shuttleservice tussen locaties tijdens het toernooi"
+  }
+}

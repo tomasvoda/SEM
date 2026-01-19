@@ -1,0 +1,20 @@
+{
+  "title": "Instellingen",
+  "sections": {
+    "appearance": {
+      "title": "Uiterlijk",
+      "theme": "Thema",
+      "themeDescription": "Kies hoe de app eruitziet"
+    },
+    "language": {
+      "title": "Taal",
+      "select": "App-taal",
+      "description": "Kies uw voorkeurstaal"
+    },
+    "about": {
+      "title": "Over",
+      "version": "Versie",
+      "copyright": "© 2026 Europees Kampioenschap Korfbal"
+    }
+  }
+}

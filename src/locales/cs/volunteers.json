@@ -1,0 +1,33 @@
+{
+    "title": "Staň se dobrovolníkem",
+    "hero": {
+        "title": "Staň se součástí největší korfbalové akce starého kontinentu",
+        "subtitle": "Přidej se k našemu týmu zapálených dobrovolníků na EURO 2026"
+    },
+    "why": {
+        "title": "Proč se stát dobrovolníkem?",
+        "reasons": [
+            "Buď v centru dění největšího evropského šampionátu",
+            "Staň se součástí skvělého týmu a poznej lidi z celé Evropy",
+            "Získej jedinečné zážitky a cenné zkušenosti",
+            "Získej oficiální certifikát pro tvůj životopis",
+            "Obdržíš balíček oblečení a stravování zdarma",
+            "Vstup na všechny zápasy šampionátu",
+            "Společný teambuilding a party po finále"
+        ]
+    },
+    "roles": {
+        "title": "Role dobrovolníků",
+        "registration": "Registrace a akreditace",
+        "hospitality": "Hospitality a služby hostům",
+        "transport": "Doprava a logistika",
+        "medical": "Zdravotní péče a první pomoc",
+        "media": "Média a komunikace",
+        "venue": "Provoz hal"
+    },
+    "cta": {
+        "title": "Připraven se přidat?",
+        "button": "Registrovat se jako dobrovolník",
+        "subtitle": "Přihlášky končí 31. července 2026"
+    }
+}

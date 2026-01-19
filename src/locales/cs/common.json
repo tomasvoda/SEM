@@ -1,0 +1,47 @@
+{
+    "appName": "EKC 2026",
+    "navigation": {
+        "home": "Domů",
+        "teams": {
+            "title": "Týmy",
+            "subtitle": "Registrované země a žebříček",
+            "search": "Hledat zemi...",
+            "registered": "Registrováno",
+            "rank": "ŽEBŘÍČEK"
+        },
+        "program": "Program",
+        "venues": "Haly",
+        "volunteers": "Dobrovolníci",
+        "contact": "Kontakt",
+        "settings": "Nastavení"
+    },
+    "actions": {
+        "back": "Zpět",
+        "next": "Další",
+        "submit": "Odeslat",
+        "cancel": "Zrušit",
+        "save": "Uložit",
+        "close": "Zavřít",
+        "learnMore": "Zjistit více",
+        "register": "Registrovat"
+    },
+    "language": {
+        "system": "Systémové nastavení",
+        "en": "English",
+        "cs": "Čeština",
+        "nl": "Nederlands",
+        "de": "Deutsch",
+        "fr": "Français"
+    },
+    "theme": {
+        "system": "Systémové",
+        "light": "Světlé",
+        "dark": "Tmavé"
+    },
+    "form": {
+        "required": "Povinné",
+        "optional": "Nepovinné",
+        "error": "Zkontrolujte prosím své údaje",
+        "success": "Úspěch!"
+    }
+}

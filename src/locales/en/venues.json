@@ -1,0 +1,28 @@
+{
+    "title": "Competition Venues",
+    "subtitle": "Three beautiful cities in Moravia",
+    "cities": {
+        "prostejov": {
+            "name": "Prostějov",
+            "venue": "Sportcentrum DDM",
+            "summary": "Prostějov is known as the city of fashion and home to the beautiful Art Nouveau town hall. The surroundings offer the scenic Plumlov dam with its unique castle.",
+            "capacity": "1,200 spectators"
+        },
+        "otrokovice": {
+            "name": "Otrokovice",
+            "venue": "Městská sportovní hala",
+            "summary": "An industrial heart with unique Baťa architecture. Located at the confluence of the Morava and Dřevnice rivers, it is a key point on the historic Baťa Canal.",
+            "capacity": "800 spectators"
+        },
+        "zlin": {
+            "name": "Zlín",
+            "venue": "DATART aréna",
+            "summary": "The world-famous city of Tomáš Baťa. Architecture enthusiasts will love the functionalist \"21\" skyscraper and the unique shoe-making museum.",
+            "capacity": "3,000 spectators"
+        }
+    },
+    "transport": {
+        "title": "Getting Around",
+        "description": "Free shuttle service between venues during the tournament"
+    }
+}

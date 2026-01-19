@@ -1,0 +1,28 @@
+{
+  "title": "Wettkampfstätten",
+  "subtitle": "Drei wunderschöne mährische Städte",
+  "cities": {
+    "prostejov": {
+      "name": "Prostějov",
+      "description": "Hauptwettkampfstätte mit modernen Sporteinrichtungen",
+      "venue": "Sportcentrum DDM",
+      "capacity": "1.200 Zuschauer"
+    },
+    "otrokovice": {
+      "name": "Otrokovice",
+      "description": "Zweite Austragungsstätte nahe Zlín",
+      "venue": "Städtische Sporthalle",
+      "capacity": "800 Zuschauer"
+    },
+    "zlin": {
+      "name": "Zlín",
+      "description": "Historische Stadt mit ausgezeichneter Infrastruktur",
+      "venue": "Zimní Stadion Luďka Čajky",
+      "capacity": "1.000 Zuschauer"
+    }
+  },
+  "transport": {
+    "title": "Transport",
+    "description": "Kostenloser Shuttle-Service zwischen den Austragungsorten während des Turniers"
+  }
+}

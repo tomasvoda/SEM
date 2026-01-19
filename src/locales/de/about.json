@@ -1,0 +1,18 @@
+{
+  "title": "Über die Meisterschaft",
+  "intro": "Die Europameisterschaft im Korbball 2026 bringt die besten Teams aus ganz Europa für eine spannende Woche des Wettbewerbs im Herzen Tschechiens zusammen.",
+  "sections": {
+    "history": {
+      "title": "Turniergeschichte",
+      "content": "Die Europameisterschaft im Korbball wird seit 1998 ausgetragen und zeigt das höchste Niveau des Wettkampf-Korbball in Europa."
+    },
+    "czechia": {
+      "title": "Warum Tschechien?",
+      "content": "Tschechien hat eine reiche Tradition im Korbball und bietet erstklassige Einrichtungen in drei wunderschönen mährischen Städten."
+    },
+    "format": {
+      "title": "Wettkampfformat",
+      "content": "16 Nationalteams treten in Gruppenphasen an, gefolgt von K.-o.-Runden, die im Meisterschaftsfinale gipfeln."
+    }
+  }
+}

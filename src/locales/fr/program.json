@@ -1,0 +1,49 @@
+{
+  "title": "Programme du tournoi",
+  "subtitle": "16-20 octobre 2026",
+  "days": {
+    "day1": {
+      "date": "Jeudi 16 octobre",
+      "title": "Ouverture et phase de groupes",
+      "events": [
+        "10:00 - Cérémonie d'ouverture",
+        "12:00 - Début des matchs de poules",
+        "18:00 - Réception de bienvenue"
+      ]
+    },
+    "day2": {
+      "date": "Vendredi 17 octobre",
+      "title": "Suite de la phase de groupes",
+      "events": [
+        "09:00 - Matchs du matin",
+        "14:00 - Matchs de l'après-midi"
+      ]
+    },
+    "day3": {
+      "date": "Samedi 18 octobre",
+      "title": "Quarts de finale",
+      "events": [
+        "10:00 - Quarts de finale 1 et 2",
+        "15:00 - Quarts de finale 3 et 4"
+      ]
+    },
+    "day4": {
+      "date": "Dimanche 19 octobre",
+      "title": "Demi-finales",
+      "events": [
+        "11:00 - Demi-finale 1",
+        "14:00 - Demi-finale 2"
+      ]
+    },
+    "day5": {
+      "date": "Lundi 20 octobre",
+      "title": "Finales et clôture",
+      "events": [
+        "10:00 - Match pour la 3e place",
+        "14:00 - Finale du championnat",
+        "16:00 - Cérémonie de remise des prix et clôture"
+      ]
+    }
+  },
+  "note": "Le calendrier détaillé des matchs sera publié plus près de l'événement"
+}
