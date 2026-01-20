@@ -1,31 +1,78 @@
 {
-  "title": "Freiwilliger werden",
-  "hero": {
-    "title": "Sei Teil der Meisterschaft",
-    "subtitle": "Werde Teil unseres engagierten Freiwilligen-Teams"
+  "title": "Freiwillige",
+  "subtitle": "Werde Teil der Meisterschaft",
+  "intro": {
+    "title": "Wir suchen dich!",
+    "description": "Werde das Herz der Europameisterschaft 2026. Hilf uns in den Hallen, beim Transport oder im Hintergrund.",
+    "continue": "Weiter zur Registrierung"
   },
-  "why": {
-    "title": "Warum Freiwilliger werden?",
-    "reasons": [
-      "Sei Teil einer großen europäischen Sportveranstaltung",
-      "Triff Menschen aus ganz Europa",
-      "Sammle wertvolle Erfahrungen im Eventmanagement",
-      "Erhalte ein offizielles Freiwilligen-Zertifikat",
-      "Kostenlose Verpflegung und Transport während der Veranstaltung"
+  "benefits": {
+    "title": "Was bekommst du?",
+    "items": [
+      "Offizielle Meisterschaftskleidung",
+      "Verpflegung und Getränke inklusive",
+      "Eintritt zu allen Spielen",
+      "Unvergessliche Erlebnisse"
     ]
   },
-  "roles": {
-    "title": "Freiwilligen-Rollen",
-    "registration": "Registrierung & Akkreditierung",
-    "hospitality": "Gastfreundschaft & Gästeservice",
-    "transport": "Transport & Logistik",
-    "medical": "Medizinisch & Erste Hilfe",
-    "media": "Medien & Kommunikation",
-    "venue": "Hallenbetrieb"
+  "fields": {
+    "personal": {
+      "title": "Persönliche Daten"
+    },
+    "firstName": {
+      "label": "Vorname",
+      "placeholder": "Gib deinen Vornamen ein"
+    },
+    "lastName": {
+      "label": "Nachname",
+      "placeholder": "Gib deinen Nachnamen ein"
+    },
+    "email": {
+      "label": "E-Mail",
+      "placeholder": "deine@email.de"
+    },
+    "phone": {
+      "label": "Telefon",
+      "placeholder": "+49 123 456789"
+    },
+    "homeClub": {
+      "label": "Heimatverein (optional)",
+      "placeholder": "Name deines Vereins"
+    },
+    "birthDate": {
+      "label": "Geburtsdatum"
+    },
+    "roles": {
+      "label": "Bevorzugte Rollen",
+      "options": {
+        "transport": "Transport / Fahrer",
+        "registration": "Registrierung / Ergebnisse",
+        "venue": "Hallen-Service",
+        "hospitality": "VIP / Gastfreundschaft",
+        "media": "Medien / Foto",
+        "medical": "Medizinisch / Sonstiges"
+      }
+    },
+    "locations": {
+      "label": "Bevorzugte Standorte"
+    },
+    "availability": {
+      "label": "Verfügbarkeit während des Turniers",
+      "status": {
+        "full": "Ganzer Tag",
+        "morning": "Vormittag",
+        "afternoon": "Nachmittag",
+        "none": "Nicht verfügbar"
+      }
+    },
+    "gdpr": {
+      "label": "Ich stimme der Verarbeitung personenbezogener Daten für die Organisation der Meisterschaft zu."
+    }
   },
-  "cta": {
-    "title": "Bereit mitzumachen?",
-    "button": "Als Freiwilliger registrieren",
-    "subtitle": "Anmeldungen enden am 31. Juli 2026"
+  "actions": {
+    "next": "Nächster Schritt",
+    "submit": "Anmeldung absenden",
+    "submitting": "Wird gesendet...",
+    "continue_to_form": "Zum Formular"
   }
 }

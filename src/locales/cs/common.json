@@ -1,17 +1,12 @@
 {
     "appName": "EKC 2026",
+    "footer": {
+        "event": "EKC 2026",
+        "country": "ČESKO"
+    },
     "navigation": {
         "home": "Domů",
-        "teams": {
-            "title": "Týmy",
-            "subtitle": "Registrované země a žebříček",
-            "search": "Hledat zemi...",
-            "registered": "Potvrzeno",
-            "rank": "ŽEBŘÍČEK",
-            "history_title": "Historie šampionátů",
-            "result": "Výsledek",
-            "no_history": "Historie není k dispozici"
-        },
+        "teams": "Týmy",
         "program": "Program",
         "venues": "Haly",
         "volunteers": "Dobrovolníci",
@@ -25,26 +20,11 @@
         "cancel": "Zrušit",
         "save": "Uložit",
         "close": "Zavřít",
-        "learnMore": "Zjistit více",
-        "register": "Registrovat"
+        "register": "Registrovat",
+        "details": "Detail"
     },
-    "language": {
-        "system": "Systémové nastavení",
-        "en": "English",
-        "cs": "Čeština",
-        "nl": "Nederlands",
-        "de": "Deutsch",
-        "fr": "Français"
-    },
-    "theme": {
-        "system": "Systémové",
-        "light": "Světlé",
-        "dark": "Tmavé"
-    },
-    "form": {
-        "required": "Povinné",
-        "optional": "Nepovinné",
-        "error": "Zkontrolujte prosím své údaje",
-        "success": "Úspěch!"
+    "meta": {
+        "language": "Jazyk",
+        "theme": "Vzhled"
     }
 }

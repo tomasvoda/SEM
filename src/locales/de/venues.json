@@ -1,28 +1,30 @@
 {
-  "title": "Wettkampfstätten",
-  "subtitle": "Drei wunderschöne mährische Städte",
+  "title": "Hallen",
+  "subtitle": "Spielorte",
+  "labels": {
+    "hall": "Halle",
+    "address": "Adresse",
+    "capacity": "Kapazität",
+    "navigate": "Navigieren"
+  },
   "cities": {
     "prostejov": {
       "name": "Prostějov",
-      "description": "Hauptwettkampfstätte mit modernen Sporteinrichtungen",
-      "venue": "Sportcentrum DDM",
+      "venue": "Sporthalle Prostějov",
+      "summary": "Eine Stadt mit reicher Korfball-Tradition und modernen Anlagen.",
       "capacity": "1.200 Zuschauer"
     },
     "otrokovice": {
       "name": "Otrokovice",
-      "description": "Zweite Austragungsstätte nahe Zlín",
       "venue": "Städtische Sporthalle",
+      "summary": "Das industrielle Herz der Region mit Leidenschaft für Sport.",
       "capacity": "800 Zuschauer"
     },
     "zlin": {
       "name": "Zlín",
-      "description": "Historische Stadt mit ausgezeichneter Infrastruktur",
-      "venue": "Zimní Stadion Luďka Čajky",
-      "capacity": "1.000 Zuschauer"
+      "venue": "Sporthalle Zlín",
+      "summary": "Baťas Erbe trifft hier auf erstklassige Architektur und Sport.",
+      "capacity": "1.500 Zuschauer"
     }
-  },
-  "transport": {
-    "title": "Transport",
-    "description": "Kostenloser Shuttle-Service zwischen den Austragungsorten während des Turniers"
   }
 }

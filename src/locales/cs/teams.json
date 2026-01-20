@@ -1,0 +1,12 @@
+{
+    "title": "Týmy",
+    "subtitle": "Registrované země a pořadí",
+    "search": "Hledat tým nebo zemi",
+    "ranking": "Žebříček",
+    "registered": "Potvrzeno",
+    "history": "Historie šampionátů",
+    "stats": {
+        "result": "Výsledek",
+        "no_history": "Historie není k dispozici"
+    }
+}

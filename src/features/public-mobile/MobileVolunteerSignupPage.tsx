@@ -27,7 +27,7 @@ const ROLES: { value: VolunteerRole; labelKey: string }[] = [
 const TOURNAMENT_LOCATIONS = ['Prostějov', 'Otrokovice', 'Zlín'];
 
 export function MobileVolunteerSignupPage() {
-    const { t, i18n } = useTranslation('signup');
+    const { t, i18n } = useTranslation('volunteers');
     const navigate = useNavigate();
     const { addVolunteer } = useVolunteerStore();
     const [step, setStep] = useState<FormStep>('personal');
@@ -150,7 +150,7 @@ export function MobileVolunteerSignupPage() {
                             onClick={() => setShowInfo(false)}
                             className="w-full mt-6 py-3 bg-white/5 border border-white/10 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-white/10 transition-all"
                         >
-                            {t('actions.continue_to_form', { defaultValue: 'Continue to Registration' })}
+                            {t('intro.continue')}
                         </button>
                     </div>
                 </div>
@@ -221,7 +221,7 @@ export function MobileVolunteerSignupPage() {
 
                             <section className="space-y-4">
                                 <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-widest flex items-center gap-2">
-                                    <Building className="w-3 h-3" /> {t('fields.homeClub.label', { defaultValue: 'Home Club' })}
+                                    <Building className="w-3 h-3" /> {t('fields.homeClub.label')}
                                 </h3>
                                 <input
                                     type="text"
@@ -235,7 +235,7 @@ export function MobileVolunteerSignupPage() {
 
                             <section className="space-y-4">
                                 <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-widest flex items-center gap-2">
-                                    <Calendar className="w-3 h-3" /> {t('fields.birthDate.label', { defaultValue: 'Birth Date' })}
+                                    <Calendar className="w-3 h-3" /> {t('fields.birthDate.label')}
                                 </h3>
                                 <input
                                     type="date"
@@ -271,7 +271,7 @@ export function MobileVolunteerSignupPage() {
 
                             <section className="space-y-4">
                                 <h3 className="text-[10px] font-black text-brand-400 uppercase tracking-widest flex items-center gap-2">
-                                    <MapPin className="w-3 h-3" /> {t('fields.locations.label', { defaultValue: 'Preferred Locations' })}
+                                    <MapPin className="w-3 h-3" /> {t('fields.locations.label')}
                                 </h3>
                                 <div className="flex flex-wrap gap-2">
                                     {TOURNAMENT_LOCATIONS.map(loc => (
@@ -365,7 +365,7 @@ export function MobileVolunteerSignupPage() {
                                         {formData.gdpr && <Check className="w-3.5 h-3.5 text-white" />}
                                     </div>
                                     <span className="text-[10px] text-[var(--text-muted)] font-medium leading-relaxed uppercase tracking-tight">
-                                        {t('fields.gdpr.label', { defaultValue: 'I agree to the processing of personal data for the purpose of volunteer coordination for EURO 2026.' })}
+                                        {t('fields.gdpr.label')}
                                     </span>
                                 </label>
 

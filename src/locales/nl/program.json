@@ -1,49 +1,9 @@
 {
-  "title": "Toernooiprogramma",
-  "subtitle": "16-20 oktober 2026",
-  "days": {
-    "day1": {
-      "date": "Donderdag 16 oktober",
-      "title": "Opening en groepsfase",
-      "events": [
-        "10:00 - Openingsceremonie",
-        "12:00 - Start groepsfasewedstrijden",
-        "18:00 - Welkomstreceptie"
-      ]
-    },
-    "day2": {
-      "date": "Vrijdag 17 oktober",
-      "title": "Groepsfase vervolg",
-      "events": [
-        "09:00 - Ochtendwedstrijden",
-        "14:00 - Middagwedstrijden"
-      ]
-    },
-    "day3": {
-      "date": "Zaterdag 18 oktober",
-      "title": "Kwartfinales",
-      "events": [
-        "10:00 - Kwartfinale 1 & 2",
-        "15:00 - Kwartfinale 3 & 4"
-      ]
-    },
-    "day4": {
-      "date": "Zondag 19 oktober",
-      "title": "Halve finales",
-      "events": [
-        "11:00 - Halve finale 1",
-        "14:00 - Halve finale 2"
-      ]
-    },
-    "day5": {
-      "date": "Maandag 20 oktober",
-      "title": "Finales en afsluiting",
-      "events": [
-        "10:00 - Wedstrijd om 3e plaats",
-        "14:00 - Kampioensfinale",
-        "16:00 - Prijsuitreiking en afsluiting"
-      ]
-    }
-  },
-  "note": "Gedetailleerde wedstrijdschema wordt dichter bij het evenement gepubliceerd"
+  "title": "Programma",
+  "subtitle": "Wedstrijdschema en uitslagen",
+  "match": {
+    "group": "Groep",
+    "event": "Evenement",
+    "vs": "VS"
+  }
 }

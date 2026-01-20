@@ -6,7 +6,7 @@ import { cn } from '../../lib/utils';
 const navigationItems = [
     { id: 'home', path: '/mobile/home', icon: Home, labelKey: 'navigation.home' },
     { id: 'volunteers', path: '/mobile/volunteers', icon: Heart, labelKey: 'navigation.volunteers' },
-    { id: 'teams', path: '/mobile/teams', icon: Users, labelKey: 'navigation.teams.title' },
+    { id: 'teams', path: '/mobile/teams', icon: Users, labelKey: 'navigation.teams' },
     { id: 'program', path: '/mobile/program', icon: Calendar, labelKey: 'navigation.program' },
     { id: 'venues', path: '/mobile/venues', icon: MapPin, labelKey: 'navigation.venues' }
 ];

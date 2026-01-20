@@ -1,17 +1,12 @@
 {
     "appName": "EKC 2026",
+    "footer": {
+        "event": "EKC 2026",
+        "country": "CZECHIA"
+    },
     "navigation": {
         "home": "Home",
-        "teams": {
-            "title": "Teams",
-            "subtitle": "Registered Nations & Rankings",
-            "search": "Search country...",
-            "registered": "Registered",
-            "rank": "RANK",
-            "history_title": "Championship History",
-            "result": "Result",
-            "no_history": "No historical data available"
-        },
+        "teams": "Teams",
         "program": "Program",
         "venues": "Venues",
         "volunteers": "Volunteers",
@@ -25,26 +20,11 @@
         "cancel": "Cancel",
         "save": "Save",
         "close": "Close",
-        "learnMore": "Learn More",
-        "register": "Register"
+        "register": "Register",
+        "details": "Details"
     },
-    "language": {
-        "system": "System Default",
-        "en": "English",
-        "cs": "Čeština",
-        "nl": "Nederlands",
-        "de": "Deutsch",
-        "fr": "Français"
-    },
-    "theme": {
-        "system": "System",
-        "light": "Light",
-        "dark": "Dark"
-    },
-    "form": {
-        "required": "Required",
-        "optional": "Optional",
-        "error": "Please check your input",
-        "success": "Success!"
+    "meta": {
+        "language": "Language",
+        "theme": "Theme"
     }
 }

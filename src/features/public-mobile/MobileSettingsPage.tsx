@@ -60,12 +60,12 @@ export function MobileSettingsPage() {
                                         key={themeOption.value}
                                         onClick={() => setTheme(themeOption.value as any)}
                                         className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${theme === themeOption.value
-                                                ? 'bg-brand-500/10 border-2 border-brand-500/30 text-brand-500'
-                                                : 'bg-white/5 border-2 border-transparent text-[var(--text-secondary)] hover:bg-white/10'
+                                            ? 'bg-brand-500/10 border-2 border-brand-500/30 text-brand-500'
+                                            : 'bg-white/5 border-2 border-transparent text-[var(--text-secondary)] hover:bg-white/10'
                                             }`}
                                     >
                                         <Icon className="w-5 h-5" />
-                                        <span className="text-sm font-medium">{t(themeOption.labelKey)}</span>
+                                        <span className="text-sm font-medium">{t(`theme.${themeOption.value}`)}</span>
                                     </button>
                                 );
                             })}
@@ -94,7 +94,7 @@ export function MobileSettingsPage() {
                                 >
                                     {lang.icon && <lang.icon className="w-5 h-5" />}
                                     {!lang.icon && <Globe className="w-5 h-5 opacity-50" />}
-                                    <span className="text-sm font-medium">{t(lang.labelKey)}</span>
+                                    <span className="text-sm font-medium">{t(`language.${lang.code}`)}</span>
                                 </button>
                             ))}
                         </div>

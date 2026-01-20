@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAdminStore } from '../../store/adminStore';
 
 export function MobileTeamsList() {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation(['teams', 'common']);
     const navigate = useNavigate();
     const { delegations } = useAdminStore();
     const [search, setSearch] = useState('');
@@ -37,10 +37,10 @@ export function MobileTeamsList() {
     return (
         <div className="min-h-screen px-4 py-6 pb-24">
             <h1 className="mobile-page-title">
-                {t('navigation.teams.title')}
+                {t('title')}
             </h1>
             <p className="mobile-page-subtitle">
-                {t('navigation.teams.subtitle')}
+                {t('subtitle')}
             </p>
 
             <div className="sticky top-0 z-30 pt-4 pb-4 -mx-4 px-4 bg-[var(--app-bg)]/90 backdrop-blur-xl border-b border-white/10">
@@ -48,7 +48,7 @@ export function MobileTeamsList() {
                     <Search className="absolute left-3 top-2.5 w-4 h-4 text-[var(--text-muted)]" />
                     <input
                         type="text"
-                        placeholder={t('navigation.teams.search')}
+                        placeholder={t('search')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-2 text-sm text-[var(--text-primary)] focus:border-brand-500/50 outline-none transition-all"

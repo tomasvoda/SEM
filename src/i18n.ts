@@ -5,109 +5,89 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // Import all locale files
 import commonEN from './locales/en/common.json';
 import homeEN from './locales/en/home.json';
-import aboutEN from './locales/en/about.json';
 import programEN from './locales/en/program.json';
+import teamsEN from './locales/en/teams.json';
 import venuesEN from './locales/en/venues.json';
 import volunteersEN from './locales/en/volunteers.json';
-import signupEN from './locales/en/signup.json';
 import settingsEN from './locales/en/settings.json';
-import contactEN from './locales/en/contact.json';
 
 import commonCS from './locales/cs/common.json';
 import homeCS from './locales/cs/home.json';
-import aboutCS from './locales/cs/about.json';
 import programCS from './locales/cs/program.json';
+import teamsCS from './locales/cs/teams.json';
 import venuesCS from './locales/cs/venues.json';
 import volunteersCS from './locales/cs/volunteers.json';
-import signupCS from './locales/cs/signup.json';
 import settingsCS from './locales/cs/settings.json';
-import contactCS from './locales/cs/contact.json';
 
 import commonNL from './locales/nl/common.json';
 import homeNL from './locales/nl/home.json';
-import aboutNL from './locales/nl/about.json';
 import programNL from './locales/nl/program.json';
+import teamsNL from './locales/nl/teams.json';
 import venuesNL from './locales/nl/venues.json';
 import volunteersNL from './locales/nl/volunteers.json';
-import signupNL from './locales/nl/signup.json';
 import settingsNL from './locales/nl/settings.json';
-import contactNL from './locales/nl/contact.json';
 
 import commonDE from './locales/de/common.json';
 import homeDE from './locales/de/home.json';
-import aboutDE from './locales/de/about.json';
 import programDE from './locales/de/program.json';
+import teamsDE from './locales/de/teams.json';
 import venuesDE from './locales/de/venues.json';
 import volunteersDE from './locales/de/volunteers.json';
-import signupDE from './locales/de/signup.json';
 import settingsDE from './locales/de/settings.json';
-import contactDE from './locales/de/contact.json';
 
 import commonFR from './locales/fr/common.json';
 import homeFR from './locales/fr/home.json';
-import aboutFR from './locales/fr/about.json';
 import programFR from './locales/fr/program.json';
+import teamsFR from './locales/fr/teams.json';
 import venuesFR from './locales/fr/venues.json';
 import volunteersFR from './locales/fr/volunteers.json';
-import signupFR from './locales/fr/signup.json';
 import settingsFR from './locales/fr/settings.json';
-import contactFR from './locales/fr/contact.json';
 
 const resources = {
     en: {
         common: commonEN,
         home: homeEN,
-        about: aboutEN,
         program: programEN,
+        teams: teamsEN,
         venues: venuesEN,
         volunteers: volunteersEN,
-        signup: signupEN,
-        settings: settingsEN,
-        contact: contactEN
+        settings: settingsEN
     },
     cs: {
         common: commonCS,
         home: homeCS,
-        about: aboutCS,
         program: programCS,
+        teams: teamsCS,
         venues: venuesCS,
         volunteers: volunteersCS,
-        signup: signupCS,
-        settings: settingsCS,
-        contact: contactCS
+        settings: settingsCS
     },
     nl: {
         common: commonNL,
         home: homeNL,
-        about: aboutNL,
         program: programNL,
+        teams: teamsNL,
         venues: venuesNL,
         volunteers: volunteersNL,
-        signup: signupNL,
-        settings: settingsNL,
-        contact: contactNL
+        settings: settingsNL
     },
     de: {
         common: commonDE,
         home: homeDE,
-        about: aboutDE,
         program: programDE,
+        teams: teamsDE,
         venues: venuesDE,
         volunteers: volunteersDE,
-        signup: signupDE,
-        settings: settingsDE,
-        contact: contactDE
+        settings: settingsDE
     },
     fr: {
         common: commonFR,
         home: homeFR,
-        about: aboutFR,
         program: programFR,
+        teams: teamsFR,
         venues: venuesFR,
         volunteers: volunteersFR,
-        signup: signupFR,
-        settings: settingsFR,
-        contact: contactFR
+        settings: settingsFR
     }
 };
 
@@ -118,7 +98,7 @@ i18n
         resources,
         fallbackLng: 'en',
         defaultNS: 'common',
-        ns: ['common', 'home', 'about', 'program', 'venues', 'volunteers', 'signup', 'settings', 'contact'],
+        ns: ['common', 'home', 'about', 'program', 'venues', 'volunteers', 'settings', 'contact'],
 
         interpolation: {
             escapeValue: false // React already escapes

@@ -1,31 +1,78 @@
 {
-  "title": "Vrijwilliger worden",
-  "hero": {
-    "title": "Wees onderdeel van het kampioenschap",
-    "subtitle": "Sluit je aan bij ons team van toegewijde vrijwilligers"
+  "title": "Vrijwilligers",
+  "subtitle": "Word onderdeel van het kampioenschap",
+  "intro": {
+    "title": "We zoeken jou!",
+    "description": "Word het hart van het EK 2026. Help ons in de hallen, bij het transport of achter de schermen.",
+    "continue": "Ga naar registratie"
   },
-  "why": {
-    "title": "Waarom vrijwilliger worden?",
-    "reasons": [
-      "Wees onderdeel van een groot Europees sportevenement",
-      "Ontmoet mensen uit heel Europa",
-      "Krijg waardevolle ervaring in evenementenbeheer",
-      "Ontvang een officieel vrijwilligerscertificaat",
-      "Gratis maaltijden en vervoer tijdens het evenement"
+  "benefits": {
+    "title": "Wat krijg je?",
+    "items": [
+      "Officiële kampioenschapskleding",
+      "Maaltijden en drankjes inbegrepen",
+      "Toegang tot alle wedstrijden",
+      "Onvergetelijke ervaringen"
     ]
   },
-  "roles": {
-    "title": "Vrijwilligersrollen",
-    "registration": "Registratie & Accreditatie",
-    "hospitality": "Gastvrijheid & VIP-service",
-    "transport": "Vervoer & Logistiek",
-    "medical": "Medisch & Eerste hulp",
-    "media": "Media & Communicatie",
-    "venue": "Locatiebeheer"
+  "fields": {
+    "personal": {
+      "title": "Persoonlijke gegevens"
+    },
+    "firstName": {
+      "label": "Voornaam",
+      "placeholder": "Vul je voornaam in"
+    },
+    "lastName": {
+      "label": "Achternaam",
+      "placeholder": "Vul je achternaam in"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "jouw@email.nl"
+    },
+    "phone": {
+      "label": "Telefoon",
+      "placeholder": "+31 6 12345678"
+    },
+    "homeClub": {
+      "label": "Thuisclub (optioneel)",
+      "placeholder": "Naam van je club"
+    },
+    "birthDate": {
+      "label": "Geboortedatum"
+    },
+    "roles": {
+      "label": "Voorkeursrollen",
+      "options": {
+        "transport": "Transport / Chauffeur",
+        "registration": "Registratie / Resultaten",
+        "venue": "Halservice",
+        "hospitality": "VIP / Gastvrijheid",
+        "media": "Media / Foto",
+        "medical": "Medisch / Overig"
+      }
+    },
+    "locations": {
+      "label": "Voorkeurslocaties"
+    },
+    "availability": {
+      "label": "Beschikbaarheid tijdens toernooi",
+      "status": {
+        "full": "Hele dag",
+        "morning": "Ochtend",
+        "afternoon": "Middag",
+        "none": "Niet beschikbaar"
+      }
+    },
+    "gdpr": {
+      "label": "Ik ga akkoord met de verwerking van persoonsgegevens voor de organisatie van het kampioenschap."
+    }
   },
-  "cta": {
-    "title": "Klaar om mee te doen?",
-    "button": "Registreer als vrijwilliger",
-    "subtitle": "Aanmeldingen sluiten 31 juli 2026"
+  "actions": {
+    "next": "Volgende stap",
+    "submit": "Aanmelding verzenden",
+    "submitting": "Verzenden...",
+    "continue_to_form": "Naar het formulier"
   }
 }

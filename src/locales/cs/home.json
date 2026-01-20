@@ -1,33 +1,34 @@
 {
     "hero": {
-        "titleLine1": "Mistrovství Evropy",
-        "titleLine2": "v\u00A0korfbalu 2026",
-        "subtitle": "Česká republika",
+        "titleLine1": "Mistrovství Evropy v korfbalu",
+        "titleLine2": "ČESKO",
         "date": "16. – 24. října 2026",
         "cities": "Prostějov · Otrokovice · Zlín"
     },
-    "cta": {
-        "volunteer": "Staň se dobrovolníkem",
-        "join": "Přidej se k našemu týmu"
-    },
     "countdown": {
         "title": "Mistrovství začíná za",
-        "days": "Dní",
-        "hours": "Hodin",
-        "minutes": "Minut"
+        "days": "Dní"
     },
     "highlights": {
-        "title": "Zajímavosti",
-        "teams": "týmů",
-        "cities": "LOKALITY",
-        "venues": "Haly",
-        "news": "Aktuality",
-        "program": "Program"
+        "teams": "Týmů",
+        "cities": "Haly",
+        "news": "Aktuality"
     },
     "news": {
         "ikf_draw": {
             "title": "Los týmů proběhne do konce února 2025",
             "description": "Losování skupin proběhne v režii IKF. Organizátoři aktuálně čekají na upřesňující informace."
+        }
+    },
+    "sections": {
+        "volunteers": {
+            "title": "Dobrovolníci",
+            "subtitle": "Pomoz s organizací turnaje\na staň se jeho srdcem i ty",
+            "button": "Registrovat se"
+        },
+        "stats": {
+            "title": "Zajímavosti",
+            "program": "Program"
         }
     }
 }

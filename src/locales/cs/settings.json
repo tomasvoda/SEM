@@ -3,18 +3,29 @@
     "sections": {
         "appearance": {
             "title": "Vzhled",
-            "theme": "Téma",
-            "themeDescription": "Vyberte, jak má aplikace vypadat"
+            "theme": "Barevný režim"
         },
         "language": {
-            "title": "Jazyk",
-            "select": "Jazyk aplikace",
-            "description": "Vyberte preferovaný jazyk"
+            "title": "Jazyk aplikace",
+            "select": "Vyberte jazyk"
         },
         "about": {
             "title": "O aplikaci",
             "version": "Verze",
-            "copyright": "© 2026 Mistrovství Evropy v korfbalu"
+            "copyright": "© 2026 Český korfbalový svaz"
         }
+    },
+    "theme": {
+        "system": "Systémový",
+        "light": "Světlý režim",
+        "dark": "Tmavý režim"
+    },
+    "language": {
+        "system": "System",
+        "cs": "Čeština",
+        "en": "Angličtina",
+        "de": "Němčina",
+        "fr": "Francouzština",
+        "nl": "Nizozemština"
     }
 }

@@ -1,33 +1,78 @@
 {
-    "title": "Volunteer with Us",
-    "hero": {
-        "title": "Be Part of the Largest Korfball Event in Europe",
-        "subtitle": "Join our team of dedicated volunteers for EURO 2026"
+    "title": "Volunteers",
+    "subtitle": "Become part of the championship",
+    "intro": {
+        "title": "We want you!",
+        "description": "Become the heart of the 2026 European Championship. Help us in the halls, with transport, or behind the scenes.",
+        "continue": "Continue to registration"
     },
-    "why": {
-        "title": "Why Volunteer?",
-        "reasons": [
-            "Be in the heart of the biggest European championship",
-            "Join a great team and meet people from all over Europe",
-            "Gain unique experiences and valuable skills",
-            "Receive an official certificate for your CV",
-            "Get a volunteer kit and free meals",
-            "Free access to all championship matches",
-            "Team building activities and post-finale party"
+    "benefits": {
+        "title": "What do you get?",
+        "items": [
+            "Official championship apparel",
+            "Meals and drinks provided",
+            "Entry to all matches",
+            "Unforgettable experiences"
         ]
     },
-    "roles": {
-        "title": "Volunteer Roles",
-        "registration": "Registration & Accreditation",
-        "hospitality": "Hospitality & Guest Services",
-        "transport": "Transportation & Logistics",
-        "medical": "Medical & First Aid",
-        "media": "Media & Communications",
-        "venue": "Venue Operations"
+    "fields": {
+        "personal": {
+            "title": "Personal Data"
+        },
+        "firstName": {
+            "label": "First Name",
+            "placeholder": "Enter your first name"
+        },
+        "lastName": {
+            "label": "Last Name",
+            "placeholder": "Enter your last name"
+        },
+        "email": {
+            "label": "E-mail",
+            "placeholder": "your@email.com"
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "+420 123 456 789"
+        },
+        "homeClub": {
+            "label": "Home Club (optional)",
+            "placeholder": "Name of your club"
+        },
+        "birthDate": {
+            "label": "Date of Birth"
+        },
+        "roles": {
+            "label": "Preferred Roles",
+            "options": {
+                "transport": "Transport / Driver",
+                "registration": "Registration / Results",
+                "venue": "Venue Service",
+                "hospitality": "VIP / Hospitality",
+                "media": "Media / Photo",
+                "medical": "Medical / Other"
+            }
+        },
+        "locations": {
+            "label": "Preferred Locations"
+        },
+        "availability": {
+            "label": "Availability during tournament",
+            "status": {
+                "full": "Full day",
+                "morning": "Morning",
+                "afternoon": "Afternoon",
+                "none": "Unavailable"
+            }
+        },
+        "gdpr": {
+            "label": "I agree to the processing of personal data for the purpose of championship organization."
+        }
     },
-    "cta": {
-        "title": "Ready to Join?",
-        "button": "Register as Volunteer",
-        "subtitle": "Applications close July 31, 2026"
+    "actions": {
+        "next": "Next step",
+        "submit": "Submit Application",
+        "submitting": "Submitting...",
+        "continue_to_form": "Go to form"
     }
 }

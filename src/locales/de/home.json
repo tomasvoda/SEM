@@ -1,25 +1,34 @@
 {
   "hero": {
-    "title": "Europameisterschaft im Korbball 2026",
-    "subtitle": "Tschechien",
-    "date": "16.-20. Oktober 2026",
+    "titleLine1": "Europameisterschaft im Korfball",
+    "titleLine2": "TSCHECHIEN",
+    "date": "16. – 24. Oktober 2026",
     "cities": "Prostějov · Otrokovice · Zlín"
-  },
-  "cta": {
-    "volunteer": "Als Freiwilliger registrieren",
-    "learnMore": "Mehr über die Meisterschaft"
   },
   "countdown": {
     "title": "Meisterschaft beginnt in",
-    "days": "Tage",
-    "hours": "Stunden",
-    "minutes": "Minuten"
+    "days": "Tagen"
   },
   "highlights": {
-    "title": "Event-Highlights",
     "teams": "Teams",
-    "cities": "Städte",
-    "venues": "Wettkampfstätten",
-    "volunteers": "Freiwillige gesucht"
+    "cities": "Hallen",
+    "news": "Aktuelles"
+  },
+  "news": {
+    "ikf_draw": {
+      "title": "Auslosung bis Ende Februar 2025",
+      "description": "Die Auslosung der Gruppenphase wird von der IKF verwaltet. Die Organisatoren warten derzeit naere Informationen."
+    },
+    "sections": {
+      "volunteers": {
+        "title": "Freiwillige",
+        "subtitle": "Hilf bei der Organisation des Turniers\nund werde auch du sein Herz",
+        "button": "Jetzt registrieren"
+      },
+      "stats": {
+        "title": "Highlights",
+        "program": "Programm"
+      }
+    }
   }
 }

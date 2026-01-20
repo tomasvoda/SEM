@@ -1,33 +1,78 @@
 {
-    "title": "Staň se dobrovolníkem",
-    "hero": {
-        "title": "Staň se součástí největší korfbalové akce starého kontinentu",
-        "subtitle": "Přidej se k našemu týmu zapálených dobrovolníků na EURO 2026"
+    "title": "Dobrovolníci",
+    "subtitle": "Staň se součástí šampionátu",
+    "intro": {
+        "title": "Hledáme právě tebe!",
+        "description": "Staň se srdcem Mistrovství Evropy 2026. Pomoz nám v halách, s transportem nebo v zázemí turnaje.",
+        "continue": "Přejít k registraci"
     },
-    "why": {
-        "title": "Proč se stát dobrovolníkem?",
-        "reasons": [
-            "Buď v centru dění největšího evropského šampionátu",
-            "Staň se součástí skvělého týmu a poznej lidi z celé Evropy",
-            "Získej jedinečné zážitky a cenné zkušenosti",
-            "Získej oficiální certifikát pro tvůj životopis",
-            "Obdržíš balíček oblečení a stravování zdarma",
-            "Vstup na všechny zápasy šampionátu",
-            "Společný teambuilding a party po finále"
+    "benefits": {
+        "title": "Co získáš?",
+        "items": [
+            "Oficiální oblečení šampionátu",
+            "Strava a pitný režim zajištěn",
+            "Vstup na všechny zápasy",
+            "Nezapomenutelné zážitky"
         ]
     },
-    "roles": {
-        "title": "Role dobrovolníků",
-        "registration": "Registrace a akreditace",
-        "hospitality": "Hospitality a služby hostům",
-        "transport": "Doprava a logistika",
-        "medical": "Zdravotní péče a první pomoc",
-        "media": "Média a komunikace",
-        "venue": "Provoz hal"
+    "fields": {
+        "personal": {
+            "title": "Osobní údaje"
+        },
+        "firstName": {
+            "label": "Jméno",
+            "placeholder": "Zadej své jméno"
+        },
+        "lastName": {
+            "label": "Příjmení",
+            "placeholder": "Zadej své příjmení"
+        },
+        "email": {
+            "label": "E-mail",
+            "placeholder": "tvuj@email.cz"
+        },
+        "phone": {
+            "label": "Telefon",
+            "placeholder": "+420 123 456 789"
+        },
+        "homeClub": {
+            "label": "Mateřský klub (volitelné)",
+            "placeholder": "Název tvého klubu"
+        },
+        "birthDate": {
+            "label": "Datum narození"
+        },
+        "roles": {
+            "label": "Preferované role",
+            "options": {
+                "transport": "Doprava / Řidič",
+                "registration": "Registrace / Výsledky",
+                "venue": "Pořadatelská služba",
+                "hospitality": "VIP / Hospitality",
+                "media": "Média / Foto",
+                "medical": "Zdravotník / Ostatní"
+            }
+        },
+        "locations": {
+            "label": "Preferované lokality"
+        },
+        "availability": {
+            "label": "Dostupnost během turnaje",
+            "status": {
+                "full": "Celý den",
+                "morning": "Dopoledne",
+                "afternoon": "Odpoledne",
+                "none": "Nemůžu"
+            }
+        },
+        "gdpr": {
+            "label": "Souhlasím se zpracováním osobních údajů pro účely organizace šampionátu."
+        }
     },
-    "cta": {
-        "title": "Připraven se přidat?",
-        "button": "Registrovat se jako dobrovolník",
-        "subtitle": "Přihlášky končí 31. července 2026"
+    "actions": {
+        "next": "Další krok",
+        "submit": "Odeslat přihlášku",
+        "submitting": "Odesílám...",
+        "continue_to_form": "Přejít k formuláři"
     }
 }

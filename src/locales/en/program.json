@@ -1,49 +1,9 @@
 {
     "title": "Program",
-    "subtitle": "Tournament Schedule & Results • Oct 16-24",
-    "days": {
-        "day1": {
-            "date": "Thursday, October 16",
-            "title": "Opening & Group Stage",
-            "events": [
-                "10:00 - Opening Ceremony",
-                "12:00 - Group Stage Matches Begin",
-                "18:00 - Welcome Reception"
-            ]
-        },
-        "day2": {
-            "date": "Friday, October 17",
-            "title": "Group Stage Continues",
-            "events": [
-                "09:00 - Morning Matches",
-                "14:00 - Afternoon Matches"
-            ]
-        },
-        "day3": {
-            "date": "Saturday, October 18",
-            "title": "Quarter Finals",
-            "events": [
-                "10:00 - Quarter Final 1 & 2",
-                "15:00 - Quarter Final 3 & 4"
-            ]
-        },
-        "day4": {
-            "date": "Sunday, October 19",
-            "title": "Semi Finals",
-            "events": [
-                "11:00 - Semi Final 1",
-                "14:00 - Semi Final 2"
-            ]
-        },
-        "day5": {
-            "date": "Monday, October 20",
-            "title": "Finals & Closing",
-            "events": [
-                "10:00 - 3rd Place Match",
-                "14:00 - Championship Final",
-                "16:00 - Award Ceremony & Closing"
-            ]
-        }
-    },
-    "note": "Detailed match schedule will be published closer to the event"
+    "subtitle": "Match schedule and results",
+    "match": {
+        "group": "Group",
+        "event": "Event",
+        "vs": "VS"
+    }
 }

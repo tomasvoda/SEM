@@ -1,0 +1,12 @@
+{
+    "title": "Teams",
+    "subtitle": "Geregistreerde landen en ranglijst",
+    "search": "Zoek team of land",
+    "ranking": "Ranglijst",
+    "registered": "Bevestigd",
+    "history": "Kampioenschapshistorie",
+    "stats": {
+        "result": "Resultaat",
+        "no_history": "Historie niet beschikbaar"
+    }
+}

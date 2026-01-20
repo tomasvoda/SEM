@@ -3,18 +3,29 @@
     "sections": {
         "appearance": {
             "title": "Appearance",
-            "theme": "Theme",
-            "themeDescription": "Choose how the app looks"
+            "theme": "Color Mode"
         },
         "language": {
-            "title": "Language",
-            "select": "App Language",
-            "description": "Choose your preferred language"
+            "title": "App Language",
+            "select": "Select Language"
         },
         "about": {
-            "title": "About",
+            "title": "About App",
             "version": "Version",
-            "copyright": "© 2026 European Korfball Championship"
+            "copyright": "© 2026 Czech Korfball Association"
         }
+    },
+    "theme": {
+        "system": "System",
+        "light": "Light Mode",
+        "dark": "Dark Mode"
+    },
+    "language": {
+        "system": "System",
+        "cs": "Czech",
+        "en": "English",
+        "de": "German",
+        "fr": "French",
+        "nl": "Dutch"
     }
 }

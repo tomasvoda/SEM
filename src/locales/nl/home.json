@@ -1,25 +1,34 @@
 {
   "hero": {
-    "title": "Europees Kampioenschap Korfbal 2026",
-    "subtitle": "Tsjechië",
-    "date": "16-20 oktober 2026",
+    "titleLine1": "Europees Korfbalkampioenschap",
+    "titleLine2": "TSJECHIË",
+    "date": "16 – 24 oktober 2026",
     "cities": "Prostějov · Otrokovice · Zlín"
-  },
-  "cta": {
-    "volunteer": "Registreer als vrijwilliger",
-    "learnMore": "Meer over het kampioenschap"
   },
   "countdown": {
     "title": "Kampioenschap begint over",
-    "days": "Dagen",
-    "hours": "Uren",
-    "minutes": "Minuten"
+    "days": "Dagen"
   },
   "highlights": {
-    "title": "Hoogtepunten",
     "teams": "Teams",
-    "cities": "Steden",
-    "venues": "Wedstrijdlocaties",
-    "volunteers": "Vrijwilligers nodig"
+    "cities": "Hallen",
+    "news": "Nieuws"
+  },
+  "news": {
+    "ikf_draw": {
+      "title": "Loting tegen eind februari 2025",
+      "description": "De loting voor de groepsfase wordt beheerd door IKF. De organisatoren wachten momenteel op verdere informatie."
+    }
+  },
+  "sections": {
+    "volunteers": {
+      "title": "Vrijwilligers",
+      "subtitle": "Help bij de organisatie van het toernooi\nen word ook jij het hart ervan",
+      "button": "Schrijf je nu in"
+    },
+    "stats": {
+      "title": "Hoogtepunten",
+      "program": "Programma"
+    }
   }
 }

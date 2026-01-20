@@ -3,18 +3,29 @@
   "sections": {
     "appearance": {
       "title": "Apparence",
-      "theme": "Thème",
-      "themeDescription": "Choisissez l'apparence de l'application"
+      "theme": "Mode couleur"
     },
     "language": {
-      "title": "Langue",
-      "select": "Langue de l'application",
-      "description": "Choisissez votre langue préférée"
+      "title": "Langue de l'app",
+      "select": "Choisir la langue"
     },
     "about": {
       "title": "À propos",
       "version": "Version",
-      "copyright": "© 2026 Championnat d'Europe de Korfbal"
+      "copyright": "© 2026 Association Tchèque de Korfbal"
     }
+  },
+  "theme": {
+    "system": "Système",
+    "light": "Mode clair",
+    "dark": "Mode sombre"
+  },
+  "language": {
+    "system": "Système",
+    "cs": "Tchèque",
+    "en": "Anglais",
+    "de": "Allemand",
+    "fr": "Français",
+    "nl": "Néerlandais"
   }
 }

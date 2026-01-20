@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Heart, Check } from 'lucide-react';
 
 export function MobileVolunteersPage() {
-    const { t } = useTranslation('signup');
+    const { t } = useTranslation('volunteers');
 
     return (
         <div className="min-h-screen px-4 py-12 pb-24">
@@ -18,8 +18,8 @@ export function MobileVolunteersPage() {
                         </div>
 
                         <h1 className="text-3xl font-black uppercase tracking-tighter leading-[0.9] mb-4">
-                            STAŇ SE SRDCEM<br />
-                            <span className="text-brand-500">ŠAMPIONÁTU</span>
+                            {t('title')}<br />
+                            <span className="text-brand-500">{t('subtitle')}</span>
                         </h1>
 
                         <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-8 max-w-xs mx-auto">
@@ -46,7 +46,7 @@ export function MobileVolunteersPage() {
                             to="/mobile/volunteer-signup"
                             className="flex items-center justify-center w-full py-5 bg-brand-500 text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-[0_20px_40px_-10px_rgba(249,115,22,0.3)] hover:shadow-brand-500/50 active:scale-[0.98] transition-all"
                         >
-                            REGISTROVAT SE
+                            {t('actions.continue_to_form')}
                         </Link>
 
                         <p className="text-[10px] text-[var(--text-muted)] mt-6 uppercase font-black tracking-widest opacity-60">
@@ -60,7 +60,7 @@ export function MobileVolunteersPage() {
 }
 
 export function MobileContactPage() {
-    const { t } = useTranslation('contact');
+    const { t } = useTranslation('common');
     return (
         <div className="min-h-screen px-4 py-8">
             <h1 className="text-2xl font-black text-[var(--text-primary)] uppercase tracking-tighter mb-6">

@@ -1,35 +1,27 @@
 {
-    "title": "Kontaktujte nás",
-    "info": {
-        "title": "Ozvěte se nám",
-        "description": "Máte dotazy? Rádi vám pomůžeme!"
-    },
+    "title": "Kontakt",
     "organizer": {
-        "title": "Pořadatel turnaje",
+        "title": "Pořadatel",
         "name": "Český korfbalový svaz",
-        "email": "info@korfbal.cz",
-        "phone": "+420 702 202 389"
+        "email": "sekretariat@korfbal.cz",
+        "phone": "+420 123 456 789"
     },
     "sections": {
         "general": {
             "title": "Obecné dotazy",
-            "email": "info@korfbal.cz"
+            "email": "info@ekc2026.cz"
         },
         "volunteers": {
-            "title": "Program dobrovolníků",
-            "email": "dobrovolnici@korfbal.cz"
+            "title": "Dobrovolníci / HR",
+            "email": "dobrovolnici@ekc2026.cz"
         },
         "media": {
-            "title": "Média a tisk",
-            "email": "press@ekc2026.cz"
+            "title": "Média / Press",
+            "email": "media@ekc2026.cz"
         },
         "teams": {
-            "title": "Týmové delegace",
-            "email": "office@korfbal.cz"
+            "title": "Týmy / Delegace",
+            "email": "teams@ekc2026.cz"
         }
-    },
-    "social": {
-        "title": "Sledujte nás",
-        "description": "Buďte v obraze na sociálních sítích"
     }
 }

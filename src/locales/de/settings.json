@@ -3,18 +3,29 @@
   "sections": {
     "appearance": {
       "title": "Erscheinungsbild",
-      "theme": "Design",
-      "themeDescription": "Wählen Sie, wie die App aussieht"
+      "theme": "Farbmodus"
     },
     "language": {
-      "title": "Sprache",
-      "select": "App-Sprache",
-      "description": "Wählen Sie Ihre bevorzugte Sprache"
+      "title": "App-Sprache",
+      "select": "Sprache auswählen"
     },
     "about": {
-      "title": "Über",
+      "title": "Über die App",
       "version": "Version",
-      "copyright": "© 2026 Europameisterschaft im Korbball"
+      "copyright": "© 2026 Tschechischer Korfballverband"
     }
+  },
+  "theme": {
+    "system": "System",
+    "light": "Heller Modus",
+    "dark": "Dunkler Modus"
+  },
+  "language": {
+    "system": "System",
+    "cs": "Tschechisch",
+    "en": "Englisch",
+    "de": "Deutsch",
+    "fr": "Französisch",
+    "nl": "Niederländisch"
   }
 }

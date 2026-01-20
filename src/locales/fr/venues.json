@@ -1,28 +1,30 @@
 {
-  "title": "Lieux de compétition",
-  "subtitle": "Trois magnifiques villes moraves",
+  "title": "Salles",
+  "subtitle": "Lieux des matchs",
+  "labels": {
+    "hall": "Salle",
+    "address": "Adresse",
+    "capacity": "Capacité",
+    "navigate": "Naviguer"
+  },
   "cities": {
     "prostejov": {
       "name": "Prostějov",
-      "description": "Lieu de compétition principal avec des installations sportives modernes",
-      "venue": "Sportcentrum DDM",
+      "venue": "Halle de sport Prostějov",
+      "summary": "Une ville avec une riche tradition de korfbal et des installations modernes.",
       "capacity": "1 200 spectateurs"
     },
     "otrokovice": {
       "name": "Otrokovice",
-      "description": "Deuxième lieu près de Zlín",
-      "venue": "Halle municipale des sports",
+      "venue": "Halle de sport municipale",
+      "summary": "Le cœur industriel de la région, passionné de sport.",
       "capacity": "800 spectateurs"
     },
     "zlin": {
       "name": "Zlín",
-      "description": "Ville historique avec une excellente infrastructure",
-      "venue": "Zimní Stadion Luďka Čajky",
-      "capacity": "1 000 spectateurs"
+      "venue": "Halle de sport Zlín",
+      "summary": "L'héritage de Baťa rencontre ici l'architecture et le sport de haut niveau.",
+      "capacity": "1 500 spectateurs"
     }
-  },
-  "transport": {
-    "title": "Transport",
-    "description": "Service de navette gratuit entre les lieux pendant le tournoi"
   }
 }

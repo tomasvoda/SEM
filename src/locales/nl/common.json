@@ -1,10 +1,14 @@
 {
   "appName": "EKC 2026",
+  "footer": {
+    "event": "EKC 2026",
+    "country": "TSJECHIË"
+  },
   "navigation": {
     "home": "Home",
-    "about": "Over",
+    "teams": "Teams",
     "program": "Programma",
-    "venues": "Locaties",
+    "venues": "Hallen",
     "volunteers": "Vrijwilligers",
     "contact": "Contact",
     "settings": "Instellingen"
@@ -16,26 +20,11 @@
     "cancel": "Annuleren",
     "save": "Opslaan",
     "close": "Sluiten",
-    "learnMore": "Meer informatie",
-    "register": "Registreren"
+    "register": "Registreren",
+    "details": "Details"
   },
-  "language": {
-    "system": "Systeemstandaard",
-    "en": "English",
-    "cs": "Čeština",
-    "nl": "Nederlands",
-    "de": "Deutsch",
-    "fr": "Français"
-  },
-  "theme": {
-    "system": "Systeem",
-    "light": "Licht",
-    "dark": "Donker"
-  },
-  "form": {
-    "required": "Verplicht",
-    "optional": "Optioneel",
-    "error": "Controleer uw invoer",
-    "success": "Succes!"
+  "meta": {
+    "language": "Taal",
+    "theme": "Thema"
   }
 }

@@ -1,49 +1,9 @@
 {
-  "title": "Turnierprogramm",
-  "subtitle": "16.-20. Oktober 2026",
-  "days": {
-    "day1": {
-      "date": "Donnerstag, 16. Oktober",
-      "title": "Eröffnung & Gruppenphase",
-      "events": [
-        "10:00 - Eröffnungszeremonie",
-        "12:00 - Beginn der Gruppenspiele",
-        "18:00 - Willkommensempfang"
-      ]
-    },
-    "day2": {
-      "date": "Freitag, 17. Oktober",
-      "title": "Gruppenphase Fortsetzung",
-      "events": [
-        "09:00 - Vormittagsspiele",
-        "14:00 - Nachmittagsspiele"
-      ]
-    },
-    "day3": {
-      "date": "Samstag, 18. Oktober",
-      "title": "Viertelfinale",
-      "events": [
-        "10:00 - Viertelfinale 1 & 2",
-        "15:00 - Viertelfinale 3 & 4"
-      ]
-    },
-    "day4": {
-      "date": "Sonntag, 19. Oktober",
-      "title": "Halbfinale",
-      "events": [
-        "11:00 - Halbfinale 1",
-        "14:00 - Halbfinale 2"
-      ]
-    },
-    "day5": {
-      "date": "Montag, 20. Oktober",
-      "title": "Finale & Abschluss",
-      "events": [
-        "10:00 - Spiel um Platz 3",
-        "14:00 - Meisterschaftsfinale",
-        "16:00 - Siegerehrung & Abschluss"
-      ]
-    }
-  },
-  "note": "Detaillierter Spielplan wird näher am Event veröffentlicht"
+  "title": "Programm",
+  "subtitle": "Spielplan und Ergebnisse",
+  "match": {
+    "group": "Gruppe",
+    "event": "Ereignis",
+    "vs": "VS"
+  }
 }

@@ -2,19 +2,30 @@
   "title": "Instellingen",
   "sections": {
     "appearance": {
-      "title": "Uiterlijk",
-      "theme": "Thema",
-      "themeDescription": "Kies hoe de app eruitziet"
+      "title": "Weergave",
+      "theme": "Kleurmodus"
     },
     "language": {
-      "title": "Taal",
-      "select": "App-taal",
-      "description": "Kies uw voorkeurstaal"
+      "title": "Taal van de app",
+      "select": "Selecteer taal"
     },
     "about": {
-      "title": "Over",
+      "title": "Over de app",
       "version": "Versie",
-      "copyright": "© 2026 Europees Kampioenschap Korfbal"
+      "copyright": "© 2026 Tsjechische Korfbalbond"
     }
+  },
+  "theme": {
+    "system": "Systeem",
+    "light": "Lichte modus",
+    "dark": "Donkere modus"
+  },
+  "language": {
+    "system": "Systeem",
+    "cs": "Tsjechisch",
+    "en": "Engels",
+    "de": "Duits",
+    "fr": "Frans",
+    "nl": "Nederlands"
   }
 }

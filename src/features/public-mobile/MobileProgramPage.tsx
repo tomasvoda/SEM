@@ -8,7 +8,7 @@ import { cn } from '../../lib/utils';
 export function MobileProgramPage() {
     const { schedule, getResolvedTeamCode } = useMatchStore();
 
-    const { t } = useTranslation('program');
+    const { t } = useTranslation(['program', 'common']);
 
     return (
         <div className="min-h-screen px-4 py-6 pb-24">
@@ -43,7 +43,7 @@ export function MobileProgramPage() {
                                             )}
                                         >
                                             <div className="absolute top-0 right-0 px-2 py-1 bg-brand-500/20 rounded-bl-lg">
-                                                <span className="mobile-metadata-label text-[9px] text-brand-500">Event</span>
+                                                <span className="mobile-metadata-label text-[9px] text-brand-500 uppercase">{t('match.event')}</span>
                                             </div>
                                             <div className="flex flex-col items-center gap-3">
                                                 <div className="px-2 py-1 bg-white/10 rounded-lg mobile-metadata-label text-white">
@@ -76,7 +76,7 @@ export function MobileProgramPage() {
                                                 </div>
                                                 {match.group && (
                                                     <div className="px-2 py-1 bg-white/5 rounded-md border border-white/5 flex items-center">
-                                                        <span className="mobile-metadata-label opacity-60">GROUP {match.group}</span>
+                                                        <span className="mobile-metadata-label opacity-60 uppercase">{t('match.group')} {match.group}</span>
                                                     </div>
                                                 )}
                                                 {!match.group && (
@@ -109,7 +109,7 @@ export function MobileProgramPage() {
                                                         <span className="mobile-card-title text-[16px] text-white">{match.score2}</span>
                                                     </div>
                                                 ) : (
-                                                    <span className="mobile-card-title text-[13px] opacity-20">VS</span>
+                                                    <span className="mobile-card-title text-[13px] opacity-20">{t('match.vs')}</span>
                                                 )}
                                             </div>
 

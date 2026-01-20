@@ -9,8 +9,8 @@ export function MobileHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-40 safe-area-top">
-            <div className="mobile-header-bar px-4 py-1.5">
+        <header className="sticky top-0 z-40">
+            <div className="mobile-header-bar px-4 pb-1.5 pt-[calc(0.375rem+env(safe-area-inset-top))]">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
@@ -19,7 +19,7 @@ export function MobileHeader() {
                         </div>
                         <div>
                             <h1 className="text-sm font-black text-[var(--text-primary)] uppercase tracking-tight leading-none">
-                                EKC 2026 <span className="text-[var(--text-muted)] font-normal">| ČESKO</span>
+                                {t('footer.event')} <span className="text-[var(--text-muted)] font-normal">| {t('footer.country')}</span>
                             </h1>
                         </div>
                     </div>

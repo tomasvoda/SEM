@@ -1,0 +1,12 @@
+{
+    "title": "Teams",
+    "subtitle": "Registrierte Länder und Rangliste",
+    "search": "Team oder Land suchen",
+    "ranking": "Rangliste",
+    "registered": "Bestätigt",
+    "history": "Meisterschaftshistorie",
+    "stats": {
+        "result": "Ergebnis",
+        "no_history": "Historie nicht verfügbar"
+    }
+}
